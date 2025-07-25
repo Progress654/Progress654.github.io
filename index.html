@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beratung · Technik — Moderne Unternehmensberatung</title>
+  <meta name="description" content="Beratung · Technik: Strategie, Technologie & Umsetzung – klar, pragmatisch, wirkungsvoll.">
+  <style>
+    :root{
+      --nav-h: 72px;
+      --accent: #355cff;
+      --bg: #ffffff;
+      --fg: #0f1115;
+      --muted: #6b7280;
+      --surface: #f6f7fb;
+      --border: #e5e7eb;
+      --radius: 14px;
+      --shadow: 0 10px 30px -15px rgba(0,0,0,.2);
+    }
+    html[data-theme="dark"]{
+      --bg: #0f1115;
+      --fg: #e5e9f0;
+      --muted: #9aa0aa;
+      --surface: #181b21;
+      --border: #272b33;
+      --shadow: 0 10px 30px -20px rgba(0,0,0,.6);
+    }
+    *{ box-sizing:border-box; }
+    ::selection{ background: var(--accent); color:#fff; }
+    html{
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+      scroll-padding-top: var(--nav-h);
+    }
+    body{
+      margin:0;
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,Inter,Helvetica,Arial,sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.55;
+    }
+    a{ color: inherit; text-decoration: none; }
+    img{ max-width:100%; display:block; }
+    h1,h2,h3{ line-height:1.15; margin:0 0 1rem; }
+    h1{ font-size: clamp(2.6rem, 6vw, 4rem); }
+    h2{ font-size: clamp(1.8rem, 3.2vw, 2.4rem); }
+    p{ max-width: 70ch; }
+    ul{ padding-left: 1.2rem; }
+    /* Header / Nav */
+    header{
+      position: fixed;
+      top:0; left:0; right:0;
+      height: var(--nav-h);
+      display:flex; align-items:center;
+      justify-content: space-between;
+      padding: 0 clamp(1rem, 5vw, 4rem);
+      backdrop-filter: blur(16px);
+      background: color-mix(in srgb, var(--bg) 75%, transparent);
+      border-bottom: 1px solid var(--border);
+      z-index: 9999;
+    }
+    .brand{
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+    nav{
+      display:flex; gap: 1.2rem;
+      align-items:center;
+    }
+    nav a{
+      padding: .35rem .2rem;
+      border-bottom: 2px solid transparent;
+      color: var(--muted);
+      font-weight: 500;
+      transition: color .15s, border-color .15s;
+    }
+    nav a.active{
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    #themeToggle{
+      margin-left: .6rem;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: inherit;
+      height: 36px; width: 36px;
+      border-radius: 50%;
+      display:flex; align-items:center; justify-content:center;
+      cursor:pointer;
+    }
+    /* Scroll progress bar */
+    .progress{
+      position: fixed;
+      top:0; left:0;
+      height: 3px;
+      background: var(--accent);
+      width: 0%;
+      z-index: 10000;
+    }
+    /* Sections */
+    section{
+      min-height: 100vh;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      padding: calc(var(--nav-h) + clamp(2rem, 5vw, 5rem)) clamp(1rem, 6vw, 6rem) clamp(4rem, 8vw, 6rem);
+      display:flex; align-items:center;
+      position: relative;
+    }
+    .container{
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .hero{
+      background: radial-gradient(circle at 70% -20%, color-mix(in srgb, var(--accent) 35%, transparent) 0%, transparent 60%), var(--bg);
+    }
+    .hero p{
+      font-size: 1.15rem;
+      color: var(--muted);
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:.4rem;
+      padding:.9rem 1.2rem;
+      border-radius: 999px;
+      font-weight:600;
+      border: 1px solid transparent;
+      cursor:pointer;
+      transition: transform .12s, box-shadow .12s;
+      text-decoration: none;
+    }
+    .btn:hover{ transform: translateY(-1px); }
+    .btn-primary{
+      background: var(--accent);
+      color:#fff;
+      box-shadow: var(--shadow);
+    }
+    .btn-outline{
+      border-color: var(--border);
+      color: var(--fg);
+    }
+    .grid{
+      display:grid;
+      gap: 1.5rem;
+    }
+    .grid-3{
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    }
+    .card{
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.4rem;
+      box-shadow: var(--shadow);
+    }
+    .step{
+      display:flex; gap:1rem; align-items:flex-start;
+      padding:1rem 0;
+    }
+    .step-num{
+      height:32px; width:32px; flex:0 0 32px;
+      border-radius:50%;
+      background: var(--accent);
+      color:#fff; display:flex; align-items:center; justify-content:center;
+      font-weight:600; font-size:.9rem;
+      box-shadow: var(--shadow);
+    }
+    .muted{ color: var(--muted); }
+    .badge{
+      display:inline-block;
+      background: color-mix(in srgb, var(--accent) 15%, transparent);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: .2rem .6rem;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .03em;
+    }
+    .contact{
+      display:grid;
+      gap:2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    }
+    form{
+      display:grid; gap: .8rem;
+    }
+    input, textarea{
+      width:100%;
+      border:1px solid var(--border);
+      border-radius: 10px;
+      padding:.8rem 1rem;
+      background: transparent;
+      color: inherit;
+      font-family: inherit;
+      resize: vertical;
+      min-height: 42px;
+    }
+    footer{
+      position:absolute; bottom: 1rem; left: 0; right: 0;
+      text-align:center; font-size:.85rem; color: var(--muted);
+      padding: 0 1rem;
+    }
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior: auto; }
+      .btn:hover{ transform:none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header>
+    <div class="brand">Beratung · Technik</div>
+    <nav id="nav">
+      <a href="#home">Start</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#vorgehen">Vorgehen</a>
+      <a href="#referenzen">Referenzen</a>
+      <a href="#ueber-uns">Über&nbsp;uns</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#impressum">Impressum</a>
+      <button id="themeToggle" aria-label="Theme umschalten">🌓</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container">
+      <span class="badge">Strategie · Technologie · Wirkung</span>
+      <h1>Beratung · Technik<br/>Wir verbinden Business & Engineering.</h1>
+      <p>Wir helfen Unternehmen, **Strategie, Prozesse und Technologie** so zu verzahnen, dass echte Geschäftsergebnisse entstehen – pragmatisch, schnell, messbar.</p>
+      <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+        <a class="btn btn-primary" href="#kontakt">Kostenloses Erstgespräch</a>
+        <a class="btn btn-outline" href="#leistungen">Unsere Leistungen</a>
+      </div>
+    </div>
+    <footer>© <span id="year"></span> Beratung · Technik</footer>
+  </section>
+
+  <!-- LEISTUNGEN -->
+  <section id="leistungen">
+    <div class="container">
+      <h2>Leistungen</h2>
+      <p class="muted">Klarer Fokus, tiefe Expertise, schnelle Umsetzung.</p>
+      <div class="grid grid-3" style="margin-top:2rem;">
+        <div class="card">
+          <h3>Digitale Strategie & Transformation</h3>
+          <p>Von der Vision zur Roadmap: Geschäftsmodell, Prozesse, Organisation & KPIs.</p>
+        </div>
+        <div class="card">
+          <h3>Software-Architektur & Cloud</h3>
+          <p>Skalierbare, wartbare Systeme. Cloud-Migrationen, Microservices, DevOps.</p>
+        </div>
+        <div class="card">
+          <h3>Data & AI Enablement</h3>
+          <p>Datenplattformen, ML/AI Use Cases, Governance, Metriken – value first.</p>
+        </div>
+        <div class="card">
+          <h3>Interim CTO / Tech Leadership</h3>
+          <p>Hands-on Führung, Architektur- und Team-Aufbau, Delivery auf Kurs.</p>
+        </div>
+        <div class="card">
+          <h3>Workshops & Sparring</h3>
+          <p>Architektur-Reviews, Team-Coaching, Strategie- und Offsite-Workshops.</p>
+        </div>
+      </div>
+    </div>
+    <footer>© <span id="year2"></span> Beratung · Technik</footer>
+  </section>
+
+  <!-- VORGEHEN -->
+  <section id="vorgehen">
+    <div class="container">
+      <h2>So arbeiten wir</h2>
+      <p class="muted">Pragmatisch. Transparent. Ergebnisorientiert.</p>
+      <div class="steps" style="margin-top:1.6rem;">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <h3>Diagnose</h3>
+            <p>Wir verstehen Ziele, Engpässe und Kontext. Ohne Buzzwords, dafür mit Zahlen.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+          <h3>Design</h3>
+          <p>Wir entwickeln klare Optionen mit Trade-offs, Kosten/Nutzen & Roadmap.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+          <h3>Delivery</h3>
+          <p>Umsetzung mit Ihnen oder für Sie – hands-on, mit Metriken & Ownership.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div>
+          <h3>Iterieren</h3>
+          <p>Kontinuierliche Verbesserung. Wir messen Wirkung, nicht Aktivität.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>© <span id="year3"></span> Beratung · Technik</footer>
+  </section>
+
+  <!-- REFERENZEN -->
+  <section id="referenzen">
+    <div class="container">
+      <h2>Referenzen (Auswahl)</h2>
+      <p class="muted">Aus Datenschutzgründen anonymisiert – Details gern im Gespräch.</p>
+      <div class="grid grid-3" style="margin-top:2rem;">
+        <div class="card">
+          <h3>Skalierung SaaS-Plattform</h3>
+          <p>Cloud-Architektur, CI/CD, Observability. Ergebnis: <strong>80% schnellere Deployments</strong>, <strong>50% weniger Incidents</strong>.</p>
+        </div>
+        <div class="card">
+          <h3>Data Platform Greenfield</h3>
+          <p>Modernes Data Lakehouse, Self-Service BI, Governance. <strong>Time-to-Insight -70%</strong>.</p>
+        </div>
+        <div class="card">
+          <h3>Interim CTO in Hypergrowth</h3>
+          <p>Team-Reorg, Architektur-Modernisierung, Hiring-Plan. <strong>Delivery-Verlässlichkeit +35%</strong>.</p>
+        </div>
+      </div>
+    </div>
+    <footer>© <span id="year4"></span> Beratung · Technik</footer>
+  </section>
+
+  <!-- ÜBER UNS -->
+  <section id="ueber-uns">
+    <div class="container">
+      <h2>Über uns</h2>
+      <p class="muted">Strategie-Verstand trifft Technik-Tiefe.</p>
+      <p>Wir sind ein kompaktes, senioriges Team aus Beratung, Software-Engineering, Data & Produkt. Kein PowerPoint-Zirkus – wir liefern Substanz, Klarheit und Umsetzung.</p>
+      <ul>
+        <li><strong>Werte:</strong> Klarheit, Verantwortung, Tempo, Pragmatismus.</li>
+        <li><strong>Arbeitsweise:</strong> Transparent, ehrlich, hands-on.</li>
+        <li><strong>Tooling:</strong> Cloud-native, testbar, automatisiert, messbar.</li>
+      </ul>
+    </div>
+    <footer>© <span id="year5"></span> Beratung · Technik</footer>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <p class="muted">Lassen Sie uns über Ihr Ziel sprechen.</p>
+      <div class="contact" style="margin-top:2rem;">
+        <div>
+          <h3>Adresse</h3>
+          <p>Beratung · Technik GmbH<br/>
+            Beispielgasse 1<br/>
+            1010 Wien, Österreich</p>
+
+          <h3>Kontakt</h3>
+          <p>
+            E: <a href="mailto:hello@beratung-technik.at">hello@beratung-technik.at</a><br/>
+            T: <a href="tel:+43123456789">+43 1 234 56 789</a>
+          </p>
+
+          <h3>Social</h3>
+          <p>
+            <a href="#" aria-label="LinkedIn">LinkedIn</a> ·
+            <a href="#" aria-label="GitHub">GitHub</a>
+          </p>
+        </div>
+        <div>
+          <h3>Nachricht senden</h3>
+          <form name="contact" method="post" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              E-Mail
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Nachricht
+              <textarea name="message" rows="6" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Senden</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>© <span id="year6"></span> Beratung · Technik</footer>
+  </section>
+
+  <!-- IMPRESSUM -->
+  <section id="impressum">
+    <div class="container">
+      <h2>Impressum</h2>
+      <p><strong>Beratung · Technik GmbH</strong><br/>
+        Beispielgasse 1, 1010 Wien, Österreich<br/>
+        FN 123456a, Handelsgericht Wien<br/>
+        UID: ATU12345678</p>
+      <p>Geschäftsführung: Max Mustermann</p>
+      <p>Haftungsausschluss: Alle Inhalte ohne Gewähr. Keine Haftung für externe Links.</p>
+      <p>Datenschutz: Wir verarbeiten personenbezogene Daten ausschließlich gemäß DSGVO. Details in unserer Datenschutzerklärung.</p>
+    </div>
+    <footer>© <span id="year7"></span> Beratung · Technik</footer>
+  </section>
+
+  <script>
+    // Year stamps
+    const y = new Date().getFullYear();
+    document.querySelectorAll('[id^="year"]').forEach(el => el.textContent = y);
+
+    // Theme init
+    const root = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    root.dataset.theme = saved || (prefersDark ? 'dark' : 'light');
+
+    // Theme toggle
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', root.dataset.theme);
+    });
+
+    // Scroll progress
+    const progress = document.getElementById('progress');
+    const onScroll = () => {
+      const doc = document.documentElement;
+      const scrolled = (doc.scrollTop) / (doc.scrollHeight - doc.clientHeight) * 100;
+      progress.style.width = scrolled + '%';
+    };
+    document.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Active nav link (scrollspy)
+    const sections = [...document.querySelectorAll('section[id]')];
+    const navLinks = [...document.querySelectorAll('nav a[href^="#"]')];
+    const byId = id => navLinks.find(a => a.getAttribute('href') === '#' + id);
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          navLinks.forEach(a => a.classList.remove('active'));
+          const link = byId(entry.target.id);
+          if(link) link.classList.add('active');
+        }
+      });
+    }, { threshold: 0.55 });
+
+    sections.forEach(s => io.observe(s));
+  </script>
+</body>
+</html>
