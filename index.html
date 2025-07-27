@@ -6,6 +6,41 @@
   <title>Beratung · Technik — Moderne Unternehmensberatung</title>
   <meta name="description" content="Beratung & Technik: Strategie, Technologie & Umsetzung – klar, pragmatisch, wirkungsvoll.">
   <style>
+
+.flex-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.text-content {
+  flex: 1 1 60%;
+  min-width: 280px;
+}
+
+.image-content {
+  flex: 0 0 200px;
+  text-align: center;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* optional, für schönes Aussehen */
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .image-content {
+    margin-top: 1rem;
+    flex: none;
+  }
+}
+    
     :root{
       --nav-h: 72px;
       --accent: #355cff;
@@ -346,7 +381,24 @@
     <footer>© <span id="year4"></span> Beratung & Technik (Unternehmensberatung & IT) | <a href="#impressum">Impressum</a></footer>
   </section> -->
 
-  <!-- ÜBER UNS -->
+  <section id="ueber-uns">
+  <div class="container flex-container">
+    <div class="text-content">
+      <h2>Warum Sie mit mir zusammen arbeiten sollen?</h2>
+      <p class="muted">Technik. Wirtschaft. Umsetzungskompetenz.</p>
+      <p>Mit über 30 Jahren Erfahrung in Geschäftsführung, Vertrieb (IT), Qualitätsmanagement und Beratung verbinde ich technisches Know-how mit betriebswirtschaftlicher Klarheit.</p>
+      <p>Mein Wissen basiert auf einem fundierten technischen (Elektrotechnik) und betriebswirtschaftlichen Hintergrund – mit Schwerpunkten in Unternehmensstrategie, Vertrieb und wirtschaftlicher Entwicklung – und wird durch langjährige Praxiserfahrung in leitenden Positionen ergänzt.</p>
+      <p>Als selbstständiger Unternehmensberater begleite ich Unternehmen dabei, Prozesse zu optimieren, Geschäftsmodelle strategisch weiterzuentwickeln und den B2B-Vertrieb wirksam auszubauen. Zudem realisiere ich zukunftssichere Glasfaser- und Heimnetzwerklösungen für Wohnbauträger, Eigentümer und Häuslbauer.</p>
+    </div>
+    <div class="image-content">
+      <img src="pfad-zu-deinem-bild.jpg" alt="Dein Name" />
+      <p><strong>Dein Name</strong><br>Deine Funktion</p>
+    </div>
+  </div>
+  <footer>© <span id="year5"></span> Beratung & Technik (Unternehmensberatung & IT) | <a href="#impressum">Impressum</a></footer>
+</section>
+  
+  <!-- ÜBER UNS 
   <section id="ueber-uns">
     <div class="container">
       <h2>Warum Sie mit mir zusammen arbeiten sollen?</h2>
@@ -355,13 +407,13 @@
       <p>Mein Wissen basiert auf einem fundierten technischen (Elektrotechnik) und betriebswirtschaftlichen Hintergrund – mit Schwerpunkten in Unternehmensstrategie, Vertrieb und wirtschaftlicher Entwicklung – und wird durch langjährige Praxiserfahrung in leitenden Positionen ergänzt.</p>
       <p>Als selbstständiger Unternehmensberater begleite ich Unternehmen dabei, Prozesse zu optimieren, Geschäftsmodelle strategisch weiterzuentwickeln und den B2B-Vertrieb wirksam auszubauen.
          Zudem realisiere ich zukunftssichere Glasfaser- und Heimnetzwerklösungen für Wohnbauträger, Eigentümer und Häuslbauer.</p>
-   <!--   <ul>
+   <ul>
         <li><strong>Werte:</strong> Klarheit, Verantwortung, Tempo, Pragmatismus.</li>
         <li><strong>Arbeitsweise:</strong> Transparent, ehrlich, hands-on.</li>
-      </ul>  -->
+      </ul>  
     </div>
     <footer>© <span id="year5"></span> Beratung & Technik (Unternehmensberatung & IT) | <a href="#impressum">Impressum</a></footer>
-  </section>
+  </section> -->
 
   <!-- KONTAKT -->
   <section id="kontakt">
