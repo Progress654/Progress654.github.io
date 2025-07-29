@@ -206,6 +206,20 @@
     @media (prefers-reduced-motion: reduce){
       html{ scroll-behavior: auto; }
       .btn:hover{ transform:none; }
+nav {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  nav::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  nav a {
+    flex: 0 0 auto; /* verhindert Umbruch */
+  }
     }
   </style>
 </head>
