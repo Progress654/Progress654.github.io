@@ -221,9 +221,6 @@
   nav a {
     flex: 0 0 auto;
   }
-      html {
-    scroll-padding-top: 100px; /* oder z. B. 80px – je nach Höhe des Headers am Handy */
-  }
 }
   </style>
 </head>
@@ -582,4 +579,18 @@
   });
 </script>
 </body>
+  
+  <script>
+  const navLinks = document.querySelectorAll("nav a");
+
+  navLinks.forEach(link => {
+    ["click", "touchstart"].forEach(event => {
+      link.addEventListener(event, () => {
+        navLinks.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
+  });
+</script>
+  
 </html>
