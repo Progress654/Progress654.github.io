@@ -579,18 +579,4 @@
   });
 </script>
 </body>
-  
-  <script>
-  const navLinks = document.querySelectorAll("nav a");
-
-  navLinks.forEach(link => {
-    ["click", "touchstart"].forEach(event => {
-      link.addEventListener(event, () => {
-        navLinks.forEach(l => l.classList.remove("active"));
-        link.classList.add("active");
-      });
-    });
-  });
-</script>
-  
 </html>
