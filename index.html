@@ -203,24 +203,25 @@
       text-align:center; font-size:.85rem; color: var(--muted);
       padding: 0 1rem;
     }
-    @media (prefers-reduced-motion: reduce){
-      html{ scroll-behavior: auto; }
-      .btn:hover{ transform:none; }
-nav {
+    @media (max-width: 768px) {
+  nav {
+    display: flex;
     overflow-x: auto;
     white-space: nowrap;
+    gap: 1.2rem;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
+    padding-bottom: 0.5rem; /* optional für bessere Wischbarkeit */
   }
 
   nav::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    display: none;
   }
 
   nav a {
-    flex: 0 0 auto; /* verhindert Umbruch */
+    flex: 0 0 auto;
   }
-    }
+}
   </style>
 </head>
 <body>
