@@ -230,12 +230,21 @@
   letter-spacing: .02em;
 }
 
-.brand svg {
+<!-- .brand svg {
   max-width: 150px;
   height: auto;
   display: block;
+} -->
+.brand svg {
+  width: 150px;
+  height: auto;
 }
 
+@media (min-width: 768px) {
+  .brand svg {
+    width: 250px;
+  }
+}
 header {
   display: flex;
   align-items: center;
