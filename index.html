@@ -222,6 +222,42 @@
     flex: 0 0 auto;
   }
 }
+<!-- BEGINN -->
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.brand svg {
+  max-width: 150px;
+  height: auto;
+  display: block;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  padding: 0 clamp(1rem, 5vw, 4rem);
+  backdrop-filter: blur(16px);
+  background: color-mix(in srgb, var(--bg) 75%, transparent);
+  border-bottom: 1px solid var(--border);
+  z-index: 9999;
+}
+
+nav {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+<!-- ENDE -->
+    
   </style>
 </head>
 <body>
