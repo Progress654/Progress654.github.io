@@ -288,7 +288,6 @@ nav {
   display: flex;
   align-items: center;
   gap: 1rem;
-  flex-wrap: nowrap;
   position: relative;
 }
 
@@ -311,8 +310,28 @@ nav {
   align-items: center;
   justify-content: center;
   color: var(--fg);
-}    
+}
 
+/* Dropdown Menü, versteckt */
+.menu-content {
+  display: none;
+  position: absolute;
+  top: 48px; /* Abstand unter den Punkten */
+  right: 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 0.5rem 1rem;
+  flex-direction: column;
+  gap: 0.8rem;
+  z-index: 10000;
+}
+
+/* Menü sichtbar machen */
+.menu-content.show {
+  display: flex;
+}
  
     
   </style>
@@ -352,7 +371,6 @@ nav {
       <a href="#referenzen">Referenzen</a>
       <a href="#ueber-uns">Über&nbsp;mich</a>
       <a href="#faq">FAQ</a>
-      <a href="#kontakt">Kontakt</a>
      <!-- <a href="#impressum">Impressum</a>
       <button id="themeToggle" aria-label="Theme umschalten">🌓</button>
     </nav>  -->
@@ -367,7 +385,6 @@ nav {
           <a href="#vorgehen">Vorgehen</a>
           <a href="#ueber-uns">Über&nbsp;mich</a>
           <a href="#faq">FAQ</a>
-          <a href="#kontakt">Kontakt</a>
           <a href="#impressum">Impressum</a>
           <button id="themeToggle" aria-label="Theme umschalten">🌓</button>
         </nav>
