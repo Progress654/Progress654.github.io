@@ -290,6 +290,7 @@ nav {
   gap: 1rem;
   position: relative;
   flex-wrap: nowrap; /* Verhindert Umbruch */
+  border: 2px solid red; /* Zum Sichtbarmachen */
 }
 
 .kontakt-link {
@@ -299,7 +300,7 @@ nav {
   white-space: nowrap;
   display: inline-flex; /* sicherstellen, dass Kontakt-Link inline bleibt */
   align-items: center;
-}
+  border: 2px solid blue; /* Sichtbarmachen */}
 
 .menu-button {
   background: none;
@@ -313,7 +314,7 @@ nav {
   align-items: center;
   justify-content: center;
   color: var(--fg);
-}
+  border: 2px solid green !important; /* Sichtbarmachen */}
 
 /* Dropdown Menü, versteckt */
 .menu-content {
@@ -326,7 +327,7 @@ nav {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 0.5rem 1rem;
-  flex-direction: row;
+  flex-direction: colunm;
   gap: 0.8rem;
   z-index: 10000;
 }
