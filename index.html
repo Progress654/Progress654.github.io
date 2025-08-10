@@ -283,25 +283,7 @@ nav {
 }    
 
 <!-- NEU ANFANG -->
-    
-.menu-container {
-  position: relative;
-}
 
-.menu-button {
-  background: none;
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  height: 36px;
-  width: 36px;
-  cursor: pointer;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--fg);
-}
-<!-- NEU 10.8 -->
 .menu-container {
   display: flex;
   align-items: center;
@@ -309,12 +291,12 @@ nav {
   flex-wrap: nowrap;
   position: relative;
 }
-    
+
 .kontakt-link {
   font-weight: 600;
-  margin-right: 1rem; /* Abstand zwischen Kontakt und Punkten */
   text-decoration: none;
   color: var(--fg);
+  white-space: nowrap;
 }
 
 .menu-button {
@@ -329,64 +311,9 @@ nav {
   align-items: center;
   justify-content: center;
   color: var(--fg);
-}
+}    
 
-.menu-content {
-  display: none; /* Versteckt das Menü standardmäßig */
-  position: absolute;
-  top: 48px; /* Abstand unter den Punkten */
-  right: 0;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 0.5rem 1rem;
-  flex-direction: column;
-  gap: 0.8rem;
-  z-index: 10000;
-}
-
-.menu-content.show {
-  display: flex; /* Zeigt das Menü, wenn Klasse "show" gesetzt ist */
-}
-
-<!-- NEU ENDE 10.8 -->
-    
-.menu-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: var(--nav-h);
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 0.5rem 0;
-  z-index: 9999;
-}
-
-.menu-content a,
-.menu-content button {
-  display: block;
-  padding: 0.6rem 1rem;
-  text-align: left;
-  background: none;
-  border: none;
-  width: 100%;
-  color: var(--fg);
-  font: inherit;
-}
-
-.menu-content a:hover,
-.menu-content button:hover {
-  background-color: var(--surface);
-}
-
-.menu-content.show {
-  display: block;
-}
-
-<!-- NEU ENDE -->
+ 
     
   </style>
 </head>
