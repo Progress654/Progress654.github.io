@@ -284,16 +284,15 @@ nav {
 
 <!-- NEU ANFANG -->
 
-.menu-container {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  position: relative;
-  flex-wrap: nowrap; /* Verhindert Umbruch */
-  border: 2px solid red; /* Zum Sichtbarmachen */
-}
 
-.kontakt-link {
+.menu-container {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  border: 2px solid red !important; /* nur zur Sichtbarkeit, kann später raus */
+}
+  .kontakt-link {
   font-weight: 600;
   text-decoration: none;
   color: var(--fg);
