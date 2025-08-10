@@ -280,6 +280,63 @@ nav {
     width: 350px;
   }
 }    
+
+<!-- NEU ANFANG -->
+    
+.menu-container {
+  position: relative;
+}
+
+.menu-button {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fg);
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: var(--nav-h);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 0.5rem 0;
+  z-index: 9999;
+}
+
+.menu-content a,
+.menu-content button {
+  display: block;
+  padding: 0.6rem 1rem;
+  text-align: left;
+  background: none;
+  border: none;
+  width: 100%;
+  color: var(--fg);
+  font: inherit;
+}
+
+.menu-content a:hover,
+.menu-content button:hover {
+  background-color: var(--surface);
+}
+
+.menu-content.show {
+  display: block;
+}
+
+<!-- NEU ENDE -->
+    
   </style>
 </head>
 <body>
@@ -309,18 +366,33 @@ nav {
       
    <!--  <h4>BERATUNG & TECHNIK</h4>  -->
     </a>
-    <nav id="nav">
+  <!--  <nav id="nav">
       <a href="#home">Start</a>
       <a href="#vorteile">Vorteile</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#vorgehen">Vorgehen</a>
-      <!-- <a href="#referenzen">Referenzen</a> -->
+      <a href="#referenzen">Referenzen</a>
       <a href="#ueber-uns">Über&nbsp;mich</a>
       <a href="#faq">FAQ</a>
       <a href="#kontakt">Kontakt</a>
-     <!-- <a href="#impressum">Impressum</a> -->
+     <!-- <a href="#impressum">Impressum</a>
       <button id="themeToggle" aria-label="Theme umschalten">🌓</button>
-    </nav>
+    </nav>  -->
+
+      <div class="menu-container">
+        <button class="menu-button" onclick="toggleMenu()">⋯</button>
+        <nav id="dropdown" class="menu-content">
+          <a href="#home">Start</a>
+          <a href="#vorteile">Vorteile</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#vorgehen">Vorgehen</a>
+          <a href="#ueber-uns">Über&nbsp;mich</a>
+          <a href="#faq">FAQ</a>
+          <a href="#kontakt">Kontakt</a>
+          <button id="themeToggle" aria-label="Theme umschalten">🌓</button>
+        </nav>
+      </div>
+    
   </header>
 
   <!-- HERO -->
@@ -787,6 +859,17 @@ nav {
 
   <!-- NEU ENDE -->
 
+  <script>
+function toggleMenu() {
+  document.getElementById("dropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.closest('.menu-container')) {
+    document.getElementById("dropdown").classList.remove("show");
+  }
+}
+</script>
   
 </body>
 </html>
