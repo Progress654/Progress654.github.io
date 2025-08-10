@@ -301,7 +301,20 @@ nav {
   justify-content: center;
   color: var(--fg);
 }
+<!-- NEU 10.8 -->
+.menu-container {
+  display: flex;
+  align-items: center;
+}
 
+.kontakt-link {
+  font-weight: 600;
+  margin-right: 1rem; /* Abstand zu den Punkten */
+  text-decoration: none;
+}
+
+<!-- NEU ENDE 10.8 -->
+    
 .menu-content {
   display: none;
   position: absolute;
@@ -381,6 +394,7 @@ nav {
     </nav>  -->
     
       <div class="menu-container">
+        <a href="#kontakt" class="kontakt-link">Kontakt</a>
         <button class="menu-button" onclick="toggleMenu()">⋯</button>
         <nav id="dropdown" class="menu-content">
           <a href="#home">Start</a>
@@ -390,6 +404,7 @@ nav {
           <a href="#ueber-uns">Über&nbsp;mich</a>
           <a href="#faq">FAQ</a>
           <a href="#kontakt">Kontakt</a>
+          <a href="#impressum">Impressum</a>
           <button id="themeToggle" aria-label="Theme umschalten">🌓</button>
         </nav>
       </div>
