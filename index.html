@@ -305,12 +305,47 @@ nav {
 .menu-container {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .kontakt-link {
   font-weight: 600;
-  margin-right: 1rem; /* Abstand zu den Punkten */
+  margin-right: 1rem; /* Abstand zwischen Kontakt und Punkten */
   text-decoration: none;
+  color: var(--fg);
+}
+
+.menu-button {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fg);
+}
+
+.menu-content {
+  display: none; /* Versteckt das Menü standardmäßig */
+  position: absolute;
+  top: 48px; /* Abstand unter den Punkten */
+  right: 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 0.5rem 1rem;
+  flex-direction: column;
+  gap: 0.8rem;
+  z-index: 10000;
+}
+
+.menu-content.show {
+  display: flex; /* Zeigt das Menü, wenn Klasse "show" gesetzt ist */
 }
 
 <!-- NEU ENDE 10.8 -->
@@ -875,7 +910,7 @@ nav {
 
   <!-- NEU ENDE -->
   
-  <script>
+<!--  <script>
 function toggleMenu() {
   document.getElementById("dropdown").classList.toggle("show");
 }
@@ -885,6 +920,24 @@ window.onclick = function(event) {
     document.getElementById("dropdown").classList.remove("show");
   }
 }
+</script> -->
+  
+<!-- NEU 10.8 -->
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('dropdown');
+    menu.classList.toggle('show');
+  }
+
+  // Optional: Menü schließen, wenn man außerhalb klickt
+  window.addEventListener('click', function(e) {
+    const menu = document.getElementById('dropdown');
+    const button = document.querySelector('.menu-button');
+    if (!menu.contains(e.target) && !button.contains(e.target)) {
+      menu.classList.remove('show');
+    }
+  });
 </script>
   
 </body>
