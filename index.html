@@ -289,6 +289,7 @@ nav {
   align-items: center;
   gap: 1rem;
   position: relative;
+  flex-wrap: nowrap; /* Verhindert Umbruch */
 }
 
 .kontakt-link {
@@ -296,6 +297,8 @@ nav {
   text-decoration: none;
   color: var(--fg);
   white-space: nowrap;
+  display: inline-flex; /* sicherstellen, dass Kontakt-Link inline bleibt */
+  align-items: center;
 }
 
 .menu-button {
