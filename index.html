@@ -286,18 +286,18 @@ nav {
 
 
 .menu-container {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  gap: 1rem !important;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
 }
-  .kontakt-link {
+
+.kontakt-link {
   font-weight: 600;
+  margin-right: 1rem; /* Abstand zwischen Kontakt und Punkten */
   text-decoration: none;
   color: var(--fg);
-  white-space: nowrap;
-  display: inline-flex; /* sicherstellen, dass Kontakt-Link inline bleibt */
-  align-items: center;
+}
 
 .menu-button {
   background: none;
@@ -311,8 +311,8 @@ nav {
   align-items: center;
   justify-content: center;
   color: var(--fg);
+}
 
-/* Dropdown Menü, versteckt */
 .menu-content {
   display: none;
   position: absolute;
@@ -328,10 +328,27 @@ nav {
   z-index: 10000;
 }
 
-/* Menü sichtbar machen */
 .menu-content.show {
   display: flex;
 }
+
+.menu-content a,
+.menu-content button {
+  display: block;
+  padding: 0.6rem 1rem;
+  text-align: left;
+  background: none;
+  border: none;
+  width: 100%;
+  color: var(--fg);
+  font: inherit;
+}
+
+.menu-content a:hover,
+.menu-content button:hover {
+  background-color: var(--surface);
+}
+
  
     
   </style>
@@ -374,22 +391,22 @@ nav {
      <!-- <a href="#impressum">Impressum</a>
       <button id="themeToggle" aria-label="Theme umschalten">🌓</button>
     </nav>  -->
-      <div class="menu-container" style="display:flex; border: 2px solid red; gap: 1rem; align-items: center;">
-      <a href="#kontakt" class="kontakt-link">Kontakt</a>
-     <!-- <div class="menu-container">
-        <a href="#kontakt" class="kontakt-link">Kontakt</a> -->
-        <button class="menu-button" onclick="toggleMenu()">⋯</button>
-        <nav id="dropdown" class="menu-content">
-          <a href="#home">Start</a>
-          <a href="#vorteile">Vorteile</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#vorgehen">Vorgehen</a>
-          <a href="#ueber-uns">Über&nbsp;mich</a>
-          <a href="#faq">FAQ</a>
-          <a href="#impressum">Impressum</a>
-          <button id="themeToggle" aria-label="Theme umschalten">🌓</button>
-        </nav>
-      </div>
+      <div class="menu-container">
+          <a href="#kontakt" class="kontakt-link">Kontakt</a>
+          <button class="menu-button" onclick="toggleMenu()">⋯</button>
+          <nav id="dropdown" class="menu-content">
+            <a href="#home">Start</a>
+            <a href="#vorteile">Vorteile</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#vorgehen">Vorgehen</a>
+            <a href="#ueber-uns">Über&nbsp;mich</a>
+            <a href="#faq">FAQ</a>
+            <a href="#kontakt">Kontakt</a>
+            <a href="#impressum">Impressum</a>
+            <button id="themeToggle" aria-label="Theme umschalten">🌓</button>
+          </nav>
+        </div>
+
   </header>
 
   <!-- HERO -->
