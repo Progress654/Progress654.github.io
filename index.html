@@ -80,60 +80,6 @@
       color: var(--accent);
       border-color: var(--accent);
     }
-
-<!-- NEU -->
-
-    /* Drei Punkte Button */
-#menuToggle {
-  font-size: 28px;
-  font-weight: bold;
-  background: none;
-  border: none;
-  color: var(--fg);
-  cursor: pointer;
-  display: inline-block;
-  transform: rotate(90deg); /* macht die Punkte senkrecht */
-}
-
-/* Menü verstecken, bis geklickt */
-.menu {
-  display: none;
-  position: absolute;
-  top: var(--nav-h);
-  left: 0;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  flex-direction: column;
-  padding: 0.5rem;
-}
-
-.menu a {
-  padding: 0.5rem 1rem;
-  display: block;
-  color: var(--fg);
-}
-
-.menu a:hover {
-  background: var(--accent);
-  color: white;
-}
-
-/* Kontakt-Link rechts vom Button */
-.kontakt-link {
-  margin-left: 1rem;
-  font-weight: 600;
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.kontakt-link:hover {
-  text-decoration: underline;
-}
-
-<!-- NEU ENDE -->
-
     
     #themeToggle{
       margin-left: .6rem;
@@ -927,13 +873,6 @@ window.onclick = function(event) {
     document.getElementById("dropdown").classList.remove("show");
   }
 }
-</script>
-
-<script>
-  document.getElementById('menuToggle').addEventListener('click', function () {
-    const menu = document.getElementById('menu');
-    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-  });
 </script>
   
 </body>
