@@ -104,11 +104,17 @@
     section{
       min-height: 100vh;
       scroll-snap-align: start;
-      scroll-snap-stop: always;
+      /*scroll-snap-stop: always; */
       padding: 100px clamp(1rem, 6vw, 6rem) clamp(4rem, 8vw, 6rem);
       display:flex; align-items:center;
       position: relative;
     }
+
+      html, body {
+        scroll-snap-type: y proximity;  /* weiches Einrasten */
+        scroll-behavior: smooth;       /* sanfte Scrollbewegung bei Ankern */
+      }
+    
     .container{
       max-width: 1200px;
       margin: 0 auto;
