@@ -109,7 +109,37 @@
       display:flex; align-items:center;
       position: relative;
     }
+<! heute 6.9.2025 -->
+    
+section#homeway-details {
+  display: block !important; /* überschreibt globales flex */
+}
 
+section#homeway-details .homeway-gallery {
+  display: flex;
+  justify-content: center; /* Bild mittig */
+  align-items: center;     /* vertikal zentrieren */
+  text-align: center;
+}
+
+section#homeway-details .homeway-gallery img {
+  display: block;
+  margin: 0 auto;          /* zusätzliche Absicherung */
+  width: 100%;
+  height: auto;
+  max-width: 600px;        /* gewünschte maximale Breite */
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  section#homeway-details .homeway-gallery img {
+    max-width: 100%; /* am Handy volle Breite */
+  }
+}
+
+
+<! heute 6.9.2025 -->
+    
       html, body {
         scroll-snap-type: y proximity;  /* weiches Einrasten */
         scroll-behavior: smooth;       /* sanfte Scrollbewegung bei Ankern */
