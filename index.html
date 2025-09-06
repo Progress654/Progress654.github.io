@@ -347,23 +347,25 @@ nav {
   background-color: var(--surface);
 }
 
-    
 .homeway-gallery {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  justify-content: center; /* Bild mittig */
 }
 
 .homeway-gallery img {
-  flex: 1 1 48%;
+  width: 100%;
+  height: auto;
+  max-width: 800px; /* maximale Breite am Desktop */
   border-radius: 8px;
+  display: block;
 }
 
 @media (max-width: 768px) {
   .homeway-gallery img {
-    flex: 1 1 100%;
+    max-width: 100%; /* am Handy volle Breite */
   }
 }
+
 
 
     
@@ -622,23 +624,23 @@ nav {
   <div class="container">
     <h2>homeway Multimedia‑Inhausnetz (NE5) – Details</h2>
     <p>
-      Das homeway Multimedia‑Inhausnetz ist Ihre zukunftssichere Komplettlösung für modernes Wohnen. 
-      Es verteilt TV, Internet, Telefon, WLAN und Glasfaseranschluss zuverlässig in jedem Raum – über 
-      eine einheitliche, leistungsstarke Infrastruktur. So genießen Sie maximale Flexibilität, höchste 
-      Übertragungsgeschwindigkeiten und perfekte Empfangsqualität – heute und in Zukunft.
+      Das homeway Multimedia‑Inhausnetz ist Ihre zukunftssichere Komplettlösung für modernes Wohnen.
+      Es verteilt TV, Internet, Telefon, WLAN und Glasfaseranschluss zuverlässig in jedem Raum –
+      über eine einheitliche, leistungsstarke Infrastruktur. So genießen Sie maximale Flexibilität,
+      höchste Übertragungsgeschwindigkeiten und perfekte Empfangsqualität – heute und in Zukunft.
     </p>
 
     <div class="homeway-gallery">
-  <img src="images/hausverkabelung.png" alt="homeway-Struktur">
-  </div>
+      <img src="images/hausverkabelung.png" alt="homeway-Struktur">
+    </div>
 
     <p style="margin-top: 20px;">
-      Mit homeway können Sie Multimedia‑Anschlüsse individuell konfigurieren und
-      jederzeit an neue Anforderungen anpassen – ideal für Neubauten und
-      Renovierungen.
+      Mit homeway können Sie Multimedia‑Anschlüsse individuell konfigurieren und jederzeit an neue
+      Anforderungen anpassen – ideal für Neubauten und Renovierungen.
     </p>
   </div>
 </section>
+
 
 
   
