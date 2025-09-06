@@ -362,21 +362,27 @@ section#homeway-details .container {
   text-align: left; /* Überschrift linksbündig */
 }
 
+section#homeway-details .container {
+  max-width: 100%; /* volle Breite nutzen */
+  text-align: center; /* Inhalt mittig ausrichten */
+}
+
+    
 section#homeway-details h2 {
   text-align: left; /* explizit links */
 }
 
 section#homeway-details .homeway-gallery {
   display: flex;
-  justify-content: center; /* Bild horizontal zentrieren */
-  margin-top: 20px;
+  justify-content: center; /* horizontal zentrieren */
+  width: 100%;
 }
 
 section#homeway-details .homeway-gallery img {
-  max-width: 500px;
+  max-width: 600px; /* begrenzt die Bildbreite */
   width: 100%;
   height: auto;
-  display: block;
+  margin: 0 auto; /* zusätzliche Absicherung */
 }
 
 
