@@ -347,6 +347,26 @@ nav {
   background-color: var(--surface);
 }
 
+    
+.homeway-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.homeway-gallery img {
+  flex: 1 1 48%;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .homeway-gallery img {
+    flex: 1 1 100%;
+  }
+}
+
+
+    
   </style>
 </head>
 <body>
@@ -608,11 +628,11 @@ nav {
       Übertragungsgeschwindigkeiten und perfekte Empfangsqualität – heute und in Zukunft.
     </p>
 
-    <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
-      <img src="images/hausverkabelung.png" alt="homeway-Struktur" style="max-width: 48%; border-radius: 8px;">
-      <img src="images/onefiber.png" alt="Anschlussdose mit Glasfaser, LAN und TV" style="max-width: 48%; border-radius: 8px;">
-      <img src="images/Accesspoint.jpg" alt="WLAN Accesspoint Wi-Fi 6 ax" style="max-width: 48%; border-radius: 8px;">
-    </div>
+    <div class="homeway-gallery">
+  <img src="images/hausverkabelung.png" alt="homeway-Struktur">
+  <img src="images/onefiber.png" alt="Anschlussdose mit Glasfaser, LAN und TV">
+  <img src="images/accesspoint-weiss-1.jpg" alt="WLAN Accesspoint Wi-Fi 6 ax">
+  </div>
 
     <p style="margin-top: 20px;">
       Mit homeway können Sie Multimedia‑Anschlüsse individuell konfigurieren und
