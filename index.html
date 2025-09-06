@@ -350,10 +350,14 @@ nav {
 
 <! heute 6.9.2025 -->
 
+/* --- HOMEWAY-DETAILS: saubere Version --- */
 section#homeway-details {
-  display: block !important; /* Flex-Layout deaktivieren */
-  align-items: initial !important; /* vertikale Zentrierung abschalten */
-  justify-content: initial !important; /* horizontale Flex-Ausrichtung abschalten */
+  /* globales Flex-Layout komplett abschalten */
+  display: block !important;
+  align-items: initial !important;
+  justify-content: initial !important;
+
+  /* Abstand & Hintergrund */
   padding: 60px clamp(1rem, 6vw, 6rem);
   background-color: #f9f9f9;
 }
