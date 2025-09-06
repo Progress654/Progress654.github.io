@@ -347,17 +347,21 @@ nav {
   background-color: var(--surface);
 }
 
+
 .homeway-gallery {
   display: flex;
   justify-content: center; /* Bild mittig */
+  align-items: center;       /* vertikal zentrieren, falls nötig */
+  text-align: center; 
 }
 
 .homeway-gallery img {
+   display: block;
+  margin: 0 auto;            /* zusätzliche Absicherung */
   width: 100%;
   height: auto;
-  max-width: 600px; /* maximale Breite am Desktop */
+  max-width: 600px;          /* gewünschte maximale Breite */
   border-radius: 8px;
-  display: block;
 }
 
 @media (max-width: 768px) {
@@ -638,7 +642,7 @@ nav {
     <div class="homeway-gallery">
       <img src="images/hausverkabelung1.png" alt="homeway-Struktur">
     </div>
-
+    
     <p style="margin-top: 20px;">
       Mit homeway können Sie Multimedia‑Anschlüsse individuell konfigurieren und jederzeit an neue
       Anforderungen anpassen – ideal für Neubauten und Renovierungen.
