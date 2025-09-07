@@ -350,36 +350,39 @@ nav {
 
 <! heute 6.9.2025 -->
 
-/* --- HOMEWAY-DETAILS: saubere Version --- */
 section#homeway-details {
-  /* globales Flex-Layout komplett abschalten */
-  display: block !important;
-  align-items: initial !important;
-  justify-content: initial !important;
-
-  /* Abstand & Hintergrund */
   padding: 60px clamp(1rem, 6vw, 6rem);
   background-color: #f9f9f9;
 }
 
-section#homeway-details .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: left; /* Überschrift & Text links */
-}
-
-section#homeway-details .homeway-gallery {
+.homeway-flex {
   display: flex;
-  justify-content: center; /* nur das Bild mittig */
-  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
 }
 
-section#homeway-details .homeway-gallery img {
-  max-width: 500px;
-  width: 100%;
+.homeway-image {
+  flex: 1 1 300px; /* min. Breite 300px, wächst mit */
+}
+
+.homeway-image img {
+  max-width: 100%;
   height: auto;
   display: block;
 }
+
+.homeway-text {
+  flex: 1 1 300px;
+}
+
+@media (max-width: 768px) {
+  .homeway-flex {
+    flex-direction: column;
+    text-align: left;
+  }
+}
+
 
 <! heute 6.9.2025 -->
     
