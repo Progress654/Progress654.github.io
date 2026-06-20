@@ -1,120 +1,212 @@
 <!DOCTYPE html>
-<html lang="de">
-
+<html lang="de" data-theme="">
 <head>
-  <meta charset="UTF-8">
-  <title>Beratung Technik – Heimnetz & Prozessmanagement Österreich</title>
-  <meta name="description" content="Heimnetzwerke für Einfamilienhäuser und Prozessmanagement nach ISO 9001 für KMU in Österreich. Planung, Workshops und Umsetzung.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Beratung & Technik – Heimnetz & Unternehmensberatung</title>
+  <meta name="description" content="Heimnetzwerke für Einfamilienhäuser in Österreich und Unternehmensberatung nach ISO 9001. Planung, Workshops und Umsetzung aus einer Hand.">
 
   <style>
-    body { margin:0; font-family: Arial, sans-serif; color:#111; }
-    a { color:#111; }
-    nav { padding:20px; border-bottom:1px solid #eee; position:sticky; top:0; background:#fff; }
-    nav a { margin-right:20px; text-decoration:none; font-weight:600; }
+    :root{
+      --nav-h: 72px;
+      --accent: #2D9CDB;
+      --bg: #ffffff;
+      --fg: #0f1115;
+      --muted: #6b7280;
+      --surface: #f6f7fb;
+      --border: #e5e7eb;
+      --radius: 14px;
+      --shadow: 0 10px 30px -15px rgba(0,0,0,.2);
+    }
 
-    section { padding:70px 20px; }
-    .container { max-width:1000px; margin:auto; }
+    html[data-theme="dark"]{
+      --bg: #0f1115;
+      --fg: #e5e9f0;
+      --muted: #9aa0aa;
+      --surface: #181b21;
+      --border: #272b33;
+      --shadow: 0 10px 30px -20px rgba(0,0,0,.6);
+    }
 
-    .btn {
-      padding:14px 22px;
-      background:#111;
-      color:#fff;
-      text-decoration:none;
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,Inter,Helvetica,Arial,sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.55;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+
+    h1,h2,h3{ margin:0 0 1rem; line-height:1.2; }
+
+    h1{ font-size: clamp(2.2rem, 5vw, 3.5rem); }
+    h2{ font-size: 2rem; }
+
+    .muted{ color: var(--muted); }
+
+    /* NAV */
+    header{
+      position: fixed;
+      top:0; left:0; right:0;
+      height: var(--nav-h);
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      padding: 0 clamp(1rem, 5vw, 4rem);
+      backdrop-filter: blur(16px);
+      background: color-mix(in srgb, var(--bg) 75%, transparent);
+      border-bottom: 1px solid var(--border);
+      z-index: 9999;
+    }
+
+    nav{
+      display:flex;
+      gap: 1rem;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      color: var(--muted);
+      font-weight: 500;
+      padding: .3rem .2rem;
+    }
+
+    nav a:hover{
+      color: var(--accent);
+    }
+
+    /* LAYOUT */
+    section{
+      padding: 110px clamp(1rem, 6vw, 5rem);
+    }
+
+    .container{
+      max-width: 1100px;
+      margin:auto;
+    }
+
+    /* HERO */
+    .hero{
+      background: linear-gradient(180deg, var(--surface), transparent);
+    }
+
+    /* BUTTONS */
+    .btn{
       display:inline-block;
-      margin-top:15px;
+      padding: .9rem 1.2rem;
+      border-radius: 999px;
+      font-weight:600;
+      border: 1px solid var(--border);
+      margin-top:1rem;
     }
 
-    .grid { display:flex; gap:30px; flex-wrap:wrap; }
-
-    .card {
-      flex:1;
-      min-width:280px;
-      border:1px solid #eee;
-      padding:25px;
+    .btn-primary{
+      background: var(--accent);
+      color:#fff;
+      border:none;
     }
 
-    h1 { font-size:42px; margin-bottom:10px; }
-    h2 { margin-bottom:20px; }
-    p { color:#444; }
+    /* GRID */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:1.5rem;
+    }
+
+    .card{
+      background: var(--surface);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      padding:1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .badge{
+      display:inline-block;
+      background: color-mix(in srgb, var(--accent) 15%, transparent);
+      color: var(--accent);
+      padding:.2rem .6rem;
+      border-radius:999px;
+      font-size:.8rem;
+      margin-bottom:.5rem;
+    }
+
+    /* FORM */
+    input, textarea{
+      width:100%;
+      padding:.8rem;
+      margin:.5rem 0;
+      border-radius:10px;
+      border:1px solid var(--border);
+      background: transparent;
+      color: inherit;
+    }
+
+    footer{
+      text-align:center;
+      padding:40px;
+      color: var(--muted);
+    }
   </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-<nav>
-  <a href="#home">Start</a>
-  <a href="#heimnetz">Heimnetz</a>
-  <a href="#unternehmen">Unternehmen</a>
-  <a href="#referenzen">Referenzen</a>
-  <a href="#kontakt">Kontakt</a>
-</nav>
+<!-- NAV -->
+<header>
+  <div><strong>Beratung & Technik</strong></div>
+  <nav>
+    <a href="#home">Start</a>
+    <a href="#heimnetz">Heimnetz</a>
+    <a href="#unternehmen">Unternehmen</a>
+    <a href="#referenzen">Referenzen</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
 
 <!-- HERO -->
-<section id="home" style="text-align:center; background:#fafafa;">
+<section id="home" class="hero">
   <div class="container">
 
     <h1>WLAN im ganzen Haus. Klare Prozesse im Unternehmen.</h1>
 
-    <p>
-      Planung und Umsetzung moderner Heimnetzwerke für Einfamilienhäuser sowie Prozessmanagement,
-      Geschäftsmodelle und Digitalisierung für KMU in Österreich.
+    <p class="muted">
+      Planung von Heimnetzwerken für Einfamilienhäuser und Prozessmanagement nach ISO 9001 für KMU in Österreich.
     </p>
 
-    <a href="#kontakt" class="btn">Kostenloses Erstgespräch</a>
+    <a href="#kontakt" class="btn btn-primary">Kostenloses Erstgespräch</a>
 
   </div>
 </section>
 
-<!-- ZWEI BEREICHE -->
+<!-- ANGEBOTE -->
 <section>
   <div class="container">
 
-    <h2>Unsere Leistungen</h2>
+    <h2>Leistungen</h2>
 
     <div class="grid">
 
       <div class="card">
-        <h3>🏠 Heimnetz & WLAN</h3>
-        <p>Stabile, strukturierte Netzwerke für Einfamilienhäuser ohne Repeater.</p>
-        <ul>
-          <li>WLAN Planung</li>
-          <li>homeway Systeme</li>
-          <li>Datendosen</li>
-          <li>Glasfaser Vorbereitung</li>
-        </ul>
-        <a href="#heimnetz">Mehr erfahren</a>
+        <span class="badge">Privat</span>
+        <h3>Heimnetz & WLAN</h3>
+        <p class="muted">Stabile Netzwerke ohne Repeater – strukturiert geplant.</p>
+        <a class="btn" href="#heimnetz">Details</a>
       </div>
 
       <div class="card">
-        <h3>🏢 Unternehmen</h3>
-        <p>Prozesse strukturieren, Geschäftsmodelle entwickeln und Vertrieb stärken.</p>
-        <ul>
-          <li>ISO 9001 Workshops</li>
-          <li>Prozessmanagement</li>
-          <li>B2B Vertrieb</li>
-          <li>ERP (Comtech Partner)</li>
-        </ul>
-        <a href="#unternehmen">Mehr erfahren</a>
+        <span class="badge">Business</span>
+        <h3>Unternehmensberatung</h3>
+        <p class="muted">Prozesse, Vertrieb & Geschäftsmodelle strukturiert entwickeln.</p>
+        <a class="btn" href="#unternehmen">Details</a>
       </div>
 
     </div>
-  </div>
-</section>
-
-<!-- PROBLEME -->
-<section style="background:#fafafa;">
-  <div class="container">
-
-    <h2>Kennen Sie diese Probleme?</h2>
-
-    <ul>
-      <li>WLAN funktioniert im Obergeschoss nicht stabil</li>
-      <li>Homeoffice ist unzuverlässig</li>
-      <li>Keine strukturierte Netzwerkplanung im Neubau</li>
-      <li>Unternehmensprozesse sind nicht dokumentiert</li>
-      <li>Vertrieb läuft ohne Struktur</li>
-    </ul>
 
   </div>
 </section>
@@ -125,41 +217,63 @@
 
     <h2>Heimnetz für Einfamilienhäuser</h2>
 
-    <p>
-      Wir planen Ihr Heimnetz als strukturiertes Gesamtsystem – keine Bastellösungen, keine Repeater.
+    <p class="muted">
+      Kein WLAN-Chaos – sondern strukturierte Netzwerke mit Access Points über LAN Backbone.
     </p>
 
-    <ul>
-      <li>Access Points mit LAN Backbone</li>
-      <li>Datendosen in allen relevanten Räumen</li>
-      <li>Zentrale Netzwerkverteilung</li>
-      <li>Glasfaser vorbereitet</li>
-    </ul>
+    <div class="grid">
 
-    <a href="#kontakt" class="btn">Heimnetz anfragen</a>
+      <div class="card">
+        <h3>Setup</h3>
+        <ul>
+          <li>2 Access Points (EG + OG)</li>
+          <li>Datendosen in allen Räumen</li>
+          <li>Homeoffice optimiert</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Vorteile</h3>
+        <ul>
+          <li>Kein Repeater nötig</li>
+          <li>Stabiles WLAN überall</li>
+          <li>Homeoffice ready</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <a href="#kontakt" class="btn btn-primary">Heimnetz anfragen</a>
 
   </div>
 </section>
 
 <!-- UNTERNEHMEN -->
-<section id="unternehmen" style="background:#fafafa;">
+<section id="unternehmen">
   <div class="container">
 
     <h2>Unternehmensberatung</h2>
 
-    <h3>ISO 9001 Prozessworkshop</h3>
-    <p>Gemeinsame Entwicklung Ihrer Unternehmensprozesse in moderierten Workshops.</p>
+    <div class="grid">
 
-    <h3>Geschäftsmodelle</h3>
-    <p>Neue Umsatzmodelle entwickeln und bestehende optimieren.</p>
+      <div class="card">
+        <h3>ISO 9001 Workshops</h3>
+        <p class="muted">Prozesse gemeinsam erarbeiten und strukturieren.</p>
+      </div>
 
-    <h3>B2B Vertrieb</h3>
-    <p>Strukturierter Vertrieb für technische Produkte und Dienstleistungen.</p>
+      <div class="card">
+        <h3>Geschäftsmodelle</h3>
+        <p class="muted">Neue Umsatzmodelle entwickeln und optimieren.</p>
+      </div>
 
-    <h3>ERP (Comtech)</h3>
-    <p>Begleitung bei der Auswahl geeigneter ERP-Systeme.</p>
+      <div class="card">
+        <h3>B2B Vertrieb & ERP</h3>
+        <p class="muted">Strukturierter Vertrieb + ERP Auswahl.</p>
+      </div>
 
-    <a href="#kontakt" class="btn">Unternehmen anfragen</a>
+    </div>
+
+    <a href="#kontakt" class="btn btn-primary">Unternehmen anfragen</a>
 
   </div>
 </section>
@@ -170,65 +284,45 @@
 
     <h2>Referenzen</h2>
 
-    <div class="card">
-      <h3>Einfamilienhaus – Wiener Neustadt</h3>
-      <p>
-        Planung und Umsetzung eines Heimnetzwerks mit 2 Access Points und strukturierter Verkabelung.
-      </p>
-      <strong>Ergebnis:</strong> Stabiles WLAN im gesamten Haus ohne Repeater.
+    <div class="grid">
+
+      <div class="card">
+        <h3>Heimnetz – Einfamilienhaus NÖ</h3>
+        <p class="muted">2 Access Points + strukturierte Verkabelung.</p>
+        <strong>Ergebnis:</strong> stabiles WLAN ohne Repeater
+      </div>
+
+      <div class="card">
+        <h3>KMU – ISO 9001 Workshop</h3>
+        <p class="muted">Prozesslandkarte und Kernprozesse definiert.</p>
+        <strong>Ergebnis:</strong> klare Unternehmensstruktur
+      </div>
+
     </div>
-
-    <br>
-
-    <div class="card">
-      <h3>KMU – ISO 9001 Workshop</h3>
-      <p>
-        Entwicklung einer vollständigen Prozesslandkarte inkl. Kernprozesse und Verantwortlichkeiten.
-      </p>
-      <strong>Ergebnis:</strong> Klare Struktur für zukünftige Zertifizierung.
-    </div>
-
-  </div>
-</section>
-
-<!-- ARBEITSWEISE -->
-<section>
-  <div class="container">
-
-    <h2>So läuft die Zusammenarbeit ab</h2>
-
-    <ol>
-      <li>Kostenloses Erstgespräch</li>
-      <li>Analyse Ihrer Anforderungen</li>
-      <li>Konzept & Angebot</li>
-      <li>Umsetzung oder Workshop</li>
-      <li>Dokumentation & Übergabe</li>
-    </ol>
 
   </div>
 </section>
 
 <!-- KONTAKT -->
-<section id="kontakt" style="background:#fafafa;">
-  <div class="container" style="text-align:center;">
+<section id="kontakt">
+  <div class="container">
 
-    <h2>Jetzt unverbindlich anfragen</h2>
+    <h2>Kontakt</h2>
 
-    <p>Wir klären gemeinsam Ihr Projekt in einem kostenlosen Gespräch.</p>
+    <p class="muted">Kostenloses Erstgespräch anfragen.</p>
 
-    <form style="max-width:400px; margin:auto;">
-      <input type="text" placeholder="Name" style="width:100%; padding:10px; margin:5px 0;"><br>
-      <input type="email" placeholder="E-Mail" style="width:100%; padding:10px; margin:5px 0;"><br>
-      <textarea placeholder="Ihr Anliegen" style="width:100%; padding:10px; height:120px;"></textarea><br>
-      <button class="btn" style="width:100%; border:none;">Anfrage senden</button>
+    <form>
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="E-Mail">
+      <textarea placeholder="Ihr Anliegen"></textarea>
+      <button class="btn btn-primary" type="submit">Senden</button>
     </form>
 
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer style="padding:30px; text-align:center; border-top:1px solid #eee;">
-  Beratung Technik – Heimnetz & Prozessmanagement Österreich
+<footer>
+  Beratung & Technik – Österreich
 </footer>
 
 </body>
