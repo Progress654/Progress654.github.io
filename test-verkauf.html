@@ -4,12 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Heimnetz Einfamilienhaus Österreich – WLAN Planung & homeway Systeme</title>
+  <title>Heimnetz Einfamilienhaus Österreich – WLAN & homeway Planung</title>
 
-  <meta name="description" content="Zukunftssichere Heimnetzwerke für Einfamilienhäuser in Österreich. WLAN Planung, homeway Systeme, Datendosen und Glasfaser Vorbereitung.">
+  <meta name="description" content="Zukunftssichere Heimnetzwerke für Einfamilienhäuser in Österreich. WLAN Planung, homeway Systeme, Glasfaser Vorbereitung und strukturierte Netzwerke.">
 
   <style>
     :root{
+      --nav-h: 72px;
       --accent: #2D9CDB;
       --bg: #ffffff;
       --fg: #0f1115;
@@ -20,6 +21,17 @@
       --shadow: 0 10px 30px -15px rgba(0,0,0,.2);
     }
 
+    html[data-theme="dark"]{
+      --bg: #0f1115;
+      --fg: #e5e9f0;
+      --muted: #9aa0aa;
+      --surface: #181b21;
+      --border: #272b33;
+      --shadow: 0 10px 30px -20px rgba(0,0,0,.6);
+    }
+
+    *{ box-sizing:border-box; }
+
     body{
       margin:0;
       font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
@@ -28,13 +40,23 @@
       line-height:1.6;
     }
 
+    a{ color:inherit; text-decoration:none; }
+
+    h1,h2,h3{ margin:0 0 1rem; line-height:1.2; }
+
+    h1{ font-size: clamp(2.2rem, 5vw, 3.5rem); }
+    h2{ font-size: 2rem; }
+
+    .muted{ color: var(--muted); }
+
     header{
-      padding:20px;
-      border-bottom:1px solid var(--border);
-      position:sticky;
+      position: sticky;
       top:0;
-      background:rgba(255,255,255,.9);
-      backdrop-filter: blur(10px);
+      background: color-mix(in srgb, var(--bg) 90%, transparent);
+      backdrop-filter: blur(12px);
+      border-bottom:1px solid var(--border);
+      padding:15px 20px;
+      z-index:1000;
     }
 
     .container{
@@ -43,56 +65,43 @@
       padding:40px 20px;
     }
 
-    h1,h2,h3{ margin:0 0 1rem; }
-    h1{ font-size:2.8rem; }
-    h2{ font-size:2rem; }
-
-    .muted{ color: var(--muted); }
+    section{
+      padding:40px 0;
+    }
 
     .btn{
       display:inline-block;
       padding:12px 18px;
       border-radius:999px;
+      font-weight:600;
+      border:1px solid var(--border);
+      margin-top:1rem;
+    }
+
+    .btn-primary{
       background: var(--accent);
       color:#fff;
-      text-decoration:none;
-      margin-top:1rem;
-      font-weight:600;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap:1.2rem;
-    }
-
-    .card{
-      background: var(--surface);
-      border:1px solid var(--border);
-      border-radius: var(--radius);
-      padding:1.2rem;
-      box-shadow: var(--shadow);
+      border:none;
     }
 
     table{
       width:100%;
       border-collapse: collapse;
-      margin-top:1rem;
+      margin-top:20px;
     }
 
     th,td{
       border:1px solid var(--border);
       padding:10px;
       text-align:center;
+      font-size:0.95rem;
     }
 
     th{
       background: var(--surface);
     }
 
-    .check{ color: var(--accent); font-weight:bold; }
-
-    section{ padding:60px 0; }
+    ul{ padding-left:1.2rem; }
 
   </style>
 </head>
@@ -110,11 +119,11 @@
     <h1>Das zukunftssichere Heimnetz für Ihr Einfamilienhaus</h1>
 
     <p class="muted">
-      WLAN in jedem Raum. LAN-Anschlüsse dort, wo sie benötigt werden.  
-      Perfekt vorbereitet für Glasfaser, Homeoffice und Streaming.
+      WLAN in jedem Raum. LAN-Anschlüsse genau dort, wo sie benötigt werden.  
+      Sauber geplant für Glasfaser, Homeoffice und Streaming – kein improvisiertes WLAN, sondern ein strukturiertes Gesamtsystem.
     </p>
 
-    <a href="#kontakt" class="btn">Kostenloses Erstgespräch</a>
+    <a href="#kontakt" class="btn btn-primary">Kostenloses Erstgespräch</a>
 
   </div>
 </section>
@@ -125,18 +134,20 @@
 
     <h2>Kommt Ihnen das bekannt vor?</h2>
 
-    <div class="grid">
+    <p>
+      In vielen Einfamilienhäusern entsteht das Netzwerk erst nach dem Bau – und genau dort beginnen die Probleme.
+      WLAN im Obergeschoss ist schwach oder instabil, Homeoffice funktioniert nur eingeschränkt,
+      und Streaming oder Smart-TV hängen ständig im WLAN.
+    </p>
 
-      <div class="card">WLAN im Obergeschoss ist schlecht</div>
-      <div class="card">Homeoffice funktioniert nicht stabil</div>
-      <div class="card">Fernseher hängt am WLAN</div>
-      <div class="card">Keine Netzwerkdosen geplant</div>
-      <div class="card">Elektriker kennt sich nicht aus</div>
+    <p>
+      Häufig werden keine oder zu wenige Netzwerkdosen geplant. Die Lösung wird dann nachträglich improvisiert –
+      meist mit Repeatern, die das Problem nur verschieben, aber nicht lösen.
+    </p>
 
-    </div>
-
-    <p class="muted" style="margin-top:20px;">
-      Dann sind Sie hier genau richtig.
+    <p>
+      Auch die Zusammenarbeit mit klassischen Elektrikern führt oft nicht zu einem optimalen Ergebnis,
+      da die Planung eines modernen Heimnetzwerks ein eigenes Fachgebiet ist.
     </p>
 
   </div>
@@ -148,18 +159,18 @@
 
     <h2>Warum homeway?</h2>
 
-    <div class="grid">
+    <p>
+      homeway ist ein modulares Infrastruktur-System, das Netzwerk, TV und Multimedia in einer gemeinsamen Struktur verbindet.
+      Dadurch entsteht kein einzelnes WLAN-Setup, sondern eine langfristig erweiterbare Gebäudeverkabelung.
+    </p>
 
-      <div class="card">Netzwerk, TV und Multimedia aus einer Infrastruktur</div>
-      <div class="card">Modular erweiterbar für zukünftige Anforderungen</div>
-      <div class="card">Vorbereitet für Glasfaser</div>
-      <div class="card">Access Points über LAN Backbone</div>
-      <div class="card">Keine Repeater notwendig</div>
+    <p>
+      Access Points werden über LAN-Backbone angeschlossen, wodurch stabile Verbindungen in allen Etagen möglich sind –
+      ohne Repeater und ohne Signalverluste.
+    </p>
 
-    </div>
-
-    <p class="muted" style="margin-top:20px;">
-      homeway ist die zukunftssichere Lösung für Neubau und Renovierung.
+    <p>
+      Das System ist speziell für Neubauten und umfassende Renovierungen geeignet und bereits heute auf zukünftige Anforderungen wie Glasfaser vorbereitet.
     </p>
 
   </div>
@@ -169,7 +180,11 @@
 <section>
   <div class="container">
 
-    <h2>Pakete</h2>
+    <h2>Leistungspakete</h2>
+
+    <p class="muted">
+      Vier klar definierte Ausbaustufen – je nach Hausgröße und gewünschtem Leistungsumfang.
+    </p>
 
     <table>
       <tr>
@@ -180,14 +195,14 @@
         <th>Premium+</th>
       </tr>
 
-      <tr><td>Planung</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-      <tr><td>5 Datendosen</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-      <tr><td>AP EG</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-      <tr><td>AP OG</td><td></td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-      <tr><td>WLAN Optimierung</td><td></td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-      <tr><td>PoE Switch</td><td></td><td></td><td class="check">✓</td><td class="check">✓</td></tr>
-      <tr><td>Baustellenbegleitung</td><td></td><td></td><td></td><td class="check">✓</td></tr>
-      <tr><td>Dokumentation</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td>Planung</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Datendosen (ca. 5 Räume)</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Access Point EG</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Access Point OG</td><td></td><td>✓</td><td>✓</td><td>✓</td></tr>
+      <tr><td>WLAN Optimierung</td><td></td><td>✓</td><td>✓</td><td>✓</td></tr>
+      <tr><td>PoE Switch</td><td></td><td></td><td>✓</td><td>✓</td></tr>
+      <tr><td>Baustellenbegleitung</td><td></td><td></td><td></td><td>✓</td></tr>
+      <tr><td>Dokumentation</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
 
     </table>
 
@@ -200,17 +215,20 @@
 
     <h2>Kostenloser Leitfaden</h2>
 
-    <div class="card">
+    <p>
+      Viele Fehler im Heimnetz entstehen bereits in der Planungsphase.
+      Deshalb haben wir einen kompakten Leitfaden erstellt:
+    </p>
 
-      <h3>Die 10 häufigsten Fehler bei der Heimnetzplanung</h3>
+    <p>
+      <strong>„Die 10 häufigsten Fehler bei der Heimnetzplanung im Einfamilienhaus“</strong>
+    </p>
 
-      <p class="muted">
-        Erfahren Sie, warum 80% aller Neubauten falsch geplant werden – und wie Sie es besser machen.
-      </p>
+    <p class="muted">
+      Ideal für Bauherren, die gerade planen oder umbauen und typische Fehler vermeiden möchten.
+    </p>
 
-      <a href="#kontakt" class="btn">PDF anfordern</a>
-
-    </div>
+    <a href="#kontakt" class="btn btn-primary">Leitfaden anfordern</a>
 
   </div>
 </section>
@@ -219,18 +237,17 @@
 <section>
   <div class="container">
 
-    <h2>Heimnetz Planung in Ihrer Region</h2>
+    <h2>Heimnetz Planung in Österreich</h2>
 
-    <div class="grid">
+    <p>
+      Wir planen Heimnetzwerke für Einfamilienhäuser in Wien, Niederösterreich und Wiener Neustadt
+      sowie im gesamten österreichischen Raum.
+    </p>
 
-      <div class="card">Wien</div>
-      <div class="card">Niederösterreich</div>
-      <div class="card">Wiener Neustadt</div>
-      <div class="card">Einfamilienhaus Planung Österreich</div>
-      <div class="card">Glasfaser Hausverkabelung</div>
-      <div class="card">WLAN Access Point Einfamilienhaus</div>
-
-    </div>
+    <p class="muted">
+      Häufige Suchbegriffe unserer Kunden: Heimnetzwerk Einfamilienhaus, WLAN Planung Neubau,
+      Glasfaser Hausverkabelung, WLAN Access Point Planung, homeway Planung Österreich.
+    </p>
 
   </div>
 </section>
@@ -241,11 +258,16 @@
 
     <h2>Jetzt unverbindlich anfragen</h2>
 
+    <p class="muted">
+      Wir prüfen gemeinsam Ihr Projekt und zeigen Ihnen, wie ein stabiles Heimnetz sinnvoll aufgebaut wird.
+    </p>
+
     <form>
-      <input type="text" placeholder="Name"><br>
-      <input type="email" placeholder="E-Mail"><br>
-      <textarea placeholder="Ihr Projekt"></textarea><br>
-      <button class="btn" type="submit">Anfrage senden</button>
+      <input type="text" placeholder="Name" style="width:100%;padding:10px;margin:5px 0;"><br>
+      <input type="email" placeholder="E-Mail" style="width:100%;padding:10px;margin:5px 0;"><br>
+      <textarea placeholder="Ihr Projekt" style="width:100%;padding:10px;height:120px;"></textarea><br>
+
+      <button class="btn btn-primary" type="submit">Anfrage senden</button>
     </form>
 
   </div>
