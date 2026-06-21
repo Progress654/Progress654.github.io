@@ -140,6 +140,90 @@ body{
   </style>
 </head>
 
+.paket-tabelle{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:40px;
+    font-size:1rem;
+}
+
+.paket-tabelle th,
+.paket-tabelle td{
+    border:2px solid #ffffff;
+    padding:12px;
+    text-align:center;
+}
+
+.paket-tabelle .paket-header{
+    background:#1FA4D8;
+    color:#fff;
+    font-size:2rem;
+    font-weight:700;
+}
+
+.paket-tabelle .paket-header-premium{
+    background:#1E678B;
+    color:#fff;
+    font-size:2rem;
+    font-weight:700;
+}
+
+.paket-tabelle .sub-header{
+    background:#c5cbd1;
+    font-weight:600;
+}
+
+.paket-tabelle .raum{
+    text-align:left;
+    padding-left:20px;
+    background:#d8d8d8;
+}
+
+.paket-tabelle .geschoss{
+    background:#cfd3d8;
+    font-weight:700;
+    width:80px;
+}
+
+.paket-tabelle .preis{
+    background:#1FA4D8;
+    color:white;
+    font-size:2rem;
+    font-weight:700;
+}
+
+.paket-tabelle .preis-premium{
+    background:#1E678B;
+    color:white;
+    font-size:2rem;
+    font-weight:700;
+}
+
+.paket-tabelle .preis-label{
+    background:#d8d8d8;
+    text-align:left;
+    padding-left:20px;
+    font-weight:700;
+    font-size:1.4rem;
+}
+
+@media(max-width:900px){
+
+    .paket-tabelle{
+        font-size:0.8rem;
+    }
+
+    .paket-tabelle .paket-header,
+    .paket-tabelle .paket-header-premium{
+        font-size:1.2rem;
+    }
+
+    .paket-tabelle .preis,
+    .paket-tabelle .preis-premium{
+        font-size:1.2rem;
+    }
+}
+  
 <body>
 
 <!-- LOGO -->
@@ -208,17 +292,17 @@ body{
     <h2>Kommt Ihnen das bekannt vor?</h2>
 
     <p>
-      In vielen Einfamilienhäusern entsteht das Netzwerk erst nach dem Bau – und genau dort beginnen die Probleme.
-      WLAN im Obergeschoss ist schwach oder instabil, Homeoffice funktioniert nur eingeschränkt,
-      Streaming oder Smart-TV ruckeln und beim Gaming fliegt man immer wieder aus dem Spiel und muss sich neu anmelden.
+      In vielen Einfamilienhäusern entsteht ein Heimnetz erst nach dem Bau – und genau dort entstehen die 
+      typischen Probleme: schwaches oder instabiles WLAN, eingeschränktes Homeoffice (Aussetzer bei Videocalls), ruckelndes Streaming 
+      sowie Verbindungsabbrüche beim Online‑Gaming.
     </p>
     <p>
-      Häufig werden keine oder zu wenige Netzwerkdosen geplant. Die Lösung wird dann nachträglich improvisiert –
+      Häufig werden keine oder zu wenige Netzwerkdosen eingeplant. Die Lösung wird dann nachträglich improvisiert –
       meist mit Repeatern, die das Problem nur verschieben, aber nicht lösen.
     </p>
     <p>
       Auch die Zusammenarbeit mit klassischen Elektrikern führt oft nicht zu einem optimalen Ergebnis,
-      da die Planung eines modernen Heimnetzwerks ein eigenes Fachgebiet ist.
+      da die Planung eines modernen Heimnetzwerks ein eigenes Fachgebiet ist und ein spezielle Erfahrung erfordert.
     </p>
 
   </div>
@@ -228,22 +312,35 @@ body{
 <section>
   <div class="container">
 
-    <h2>Warum ist das homeway-System die beste Wahl?</h2>
+<h2>Warum ist das homeway‑System die beste Wahl?</h2>
 
-    <p>
-      homeway ist ein modulares Infrastruktur-System, das Netzwerk, TV und Multimedia in einer gemeinsamen Struktur verbindet.
-      Dadurch entsteht kein einzelnes WLAN-Setup, sondern eine langfristig erweiterbare Gebäudeverkabelung.
-    </p>
+<p>
+  homeway ist ein modulares Infrastruktur-System, das Netzwerk, TV und Multimedia in einer gemeinsamen, zukunftssicheren Struktur vereint.
+  Statt eines einzelnen WLAN-Setups entsteht eine vollständige Gebäudeverkabelung, die langfristig erweiterbar ist und höchste Stabilität 
+  bietet.
+</p>
 
-    <p>
-      Access Points werden über LAN-Backbone angeschlossen, wodurch stabile Verbindungen in allen Etagen möglich sind –
-      ohne Repeater und ohne Signalverluste.
-    </p>
+<p>
+  Access Points werden über einen kabelgebundenen LAN‑Backbone angeschlossen. Dadurch sind stabile Verbindungen in allen Etagen möglich –
+  ohne Repeater, ohne Funkverluste und ohne die typischen Probleme klassischer WLAN‑Erweiterungen.
+</p>
 
-    <p>
-      Das System ist speziell für Neubauten und umfassende Renovierungen geeignet und bereits heute auf zukünftige Anforderungen wie Glasfaser vorbereitet.
-    </p>
+<p>
+  Das System ist ideal für moderne Premium‑Anwendungen wie Homeoffice, Online‑Gaming, Streaming in 4K/8K, große Downloads oder 
+  Smart‑Home‑Steuerung. LAN‑Anschlüsse liefern maximale Stabilität und Geschwindigkeit, während die integrierbaren WLAN‑Access‑Points 
+  eine gleichmäßige Abdeckung im ganzen Haus ermöglichen.
+</p>
 
+<p>
+  homeway‑Multimediadosen vereinen bis zu drei Dienste (TV, LAN, Glasfaser) in einer einzigen Dose. Das spart Platz, reduziert 
+  Installationsaufwand und sorgt für eine saubere, hochwertige Optik – in Weiß, Schwarz oder Anthrazit.
+</p>
+
+<p>
+  Das System ist speziell für Neubauten und umfassende Renovierungen entwickelt und bereits heute auf zukünftige Anforderungen wie 
+  Glasfaser bis in den Wohnraum vorbereitet.
+</p>
+    
   </div>
 </section>
 
@@ -253,30 +350,112 @@ body{
 
     <h2>Leistungspakete</h2>
 
-    <p class="muted">
-      Vier klar definierte Ausbaustufen – je nach Hausgröße und gewünschtem Leistungsumfang.
-    </p>
+<table class="paket-tabelle">
 
-    <table>
-      <tr>
-        <th>Leistung</th>
-        <th>Basis</th>
-        <th>Basis+</th>
-        <th>Premium</th>
-        <th>Premium+</th>
-      </tr>
+<tr>
+    <th colspan="2"></th>
 
-      <tr><td>Planung</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
-      <tr><td>Datendosen (ca. 5 Räume)</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
-      <tr><td>Access Point EG</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
-      <tr><td>Access Point OG</td><td></td><td>✓</td><td>✓</td><td>✓</td></tr>
-      <tr><td>WLAN Optimierung</td><td></td><td>✓</td><td>✓</td><td>✓</td></tr>
-      <tr><td>PoE Switch</td><td></td><td></td><td>✓</td><td>✓</td></tr>
-      <tr><td>Baustellenbegleitung</td><td></td><td></td><td></td><td>✓</td></tr>
-      <tr><td>Dokumentation</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+    <th colspan="3" class="paket-header">BASIS</th>
+    <th colspan="3" class="paket-header">BASIS plus</th>
 
-    </table>
+    <th colspan="3" class="paket-header-premium">PREMIUM</th>
+    <th colspan="3" class="paket-header-premium">PREMIUM plus</th>
+</tr>
 
+<tr>
+    <th colspan="2"></th>
+
+    <th class="sub-header">WLAN AP</th>
+    <th class="sub-header">LAN</th>
+    <th class="sub-header">TV</th>
+
+    <th class="sub-header">WLAN AP</th>
+    <th class="sub-header">LAN</th>
+    <th class="sub-header">TV</th>
+
+    <th class="sub-header">WLAN AP</th>
+    <th class="sub-header">LAN</th>
+    <th class="sub-header">TV</th>
+
+    <th class="sub-header">WLAN AP</th>
+    <th class="sub-header">LAN</th>
+    <th class="sub-header">TV</th>
+</tr>
+
+<tr>
+    <td rowspan="2" class="geschoss">EG</td>
+    <td class="raum">Wohnzimmer</td>
+
+    <td>x</td><td>x</td><td></td>
+    <td>x</td><td>x</td><td>x</td>
+    <td>x</td><td>x</td><td></td>
+    <td>x</td><td>x</td><td>x</td>
+</tr>
+
+<tr>
+    <td class="raum">Homeoffice</td>
+
+    <td></td><td>x</td><td></td>
+    <td></td><td>x</td><td></td>
+    <td></td><td>x</td><td></td>
+    <td></td><td>x</td><td></td>
+</tr>
+
+<tr>
+    <td rowspan="4" class="geschoss">OG</td>
+    <td class="raum">Zimmer 1</td>
+
+    <td></td><td></td><td></td>
+    <td></td><td></td><td></td>
+    <td></td><td>x</td><td></td>
+    <td></td><td>x</td><td>x</td>
+</tr>
+
+<tr>
+    <td class="raum">Zimmer 2</td>
+
+    <td></td><td></td><td></td>
+    <td></td><td></td><td></td>
+    <td></td><td>x</td><td></td>
+    <td></td><td>x</td><td>x</td>
+</tr>
+
+<tr>
+    <td class="raum">Zimmer 3</td>
+
+    <td></td><td></td><td></td>
+    <td></td><td></td><td></td>
+    <td></td><td>x</td><td></td>
+    <td></td><td>x</td><td>x</td>
+</tr>
+
+<tr>
+    <td class="raum">Vorraum</td>
+
+    <td>x</td><td></td><td></td>
+    <td>x</td><td></td><td></td>
+    <td>x</td><td></td><td></td>
+    <td>x</td><td></td><td></td>
+</tr>
+
+<tr>
+    <td colspan="2" class="preis-label">Paketpreis*</td>
+
+    <td colspan="3" class="preis">1.490 €</td>
+    <td colspan="3" class="preis">1.590 €</td>
+
+    <td colspan="3" class="preis-premium">1.990 €</td>
+    <td colspan="3" class="preis-premium">2.290 €</td>
+</tr>
+
+</table>
+<p class="muted">
+Die folgenden Pakete basieren auf einem typischen Einfamilienhaus mit Erdgeschoss und Obergeschoss. 
+Alle Pakete beinhalten Planung, Installation, Inbetriebnahme, WLAN-Optimierung und Dokumentation.
+Individuelle Anpassungen sind selbstverständlich möglich.
+</p>
+
+    
   </div>
 </section>
 
