@@ -188,49 +188,43 @@ body{
     font-weight:700;
 }
 
-/* =======================
-   PREMIUM (dunkelblau)
-======================= */
-
-.paket-header.premium{
-    background:var(--blue-dark);
-    color:#fff;
+/* BASIS HEADER */
+.paket-header{
+    background:#2F80ED !important;
+    color:#fff !important;
+    font-weight:600;
+    text-align:center;
+    padding:12px;
 }
 
-.preis.premium{
-    background:var(--blue-dark);
-    color:#fff;
+/* PREMIUM HEADER */
+.paket-header.premium{
+    background:#0B1F3B !important;
+    color:#fff !important;
+}
+
+/* BASIS PREIS */
+.preis{
+    background:#2F80ED !important;
+    color:#fff !important;
     font-weight:700;
 }
 
-/* linke Spalten */
-.geschoss{
-    background:rgba(0,0,0,0.03);
-    font-weight:600;
-    text-align:left;
-    padding-left:12px;
+/* PREMIUM PREIS */
+.preis.premium{
+    background:#0B1F3B !important;
+    color:#fff !important;
+    font-weight:700;
 }
 
-.raum{
-    background:rgba(0,0,0,0.02);
-    text-align:left;
+/* Subheader leicht blau */
+.sub-header{
+    background:rgba(47,128,237,0.15) !important;
 }
 
-/* Preislabel neutral */
-.preis-label{
-    background:rgba(0,0,0,0.05);
-    font-weight:600;
-    text-align:right;
-}
-
-/* Kanten sauber */
-.paket-tabelle tr:last-child td{
-    border-bottom:none;
-}
-
-.paket-tabelle td:last-child,
-.paket-tabelle th:last-child{
-    border-right:none;
+/* Zellen bleiben neutral */
+.paket-tabelle td{
+    background:rgba(255,255,255,0.7) !important;
 }
     
   </style>
