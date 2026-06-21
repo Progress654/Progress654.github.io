@@ -142,86 +142,79 @@ body{
 
 .paket-tabelle{
     width:100%;
-    border-collapse:collapse;
-    margin-top:40px;
-    font-size:1rem;
+    border-collapse:separate;
+    border-spacing:0;
+    margin-top:30px;
+    font-size:13px;
+    color:#444;
+    background:#f6f7f8;
+    border:1px solid #e3e3e3;
+    border-radius:12px;
+    overflow:hidden;
 }
 
-.paket-tabelle th,
+/* WICHTIG: jede Zelle bekommt Hintergrund */
 .paket-tabelle td{
-    border:2px solid #ffffff;
-    padding:12px;
+    padding:10px 10px;
     text-align:center;
+    border-bottom:1px solid #e6e6e6;
+    border-right:1px solid #e6e6e6;
+    background:#fff;
 }
 
-.paket-tabelle .paket-header{
-    background:#1FA4D8;
-    color:#fff;
-    font-size:2rem;
-    font-weight:700;
+/* Header */
+.paket-header{
+    background:#e9ecef !important;
+    color:#333;
+    font-weight:600;
+    text-align:center;
+    padding:12px;
 }
 
-.paket-tabelle .paket-header-premium{
-    background:#1E678B;
-    color:#fff;
-    font-size:2rem;
-    font-weight:700;
+/* Subheader */
+.sub-header{
+    background:#f1f3f5 !important;
+    font-weight:500;
 }
 
-.paket-tabelle .sub-header{
-    background:#c5cbd1;
+/* linke Spalten */
+.geschoss{
+    background:#f1f3f5 !important;
+    font-weight:600;
+    text-align:left;
+    padding-left:12px;
+}
+
+.raum{
+    background:#fafafa !important;
+    text-align:left;
+}
+
+/* Preis */
+.preis-label{
+    background:#e9ecef !important;
+    font-weight:600;
+    text-align:right;
+}
+
+.preis{
+    background:#f1f3f5 !important;
     font-weight:600;
 }
 
-.paket-tabelle .raum{
-    text-align:left;
-    padding-left:20px;
-    background:#d8d8d8;
+/* Premium leicht anders */
+.preis.premium{
+    background:#e2e6ea !important;
 }
 
-.paket-tabelle .geschoss{
-    background:#cfd3d8;
-    font-weight:700;
-    width:80px;
+/* letzte Kanten entfernen */
+.paket-tabelle tr:last-child td{
+    border-bottom:none;
 }
 
-.paket-tabelle .preis{
-    background:#1FA4D8;
-    color:white;
-    font-size:2rem;
-    font-weight:700;
-}
-
-.paket-tabelle .preis-premium{
-    background:#1E678B;
-    color:white;
-    font-size:2rem;
-    font-weight:700;
-}
-
-.paket-tabelle .preis-label{
-    background:#d8d8d8;
-    text-align:left;
-    padding-left:20px;
-    font-weight:700;
-    font-size:1.4rem;
-}
-
-@media(max-width:900px){
-
-    .paket-tabelle{
-        font-size:0.8rem;
-    }
-
-    .paket-tabelle .paket-header,
-    .paket-tabelle .paket-header-premium{
-        font-size:1.2rem;
-    }
-
-    .paket-tabelle .preis,
-    .paket-tabelle .preis-premium{
-        font-size:1.2rem;
-    }
+.paket-tabelle td:last-child,
+.paket-tabelle th:last-child{
+    border-right:none;
 }
   
 <body>
@@ -382,8 +375,61 @@ body{
     <th class="sub-header">TV</th>
 </tr>
 
-<!-- Inhalt bleibt unverändert -->
-<!-- (deine rows hier 그대로 einfügen) -->
+<tr>
+    <td rowspan="2" class="geschoss">EG</td>
+    <td class="raum">Wohnzimmer</td>
+
+    <td>x</td><td>x</td><td></td>
+    <td>x</td><td>x</td><td>x</td>
+    <td>x</td><td>x</td><td></td>
+    <td>x</td><td>x</td><td>x</td>
+</tr>
+
+<tr>
+    <td class="raum">Homeoffice</td>
+
+    <td></td><td>x</td><td></td>
+    <td></td><td>x</td><td></td>
+    <td></td><td>x</td><td></td>
+    <td></td><td>x</td><td></td>
+</tr>
+
+<tr>
+    <td rowspan="4" class="geschoss">OG</td>
+    <td class="raum">Zimmer 1</td>
+
+    <td></td><td></td><td></td>
+    <td></td><td></td><td></td>
+    <td></td><td>x</td><td></td>
+    <td></td><td>x</td><td>x</td>
+</tr>
+
+<tr>
+    <td class="raum">Zimmer 2</td>
+
+    <td></td><td></td><td></td>
+    <td></td><td></td><td></td>
+    <td></td><td>x</td><td></td>
+    <td></td><td>x</td><td>x</td>
+</tr>
+
+<tr>
+    <td class="raum">Zimmer 3</td>
+
+    <td></td><td></td><td></td>
+    <td></td><td></td><td></td>
+    <td></td><td>x</td><td></td>
+    <td></td><td>x</td><td>x</td>
+</tr>
+
+<tr>
+    <td class="raum">Vorraum</td>
+
+    <td>x</td><td></td><td></td>
+    <td>x</td><td></td><td></td>
+    <td>x</td><td></td><td></td>
+    <td>x</td><td></td><td></td>
+</tr>
 
 <tr>
     <td colspan="2" class="preis-label">Paketpreis*</td>
