@@ -137,94 +137,99 @@ body{
 
     ul{ padding-left:1.2rem; }
 
-/* ============ GRUNDAUFBAU ============ */
 
-.paket-tabelle{
-    width:100%;
-    border-collapse:separate;
-    border-spacing:0;
-    font-size:13px;
+
+
+
+    
+/* BASE (Mobile First) */
+.pricing {
+  padding: 16px;
+  font-family: system-ui, sans-serif;
 }
 
-/* Zellen */
-.paket-tabelle td{
-    padding:10px;
-    text-align:center;
-    border:1px solid rgba(0,0,0,0.08);
-    background:rgba(255,255,255,0.75);
-    color:#333;
+.pricing__plans {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
 }
 
-/* ============ HEADER ============ */
-
-.paket-tabelle th{
-    color:#fff;
-    font-weight:600;
-    padding:14px;
+/* Plan Cards */
+.plan {
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 16px;
+  background: #fff;
 }
 
-/* BASIS */
-.paket-tabelle th:nth-child(2),
-.paket-tabelle th:nth-child(3),
-.paket-tabelle th:nth-child(4){
-    background:#00AEEF !important; /* BASIS Hellblau */
+.plan__title {
+  font-size: 18px;
+  margin: 0 0 6px;
 }
 
-/* BASIS PLUS */
-.paket-tabelle th:nth-child(5),
-.paket-tabelle th:nth-child(6),
-.paket-tabelle th:nth-child(7){
-    background:#00AEEF !important;
+.plan__price {
+  font-size: 28px;
+  font-weight: 700;
 }
 
-/* PREMIUM */
-.paket-tabelle th:nth-child(8),
-.paket-tabelle th:nth-child(9),
-.paket-tabelle th:nth-child(10){
-    background:#145A7A !important;
+.plan__desc {
+  color: #666;
+  font-size: 14px;
 }
 
-/* PREMIUM PLUS */
-.paket-tabelle th:nth-child(11),
-.paket-tabelle th:nth-child(12),
-.paket-tabelle th:nth-child(13){
-    background:#145A7A !important;
+/* Highlight */
+.plan--featured {
+  border: 2px solid #3b82f6;
+  transform: scale(1.02);
 }
 
-/* ============ PREISZEILE FIX ============ */
-
-.paket-tabelle tr:last-child td{
-    font-weight:700;
-    font-size:16px;
-    color:#fff !important;
+/* FEATURES (Mobile stacked) */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-/* BASIS PREIS */
-.paket-tabelle tr:last-child td:nth-child(2),
-.paket-tabelle tr:last-child td:nth-child(3),
-
-    background:#00AEEF !important;
+.feature {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 10px;
 }
 
-/* BASIS PLUS PREIS */
-.paket-tabelle tr:last-child td:nth-child(4),
-.paket-tabelle tr:last-child td:nth-child(5),
-
-    background:#145A7A !important;
+.feature span:not(.feature__label) {
+  display: inline-block;
+  padding: 6px 10px;
+  background: #f6f6f6;
+  border-radius: 8px;
 }
 
-/* PREMIUM PREIS */
-.paket-tabelle tr:last-child td:nth-child(8),
-.paket-tabelle tr:last-child td:nth-child(9),
-.paket-tabelle tr:last-child td:nth-child(10){
-    background:#145A7A !important;
+/* TABLET */
+@media (min-width: 768px) {
+
+  .pricing__plans {
+    flex-direction: row;
+  }
+
+  .plan {
+    flex: 1;
+  }
+
+  .feature {
+    grid-template-columns: 200px 1fr 1fr 1fr;
+    align-items: center;
+  }
 }
 
-/* PREMIUM PLUS PREIS */
-.paket-tabelle tr:last-child td:nth-child(11),
-.paket-tabelle tr:last-child td:nth-child(12),
-.paket-tabelle tr:last-child td:nth-child(13){
-    background:#0B3A57 !important;
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .pricing {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 }
     
   </style>
