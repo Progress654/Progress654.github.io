@@ -137,94 +137,94 @@ body{
 
     ul{ padding-left:1.2rem; }
 
+/* ============ GRUNDAUFBAU ============ */
 
-:root{
-  --blue-light: #2F80ED;
-  --blue-dark: #0B1F3B;
-}
-
-/* TABLE BASIS */
 .paket-tabelle{
     width:100%;
     border-collapse:separate;
     border-spacing:0;
-    margin-top:30px;
     font-size:13px;
-    color:#333;
-    border-radius:12px;
-    overflow:hidden;
 }
 
 /* Zellen */
 .paket-tabelle td{
     padding:10px;
     text-align:center;
-    border-bottom:1px solid rgba(0,0,0,0.08);
-    border-right:1px solid rgba(0,0,0,0.08);
-    background:rgba(255,255,255,0.7); /* 30% transparent Effekt */
+    border:1px solid rgba(0,0,0,0.08);
+    background:rgba(255,255,255,0.75);
+    color:#333;
 }
 
-/* =======================
-   BASIS (hellblau)
-======================= */
+/* ============ HEADER ============ */
 
-.paket-header{
-    background:var(--blue-light);
+.paket-tabelle th{
     color:#fff;
     font-weight:600;
-    text-align:center;
-    padding:12px;
+    padding:14px;
 }
 
-.sub-header{
-    background:rgba(77,163,255,0.25);
-    font-weight:500;
-    color:#0b2f6b;
+/* BASIS */
+.paket-tabelle th:nth-child(3),
+.paket-tabelle th:nth-child(4),
+.paket-tabelle th:nth-child(5){
+    background:#00AEEF !important; /* BASIS Hellblau */
 }
 
-.preis{
-    background:var(--blue-light);
-    color:#fff;
+/* BASIS PLUS */
+.paket-tabelle th:nth-child(6),
+.paket-tabelle th:nth-child(7),
+.paket-tabelle th:nth-child(8){
+    background:#00AEEF !important;
+}
+
+/* PREMIUM */
+.paket-tabelle th:nth-child(9),
+.paket-tabelle th:nth-child(10),
+.paket-tabelle th:nth-child(11){
+    background:#145A7A !important;
+}
+
+/* PREMIUM PLUS */
+.paket-tabelle th:nth-child(12),
+.paket-tabelle th:nth-child(13),
+.paket-tabelle th:nth-child(14){
+    background:#0B3A57 !important;
+}
+
+/* ============ PREISZEILE FIX ============ */
+
+.paket-tabelle tr:last-child td{
     font-weight:700;
-}
-
-/* BASIS HEADER */
-.paket-header{
-    background:#2F80ED !important;
-    color:#fff !important;
-    font-weight:600;
-    text-align:center;
-    padding:12px;
-}
-
-/* PREMIUM HEADER */
-.paket-header.premium{
-    background:#0B1F3B !important;
+    font-size:16px;
     color:#fff !important;
 }
 
 /* BASIS PREIS */
-.preis{
-    background:#2F80ED !important;
-    color:#fff !important;
-    font-weight:700;
+.paket-tabelle tr:last-child td:nth-child(3),
+.paket-tabelle tr:last-child td:nth-child(4),
+.paket-tabelle tr:last-child td:nth-child(5){
+    background:#00AEEF !important;
+}
+
+/* BASIS PLUS PREIS */
+.paket-tabelle tr:last-child td:nth-child(6),
+.paket-tabelle tr:last-child td:nth-child(7),
+.paket-tabelle tr:last-child td:nth-child(8){
+    background:#00AEEF !important;
 }
 
 /* PREMIUM PREIS */
-.preis.premium{
-    background:#0B1F3B !important;
-    color:#fff !important;
-    font-weight:700;
+.paket-tabelle tr:last-child td:nth-child(9),
+.paket-tabelle tr:last-child td:nth-child(10),
+.paket-tabelle tr:last-child td:nth-child(11){
+    background:#145A7A !important;
 }
 
-/* Subheader leicht blau */
-.sub-header{
-    background:rgba(47,128,237,0.15) !important;
-}
-
-/* Zellen bleiben neutral */
-.paket-tabelle td{
-    background:rgba(255,255,255,0.7) !important;
+/* PREMIUM PLUS PREIS */
+.paket-tabelle tr:last-child td:nth-child(12),
+.paket-tabelle tr:last-child td:nth-child(13),
+.paket-tabelle tr:last-child td:nth-child(14){
+    background:#0B3A57 !important;
 }
     
   </style>
