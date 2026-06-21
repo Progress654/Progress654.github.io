@@ -137,6 +137,86 @@ body{
 
     ul{ padding-left:1.2rem; }
 
+
+.paket-tabelle{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+    margin-top:30px;
+    font-size:13px;
+    color:#444;
+    background:#f6f7f8;
+    border:1px solid #e3e3e3;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+/* WICHTIG: jede Zelle bekommt Hintergrund */
+.paket-tabelle td{
+    padding:10px 10px;
+    text-align:center;
+    border-bottom:1px solid #e6e6e6;
+    border-right:1px solid #e6e6e6;
+    background:#fff;
+}
+
+/* Header */
+.paket-header{
+    background:#e9ecef !important;
+    color:#333;
+    font-weight:600;
+    text-align:center;
+    padding:12px;
+}
+
+/* Subheader */
+.sub-header{
+    background:#f1f3f5 !important;
+    font-weight:500;
+}
+
+/* linke Spalten */
+.geschoss{
+    background:#f1f3f5 !important;
+    font-weight:600;
+    text-align:left;
+    padding-left:12px;
+}
+
+.raum{
+    background:#fafafa !important;
+    text-align:left;
+}
+
+/* Preis */
+.preis-label{
+    background:#e9ecef !important;
+    font-weight:600;
+    text-align:right;
+}
+
+.preis{
+    background:#f1f3f5 !important;
+    font-weight:600;
+}
+
+/* Premium leicht anders */
+.preis.premium{
+    background:#e2e6ea !important;
+}
+
+/* letzte Kanten entfernen */
+.paket-tabelle tr:last-child td{
+    border-bottom:none;
+}
+
+.paket-tabelle td:last-child,
+.paket-tabelle th:last-child{
+    border-right:none;
+}
+  
+
+    
   </style>
   
 </head>
