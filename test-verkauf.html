@@ -80,15 +80,17 @@ body{
       z-index:1000;
     }
 
+.logo-svg {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+@media (min-width: 768px) {
     .logo-svg {
-     width: 140px;
-     height: auto;
+        width: 240px;
     }
-    @media (min-width: 768px) {
-    .logo-svg {
-    width: 240px;
-    }
-    }    
+}
 
     
     .container{
@@ -141,22 +143,41 @@ body{
 <body>
 
 <!-- LOGO -->
-      
-      <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg" style="width:800px !important; height:auto !important; display:block;">
-        <!-- Quadrat (Dunkelblau) -->
-        <rect x="20" y="50" width="80" height="80" fill="#1F3A93" rx="4"/>
-        <!-- Kreis (Petrol) -->
-        <circle cx="110" cy="90" r="36" fill="#2D9CDB" />
-        <!-- Text BERATUNG -->
-        <text x="170" y="76" font-family="Arial, sans-serif" font-size="48" fill="#2C3E50" font-weight="bold" text-transform="uppercase" letter-spacing="1">
-          BERATUNG
-        </text>
-        <!-- Text &TECHNIK -->
-        <text x="200" y="120" font-family="Arial, sans-serif" font-size="48" fill="#2C3E50" font-weight="bold" text-transform="uppercase" letter-spacing="1">
-          &amp;TECHNIK
-        </text>
-      </svg>
-  
+
+<svg class="logo-svg"
+     viewBox="0 0 700 180"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Quadrat (Dunkelblau) -->
+  <rect x="20" y="50" width="80" height="80" fill="#1F3A93" rx="4"/>
+
+  <!-- Kreis (Petrol) -->
+  <circle cx="110" cy="90" r="36" fill="#2D9CDB"/>
+
+  <!-- Text BERATUNG -->
+  <text x="170"
+        y="76"
+        font-family="Arial, sans-serif"
+        font-size="48"
+        fill="#2C3E50"
+        font-weight="bold"
+        letter-spacing="1">
+    BERATUNG
+  </text>
+
+  <!-- Text & TECHNIK -->
+  <text x="200"
+        y="120"
+        font-family="Arial, sans-serif"
+        font-size="48"
+        fill="#2C3E50"
+        font-weight="bold"
+        letter-spacing="1">
+    &amp;TECHNIK
+  </text>
+
+</svg>
+
 <!-- LOGO ENDE -->
   
 <header>
