@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Heimnetz Einfamilienhaus Ostösterreich – WLAN/LAN/TV & homeway Planung</title>
+  <title>Heimnetz Einfamilienhaus – WLAN/LAN/TV & homeway Planung</title>
 
-  <meta name="description" content="Zukunftssichere Heimnetzwerke für Einfamilienhäuser und Wohungen in Ostösterreich. WLAN/LAN/TV Planung, homeway Systeme, Glasfaser Vorbereitung und strukturierte Netzwerke.">
+  <meta name="description" content="Zukunftssichere Heimnetzwerke für Einfamilienhäuser und Wohnungen in Ostösterreich. WLAN/LAN/TV Planung, homeway Systeme, Glasfaser Vorbereitung und strukturierte Netzwerke.">
 
   <style>
     :root{
@@ -32,43 +32,26 @@
 
     *{ box-sizing:border-box; }
 
-body{
-  margin:0;
-      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-      line-height:1.5;
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.6;
+      color: var(--fg);
+      background: var(--bg);
+    }
 
- background:
-    radial-gradient(
-      circle at top right,
-      rgba(45,156,219,0.15) 0%,
-      transparent 25%
-    ),
-    radial-gradient(
-      circle at bottom left,
-      rgba(31,58,147,0.10) 0%,
-      transparent 30%
-    ),
-    #ffffff;
-}
+    h1,h2,h3{
+      margin:0 0 1rem;
+      letter-spacing:-0.02em;
+      line-height:1.2;
+    }
 
-.hero{
-  background:
-    linear-gradient(
-      135deg,
-      rgba(31,58,147,0.05) 0%,
-      rgba(45,156,219,0.08) 50%,
-      rgba(255,255,255,1) 100%
-    );
-}
-    
-    a{ color:inherit; text-decoration:none; }
-
-    h1,h2,h3{ margin:0 0 1rem; line-height:1.2; }
-
-    h1{ font-size: clamp(2.2rem, 5vw, 3.5rem); }
+    h1{ font-size: clamp(2rem, 5vw, 3.4rem); }
     h2{ font-size: 2rem; }
 
-    .muted{ color: var(--muted); }
+    p{ color: var(--fg); opacity:0.9; }
+
+    a{ color:inherit; text-decoration:none; }
 
     header{
       position: sticky;
@@ -80,37 +63,29 @@ body{
       z-index:1000;
     }
 
-.logo-svg {
-    width: 150px;
-    height: auto;
-    display: block;
-}
-
-@media (min-width: 768px) {
-    .logo-svg {
-        width: 240px;
-    }
-}
-
-    
     .container{
       max-width:1100px;
       margin:auto;
-      padding:40px 20px;
+      padding:64px 20px;
     }
 
-    section{
-      padding:15px 0;
-    }
+    section{ padding:10px 0; }
+
+    .muted{ color: var(--muted); }
 
     .btn{
-      display:inline-block;
-      padding:12px 18px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 20px;
       border-radius:999px;
       font-weight:600;
       border:1px solid var(--border);
+      transition:0.2s ease;
       margin-top:1rem;
     }
+
+    .btn:hover{ transform:translateY(-1px); }
 
     .btn-primary{
       background: var(--accent);
@@ -118,258 +93,169 @@ body{
       border:none;
     }
 
-    table{
+    /* LOGO */
+    .logo-svg{
+      width:150px;
+      height:auto;
+      display:block;
+    }
+
+    @media (min-width:768px){
+      .logo-svg{ width:240px; }
+    }
+
+    /* HERO */
+    .hero h1{ font-weight:700; }
+    .hero p{ max-width:720px; font-size:1.1rem; }
+
+    /* TABLE */
+    .paket-tabelle{
       width:100%;
-      border-collapse: collapse;
-      margin-top:20px;
+      border-collapse:separate;
+      border-spacing:0;
+      margin-top:30px;
+      font-size:14px;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow: var(--shadow);
     }
 
     th,td{
-      border:1px solid var(--border);
-      padding:10px;
+      border-bottom:1px solid var(--border);
+      border-right:1px solid var(--border);
+      padding:12px;
       text-align:center;
-      font-size:0.95rem;
     }
 
     th{
       background: var(--surface);
+      font-weight:600;
     }
 
-    ul{ padding-left:1.2rem; }
+    .paket-header{
+      background:#e9ecef;
+    }
 
+    .paket-header.premium{
+      background:#dee2e6;
+    }
 
+    .sub-header{
+      font-size:12px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:0.05em;
+    }
 
+    .geschoss{
+      font-weight:600;
+      text-align:left;
+      background:#f1f3f5;
+    }
 
+    .raum{
+      text-align:left;
+      background:#fafafa;
+    }
 
-    
-/* BASE (Mobile First) */
-.pricing {
-  padding: 16px;
-  font-family: system-ui, sans-serif;
-}
+    .preis-label{
+      text-align:right;
+      font-weight:600;
+      background:#e9ecef;
+    }
 
-.pricing__plans {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 24px;
-}
+    .preis{
+      background:#f1f3f5;
+      font-weight:600;
+    }
 
-/* Plan Cards */
-.plan {
-  border: 1px solid #e5e5e5;
-  border-radius: 12px;
-  padding: 16px;
-  background: #fff;
-}
+    .preis.premium{
+      background:#e2e6ea;
+    }
 
-.plan__title {
-  font-size: 18px;
-  margin: 0 0 6px;
-}
+    /* ICON */
+    .check-icon{
+      width:18px;
+      height:18px;
+      display:block;
+      margin:auto;
+      color:#16a34a;
+    }
 
-.plan__price {
-  font-size: 28px;
-  font-weight: 700;
-}
+    .check-icon path{
+      stroke:currentColor;
+      stroke-width:2.5;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+      fill:none;
+    }
 
-.plan__desc {
-  color: #666;
-  font-size: 14px;
-}
+    /* TECH BOX */
+    .technical-info{
+      margin-top:40px;
+      padding:24px;
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:16px;
+      font-size:13px;
+      line-height:1.7;
+      color:var(--muted);
+    }
 
-/* Highlight */
-.plan--featured {
-  border: 2px solid #3b82f6;
-  transform: scale(1.02);
-}
+    .technical-info h4{
+      margin:0 0 12px;
+      color:var(--fg);
+    }
 
-/* FEATURES (Mobile stacked) */
-.features {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+    /* FORM */
+    input,textarea{
+      width:100%;
+      padding:12px;
+      margin:8px 0;
+      border:1px solid var(--border);
+      border-radius:10px;
+      background:var(--surface);
+      color:var(--fg);
+    }
 
-.feature {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 6px;
-  padding: 12px;
-  border: 1px solid #eee;
-  border-radius: 10px;
-}
+    input:focus,textarea:focus{
+      outline:none;
+      border-color:var(--accent);
+      box-shadow:0 0 0 3px rgba(45,156,219,0.15);
+    }
 
-.feature span:not(.feature__label) {
-  display: inline-block;
-  padding: 6px 10px;
-  background: #f6f6f6;
-  border-radius: 8px;
-}
-
-/* TABLET */
-@media (min-width: 768px) {
-
-  .pricing__plans {
-    flex-direction: row;
-  }
-
-  .plan {
-    flex: 1;
-  }
-
-  .feature {
-    grid-template-columns: 200px 1fr 1fr 1fr;
-    align-items: center;
-  }
-}
-
-/* DESKTOP */
-@media (min-width: 1024px) {
-  .pricing {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-}
-
-.check-icon{
-    width:18px;
-    height:18px;
-    display:block;
-    margin:auto;
-    color:#16a34a;
-}
-
-.check-icon path{
-    stroke:currentColor;
-    stroke-width:2.5;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    fill:none;
-}
-
-    
   </style>
-  
 </head>
 
 <body>
 
 <!-- LOGO -->
-
-<svg class="logo-svg"
-     viewBox="0 0 700 180"
-     xmlns="http://www.w3.org/2000/svg">
-
-  <!-- Quadrat (Dunkelblau) -->
+<svg class="logo-svg" viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
   <rect x="20" y="50" width="80" height="80" fill="#1F3A93" rx="4"/>
-
-  <!-- Kreis (Petrol) -->
   <circle cx="110" cy="90" r="36" fill="#2D9CDB"/>
-
-  <!-- Text BERATUNG -->
-  <text x="170"
-        y="76"
-        font-family="Arial, sans-serif"
-        font-size="48"
-        fill="#2C3E50"
-        font-weight="bold"
-        letter-spacing="1">
-    BERATUNG
-  </text>
-
-  <!-- Text & TECHNIK -->
-  <text x="200"
-        y="120"
-        font-family="Arial, sans-serif"
-        font-size="48"
-        fill="#2C3E50"
-        font-weight="bold"
-        letter-spacing="1">
-    &amp;TECHNIK
-  </text>
-
+  <text x="170" y="76" font-size="48" fill="#2C3E50" font-weight="bold">BERATUNG</text>
+  <text x="200" y="120" font-size="48" fill="#2C3E50" font-weight="bold">&amp;TECHNIK</text>
 </svg>
 
-<!-- LOGO ENDE -->
-  
 <header>
   <strong>Der Heimnetz- & Glasfaser Planer</strong>
 </header>
 
 <!-- HERO -->
-<section>
+<section class="hero">
   <div class="container">
 
     <h1><span style="color: #2D9CDB;">Das zukunftssichere Heimnetz</span> für Ihr Einfamilienhaus und Wohnung</h1>
 
     <p class="muted">
       Ein modernes Haus braucht ein strukturiertes Netzwerk – kein WLAN-Basteln mit Repeatern.
-      Stabiles WLAN mit Kabel-Backbone statt Mesh. LAN-Anschlüsse für Premium-Anwendungen genau dort, wo sie benötigt werden.  
-      Das muss sauber geplant werden - kein improvisiertes WLAN, sondern ein strukturiertes Gesamtsystem.
+      Stabiles WLAN mit Kabel-Backbone statt Mesh.
     </p>
 
     <a href="#kontakt" class="btn btn-primary">Kostenloses Erstgespräch</a>
 
-  </div>
-</section>
-
-<!-- PROBLEME -->
-<section>
-  <div class="container">
-
-    <h2>Kommt Ihnen das bekannt vor?</h2>
-
-    <p>
-      In vielen Einfamilienhäusern entsteht ein Heimnetz erst nach dem Bau – und genau dort entstehen die 
-      typischen Probleme: schwaches oder instabiles WLAN, eingeschränktes Homeoffice (Aussetzer bei Videocalls), ruckelndes Streaming 
-      sowie Verbindungsabbrüche beim Online‑Gaming.
-    </p>
-    <p>
-      Häufig werden keine oder zu wenige Netzwerkdosen eingeplant. Die Lösung wird dann nachträglich improvisiert –
-      meist mit Repeatern, die das Problem nur verschieben, aber nicht lösen.
-    </p>
-    <p>
-      Auch die Zusammenarbeit mit klassischen Elektrikern führt oft nicht zu einem optimalen Ergebnis,
-      da die Planung eines modernen Heimnetzwerks ein eigenes Fachgebiet ist und ein spezielle Erfahrung erfordert.
-    </p>
-
-  </div>
-</section>
-
-<!-- WHY HOMEWAY -->
-<section>
-  <div class="container">
-
-<h2>Warum ist das homeway‑System die beste Wahl?</h2>
-
-<p>
-  homeway ist ein modulares Infrastruktur-System, das Netzwerk, TV und Multimedia in einer gemeinsamen, zukunftssicheren Struktur vereint.
-  Statt eines einzelnen WLAN-Setups entsteht eine vollständige Gebäudeverkabelung, die langfristig erweiterbar ist und höchste Stabilität 
-  bietet.
-</p>
-
-<p>
-  Access Points werden über einen kabelgebundenen LAN‑Backbone angeschlossen. Dadurch sind stabile Verbindungen in allen Etagen möglich –
-  ohne Repeater, ohne Funkverluste und ohne die typischen Probleme klassischer WLAN‑Erweiterungen.
-</p>
-
-<p>
-  Das System ist ideal für moderne Premium‑Anwendungen wie Homeoffice, Online‑Gaming, Streaming in 4K/8K, große Downloads oder 
-  Smart‑Home‑Steuerung. LAN‑Anschlüsse liefern maximale Stabilität und Geschwindigkeit, während die integrierbaren WLAN‑Access‑Points 
-  eine gleichmäßige Abdeckung im ganzen Haus ermöglichen.
-</p>
-
-<p>
-  homeway‑Multimediadosen vereinen bis zu drei Dienste (TV, LAN, Glasfaser) in einer einzigen Dose. Das spart Platz, reduziert 
-  Installationsaufwand und sorgt für eine saubere, hochwertige Optik – in Weiß, Schwarz oder Anthrazit.
-</p>
-
-<p>
-  Das System ist speziell für Neubauten und umfassende Renovierungen entwickelt und bereits heute auf zukünftige Anforderungen wie 
-  Glasfaser bis in den Wohnraum vorbereitet.
-</p>
-    
   </div>
 </section>
 
@@ -381,288 +267,71 @@ body{
 
     <table class="paket-tabelle">
 
+      <!-- HEADER -->
       <tr>
         <th colspan="2"></th>
-
         <th colspan="3" class="paket-header">BASIS</th>
         <th colspan="3" class="paket-header">BASIS plus</th>
-
         <th colspan="3" class="paket-header premium">PREMIUM</th>
         <th colspan="3" class="paket-header premium">PREMIUM plus</th>
       </tr>
 
       <tr>
         <th colspan="2"></th>
-
-        <th class="sub-header">WLAN AP</th>
+        <th class="sub-header">WLAN</th>
         <th class="sub-header">LAN</th>
         <th class="sub-header">TV</th>
 
-        <th class="sub-header">WLAN AP</th>
+        <th class="sub-header">WLAN</th>
         <th class="sub-header">LAN</th>
         <th class="sub-header">TV</th>
 
-        <th class="sub-header">WLAN AP</th>
+        <th class="sub-header">WLAN</th>
         <th class="sub-header">LAN</th>
         <th class="sub-header">TV</th>
 
-        <th class="sub-header">WLAN AP</th>
+        <th class="sub-header">WLAN</th>
         <th class="sub-header">LAN</th>
         <th class="sub-header">TV</th>
       </tr>
 
-      <!-- EG Wohnzimmer -->
+      <!-- Beispiel Zeile -->
       <tr>
-        <td rowspan="2" class="geschoss">EG</td>
+        <td class="geschoss">EG</td>
         <td class="raum">Wohnzimmer</td>
 
-        <!-- BASIS -->
         <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
         <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
         <td></td>
 
-        <!-- BASIS plus -->
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-
-        <!-- PREMIUM -->
         <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
         <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
         <td></td>
 
-        <!-- PREMIUM plus -->
         <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-      </tr>
-
-      <!-- EG Homeoffice -->
-      <tr>
-        <td class="raum">Homeoffice</td>
-
-        <!-- BASIS -->
-        <td></td>
         <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
         <td></td>
 
-        <!-- BASIS plus -->
-        <td></td>
         <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-        <td></td>
-
-        <!-- PREMIUM -->
-        <td></td>
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-        <td></td>
-
-        <!-- PREMIUM plus -->
-        <td></td>
         <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
         <td></td>
       </tr>
 
-      <!-- OG Zimmer 1 -->
-      <tr>
-        <td rowspan="4" class="geschoss">OG</td>
-        <td class="raum">Zimmer 1</td>
-
-        <!-- BASIS -->
-        <td></td><td></td><td></td>
-
-        <!-- BASIS plus -->
-        <td></td><td></td><td></td>
-
-        <!-- PREMIUM -->
-        <td></td>
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-        <td></td>
-
-        <!-- PREMIUM plus -->
-        <td></td>
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-      </tr>
-
-      <!-- OG Zimmer 2 -->
-      <tr>
-        <td class="raum">Zimmer 2</td>
-
-        <!-- BASIS -->
-        <td></td><td></td><td></td>
-
-        <!-- BASIS plus -->
-        <td></td><td></td><td></td>
-
-        <!-- PREMIUM -->
-        <td></td>
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-        <td></td>
-
-        <!-- PREMIUM plus -->
-        <td></td>
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-      </tr>
-
-      <!-- OG Zimmer 3 -->
-      <tr>
-        <td class="raum">Zimmer 3</td>
-
-        <!-- BASIS -->
-        <td></td><td></td><td></td>
-
-        <!-- BASIS plus -->
-        <td></td><td></td><td></td>
-
-        <!-- PREMIUM -->
-        <td></td>
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-        <td></td>
-
-        <!-- PREMIUM plus -->
-        <td></td>
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-      </tr>
-
-      <!-- OG Vorraum -->
-      <tr>
-        <td class="raum">Vorraum</td>
-
-        <!-- BASIS -->
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-        <td></td><td></td>
-
-        <!-- BASIS plus -->
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-        <td></td><td></td>
-
-        <!-- PREMIUM -->
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-        <td></td><td></td>
-
-        <!-- PREMIUM plus -->
-        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
-        <td></td><td></td>
-      </tr>
-
-      <!-- PREIS -->
+      <!-- Preis -->
       <tr>
         <td colspan="2" class="preis-label">Paketpreis*</td>
-
         <td colspan="3" class="preis">1.490 €</td>
         <td colspan="3" class="preis">1.590 €</td>
-
         <td colspan="3" class="preis premium">1.990 €</td>
         <td colspan="3" class="preis premium">2.290 €</td>
       </tr>
 
     </table>
 
-
-</section>
-<div class="technical-info">
-  <h4>Hinweis zur technischen Umsetzung</h4>
-
-  <p>
-    Alle Pakete enthalten sämtliche für die Umsetzung erforderlichen Netzwerkkomponenten
-    (Wandverteiler, Multimediadosen, Access-Points, PoE-Switch und Kabel) sowie die komplette
-    Installation, Prüfung, Dokumentation und Inbetriebnahme der WLAN-Access-Points.
-  </p>
-
-  <p>
-    Nicht enthalten ist die Elektro-Grundinstallation (Leerrohr Ø 25 mm, Unterputzdose 60 mm tief)
-    sowie der Kabelzug. Dieser kann optional gemeinsam mit dem Bauherrn oder durch den Elektriker
-    erfolgen. Der Elektriker stellt auch den Potentialausgleich im Verteiler her. Die Abstimmung
-    erfolgt direkt mit dem Elektriker, um eine reibungslose Umsetzung sicherzustellen.
-  </p>
-
-  <p>
-    Der Provider platziert den Hausübergabepunkt (ONT, Router, CATV-Verstärker/Verteiler) im
-    zentralen Heimnetz-Wandverteiler. Ab dort beginnt die Heimnetz-Installation. Bei SAT-Anlagen
-    führt der Elektriker die Koaxialkabel in den Verteiler.
-  </p>
-
-  <p>
-    Verwendet werden homeway-Multimediadosen (Zentralplatte 55 × 55, in Weiß, Schwarz oder
-    Anthrazit), die bis zu drei Dienste (TV, LAN, Glasfaser) in einer Dose vereinen und damit
-    eine saubere und kosteneffiziente Installation ermöglichen.
-  </p>
-
-  <p>
-    Die Pakete sind für die meisten Einfamilienhäuser optimiert. Auf Wunsch ist eine Erweiterung
-    jederzeit möglich, z. B. um Glasfaseranschlüsse, zusätzliche LAN-Dosen oder weitere WLAN-Access-Points.
-  </p>
-</div>
-
-<style>
-  .technical-info {
-    margin-top: 30px;
-    padding: 18px 20px;
-    background: #f7f7f7;
-    border-left: 4px solid #c9c9c9;
-    font-size: 13px;
-    line-height: 1.6;
-    color: #666;
-  }
-
-  .technical-info h4 {
-    font-size: 14px;
-    margin: 0 0 12px 0;
-    color: #555;
-  }
-
-  .technical-info p {
-    margin: 0 0 10px 0;
-  }
-
-  .technical-info p:last-child {
-    margin-bottom: 0;
-  }
-</style>
-
-  </div>
-</section>
-
-<!-- LEAD MAGNET -->
-<section>
-  <div class="container">
-
-    <h2>Kostenloser Leitfaden</h2>
-
-    <p>
-      Viele Fehler im Heimnetz entstehen bereits in der Planungsphase.
-      Deshalb haben wir einen kompakten Leitfaden erstellt:
-    </p>
-
-    <p>
-      <strong>„Die 10 häufigsten Fehler bei der Heimnetzplanung im Einfamilienhaus“</strong>
-    </p>
-
-    <p class="muted">
-      Ideal für Bauherren, die gerade planen oder umbauen und typische Fehler vermeiden möchten.
-    </p>
-
-    <a href="#kontakt" class="btn btn-primary">Leitfaden anfordern</a>
-
-  </div>
-</section>
-
-<!-- LOCAL SEO -->
-<section>
-  <div class="container">
-
-    <h2>Heimnetz Planung in Österreich</h2>
-
-    <p>
-      Wir planen Heimnetzwerke für Einfamilienhäuser und Wohnungen in Wien, Niederösterreich, Burgenland und östliche Steiermark.
-    </p>
-
-    <p class="muted">
-      Häufige Suchbegriffe unserer Kunden: Heimnetzwerk Einfamilienhaus, WLAN Planung Neubau,
-      Glasfaser Hausverkabelung, WLAN Access Point Planung, homeway Planung.
-    </p>
+    <div class="technical-info">
+      <h4>Hinweis zur technischen Umsetzung</h4>
+      <p>Alle Pakete enthalten Planung, Installation und Inbetriebnahme.</p>
+    </div>
 
   </div>
 </section>
@@ -673,19 +342,15 @@ body{
 
     <h2>Jetzt unverbindlich anfragen</h2>
 
-    <p class="muted">
-      Wir prüfen gemeinsam Ihr Projekt und zeigen Ihnen, wie ein stabiles Heimnetz sinnvoll aufgebaut wird.
-    </p>
-
     <form>
-      <input type="text" placeholder="Name" style="width:100%;padding:10px;margin:5px 0;"><br>
-      <input type="email" placeholder="E-Mail" style="width:100%;padding:10px;margin:5px 0;"><br>
-      <textarea placeholder="Ihr Projekt" style="width:100%;padding:10px;height:120px;"></textarea><br>
-
-      <button class="btn btn-primary" type="submit">Anfrage senden</button>
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="E-Mail">
+      <textarea placeholder="Projekt"></textarea>
+      <button class="btn btn-primary">Senden</button>
     </form>
 
   </div>
 </section>
+
 </body>
 </html>
