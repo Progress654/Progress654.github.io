@@ -231,6 +231,23 @@ body{
     margin: 0 auto;
   }
 }
+
+.check-icon{
+    width:18px;
+    height:18px;
+    display:block;
+    margin:auto;
+    color:#16a34a;
+}
+
+.check-icon path{
+    stroke:currentColor;
+    stroke-width:2.5;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    fill:none;
+}
+
     
   </style>
   
@@ -362,198 +379,189 @@ body{
 
     <h2>Leistungspakete</h2>
 
-<table class="paket-tabelle">
+    <table class="paket-tabelle">
 
-<tr>
-    <th colspan="2"></th>
+      <tr>
+        <th colspan="2"></th>
 
-    <th colspan="3" class="paket-header">BASIS</th>
-    <th colspan="3" class="paket-header">BASIS plus</th>
+        <th colspan="3" class="paket-header">BASIS</th>
+        <th colspan="3" class="paket-header">BASIS plus</th>
 
-    <th colspan="3" class="paket-header premium">PREMIUM</th>
-    <th colspan="3" class="paket-header premium">PREMIUM plus</th>
-</tr>
+        <th colspan="3" class="paket-header premium">PREMIUM</th>
+        <th colspan="3" class="paket-header premium">PREMIUM plus</th>
+      </tr>
 
-<tr>
-    <th colspan="2"></th>
+      <tr>
+        <th colspan="2"></th>
 
-    <th class="sub-header">WLAN AP</th>
-    <th class="sub-header">LAN</th>
-    <th class="sub-header">TV</th>
+        <th class="sub-header">WLAN AP</th>
+        <th class="sub-header">LAN</th>
+        <th class="sub-header">TV</th>
 
-    <th class="sub-header">WLAN AP</th>
-    <th class="sub-header">LAN</th>
-    <th class="sub-header">TV</th>
+        <th class="sub-header">WLAN AP</th>
+        <th class="sub-header">LAN</th>
+        <th class="sub-header">TV</th>
 
-    <th class="sub-header">WLAN AP</th>
-    <th class="sub-header">LAN</th>
-    <th class="sub-header">TV</th>
+        <th class="sub-header">WLAN AP</th>
+        <th class="sub-header">LAN</th>
+        <th class="sub-header">TV</th>
 
-    <th class="sub-header">WLAN AP</th>
-    <th class="sub-header">LAN</th>
-    <th class="sub-header">TV</th>
-</tr>
+        <th class="sub-header">WLAN AP</th>
+        <th class="sub-header">LAN</th>
+        <th class="sub-header">TV</th>
+      </tr>
 
-<tr>
-    <td rowspan="2" class="geschoss">EG</td>
-    <td class="raum">Wohnzimmer</td>
+      <!-- EG Wohnzimmer -->
+      <tr>
+        <td rowspan="2" class="geschoss">EG</td>
+        <td class="raum">Wohnzimmer</td>
 
-    <td>x</td><td>x</td><td></td>
-    <td>x</td><td>x</td><td>x</td>
-    <td>x</td><td>x</td><td></td>
-    <td>x</td><td>x</td><td>x</td>
-</tr>
+        <!-- BASIS -->
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td></td>
 
-<tr>
-    <td class="raum">Homeoffice</td>
+        <!-- BASIS plus -->
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
 
-    <td></td><td>x</td><td></td>
-    <td></td><td>x</td><td></td>
-    <td></td><td>x</td><td></td>
-    <td></td><td>x</td><td></td>
-</tr>
+        <!-- PREMIUM -->
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td></td>
 
-<tr>
-    <td rowspan="4" class="geschoss">OG</td>
-    <td class="raum">Zimmer 1</td>
+        <!-- PREMIUM plus -->
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+      </tr>
 
-    <td></td><td></td><td></td>
-    <td></td><td></td><td></td>
-    <td></td><td>x</td><td></td>
-    <td></td><td>x</td><td>x</td>
-</tr>
+      <!-- EG Homeoffice -->
+      <tr>
+        <td class="raum">Homeoffice</td>
 
-<tr>
-    <td class="raum">Zimmer 2</td>
+        <!-- BASIS -->
+        <td></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td></td>
 
-    <td></td><td></td><td></td>
-    <td></td><td></td><td></td>
-    <td></td><td>x</td><td></td>
-    <td></td><td>x</td><td>x</td>
-</tr>
+        <!-- BASIS plus -->
+        <td></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td></td>
 
-<tr>
-    <td class="raum">Zimmer 3</td>
+        <!-- PREMIUM -->
+        <td></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td></td>
 
-    <td></td><td></td><td></td>
-    <td></td><td></td><td></td>
-    <td></td><td>x</td><td></td>
-    <td></td><td>x</td><td>x</td>
-</tr>
+        <!-- PREMIUM plus -->
+        <td></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td></td>
+      </tr>
 
-<tr>
-    <td class="raum">Vorraum</td>
+      <!-- OG Zimmer 1 -->
+      <tr>
+        <td rowspan="4" class="geschoss">OG</td>
+        <td class="raum">Zimmer 1</td>
 
-    <td>x</td><td></td><td></td>
-    <td>x</td><td></td><td></td>
-    <td>x</td><td></td><td></td>
-    <td>x</td><td></td><td></td>
-</tr>
+        <!-- BASIS -->
+        <td></td><td></td><td></td>
 
-<tr>
-    <td colspan="2" class="preis-label">Paketpreis*</td>
+        <!-- BASIS plus -->
+        <td></td><td></td><td></td>
 
-    <td colspan="3" class="preis">1.490 €</td>
-    <td colspan="3" class="preis">1.590 €</td>
+        <!-- PREMIUM -->
+        <td></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td></td>
 
-    <td colspan="3" class="preis premium">1.990 €</td>
-    <td colspan="3" class="preis premium">2.290 €</td>
-</tr>
+        <!-- PREMIUM plus -->
+        <td></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+      </tr>
 
-</table>
+      <!-- OG Zimmer 2 -->
+      <tr>
+        <td class="raum">Zimmer 2</td>
 
-<style>
-.paket-tabelle{
-    width:100%;
-    border-collapse:separate;
-    border-spacing:0;
-    margin-top:30px;
-    font-size:13px;
-    color:#555;
-    background:#f6f7f8;
-    border:1px solid #e3e3e3;
-    border-radius:12px;
-    overflow:hidden;
-}
+        <!-- BASIS -->
+        <td></td><td></td><td></td>
 
-/* HEADER (neutral grau wie dein Infoblock) */
-.paket-header{
-    background:#e9ecef;
-    color:#333;
-    font-weight:600;
-    text-align:center;
-    padding:10px;
-    border-bottom:1px solid #ddd;
-}
+        <!-- BASIS plus -->
+        <td></td><td></td><td></td>
 
-/* PREMIUM leicht dunkler, aber NICHT farbig */
-.paket-header.premium{
-    background:#dee2e6;
-}
+        <!-- PREMIUM -->
+        <td></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td></td>
 
-/* Sub Header */
-.sub-header{
-    background:#f1f3f5;
-    font-size:12px;
-    font-weight:500;
-    text-align:center;
-    padding:8px;
-    color:#555;
-}
+        <!-- PREMIUM plus -->
+        <td></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+      </tr>
 
-/* Zellen */
-.paket-tabelle td{
-    padding:8px 10px;
-    text-align:center;
-    border-bottom:1px solid #e6e6e6;
-    border-right:1px solid #e6e6e6;
-}
+      <!-- OG Zimmer 3 -->
+      <tr>
+        <td class="raum">Zimmer 3</td>
 
-/* linke Spalten */
-.geschoss{
-    font-weight:600;
-    background:#f1f3f5;
-    text-align:left;
-    padding-left:12px;
-    color:#444;
-}
+        <!-- BASIS -->
+        <td></td><td></td><td></td>
 
-.raum{
-    text-align:left;
-    background:#fafafa;
-    color:#555;
-}
+        <!-- BASIS plus -->
+        <td></td><td></td><td></td>
 
-/* Preisbereich */
-.preis-label{
-    text-align:right;
-    font-weight:600;
-    background:#e9ecef;
-    color:#333;
-}
+        <!-- PREMIUM -->
+        <td></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td></td>
 
-.preis{
-    background:#f1f3f5;
-    font-weight:600;
-    color:#333;
-}
+        <!-- PREMIUM plus -->
+        <td></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+      </tr>
 
-/* PREMIUM Preis NICHT knallig, nur leicht abgesetzt */
-.preis.premium{
-    background:#e2e6ea;
-}
+      <!-- OG Vorraum -->
+      <tr>
+        <td class="raum">Vorraum</td>
 
-/* letzte Reihe */
-.paket-tabelle tr:last-child td{
-    border-bottom:none;
-}
+        <!-- BASIS -->
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td></td><td></td>
 
-/* kleine optische Verbesserung */
-.paket-tabelle td:last-child,
-.paket-tabelle th:last-child{
-    border-right:none;
-}
-</style>
+        <!-- BASIS plus -->
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td></td><td></td>
+
+        <!-- PREMIUM -->
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td></td><td></td>
+
+        <!-- PREMIUM plus -->
+        <td><svg class="check-icon" viewBox="0 0 24 24"><path d="M5 13L10 18L19 7"/></svg></td>
+        <td></td><td></td>
+      </tr>
+
+      <!-- PREIS -->
+      <tr>
+        <td colspan="2" class="preis-label">Paketpreis*</td>
+
+        <td colspan="3" class="preis">1.490 €</td>
+        <td colspan="3" class="preis">1.590 €</td>
+
+        <td colspan="3" class="preis premium">1.990 €</td>
+        <td colspan="3" class="preis premium">2.290 €</td>
+      </tr>
+
+    </table>
+
+  </div>
+</section>
 
 <div class="technical-info">
   <h4>Hinweis zur technischen Umsetzung</h4>
