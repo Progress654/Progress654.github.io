@@ -3,22 +3,28 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Connect Netzwerk Lösungen</title>
+
+<title>Connect Netzwerk Lösungen – Smarte Hausverkabelung</title>
+<meta name="description" content="Zukunftssichere Netzwerk- und Hausverkabelung für Ihr Zuhause. CONNECT HOME & CONNECT FAMILY Lösungen für Streaming, Homeoffice und Smart Home."/>
 
 <style>
 
 /* =========================
-   BRAND COLORS
+   BRAND SYSTEM
 ========================= */
 
 :root {
   --blue-dark: #1F3A93;
   --blue: #2D9CDB;
   --text: #2C3E50;
-  --bg: #F5F8FC;
+  --bg: #F4F7FB;
   --card: #FFFFFF;
   --border: rgba(31,58,147,0.12);
 }
+
+/* =========================
+   BASE
+========================= */
 
 * {
   box-sizing: border-box;
@@ -30,6 +36,40 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.65;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  background: white;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+}
+
+.logo {
+  font-weight: 800;
+  color: var(--blue-dark);
+  letter-spacing: 0.5px;
+}
+
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 16px;
+  font-size: 0.95rem;
 }
 
 /* =========================
@@ -52,20 +92,31 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-size: clamp(1.9rem, 5vw, 3rem);
   color: var(--blue-dark);
   margin-bottom: 12px;
 }
 
 .hero p {
-  font-size: clamp(1rem, 3.5vw, 1.2rem);
-  color: var(--text);
+  font-size: 1.1rem;
   margin: 6px 0;
 }
 
 .hero .sub {
   color: #5b6b7a;
-  margin-top: 10px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+  margin-top: 60px;
+}
+
+.section h2 {
+  color: var(--blue-dark);
+  font-size: 1.6rem;
 }
 
 /* =========================
@@ -76,85 +127,28 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 22px;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 16px;
-  padding: 26px;
-  box-shadow: 0 10px 25px rgba(31,58,147,0.06);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: 0.2s ease;
+  padding: 24px;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(45,156,219,0.35);
-}
-
-.card h2 {
+.card h3 {
   margin-top: 10px;
   color: var(--blue-dark);
 }
 
 .badge {
   display: inline-block;
-  padding: 6px 10px;
+  padding: 5px 10px;
   border-radius: 999px;
   font-size: 0.75rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.badge.home {
-  background: rgba(31,58,147,0.08);
-  color: var(--blue-dark);
-}
-
-.badge.family {
   background: rgba(45,156,219,0.12);
   color: var(--blue);
-}
-
-/* =========================
-   TEXT CONTENT (YOUR ORIGINAL STYLE)
-========================= */
-
-.section-text {
-  margin-top: 12px;
-  color: var(--text);
-}
-
-.section-text strong {
-  color: var(--blue-dark);
-}
-
-/* =========================
-   LISTS
-========================= */
-
-ul {
-  padding-left: 18px;
-  margin-top: 12px;
-}
-
-li {
-  margin-bottom: 8px;
-}
-
-/* =========================
-   PRICE
-========================= */
-
-.price {
-  margin-top: 14px;
-  font-weight: 700;
-  color: var(--blue-dark);
-  font-size: 1.1rem;
 }
 
 /* =========================
@@ -167,13 +161,12 @@ li {
   align-items: center;
   margin-top: 18px;
   padding: 14px;
-  min-height: 44px;
   border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
   background: var(--blue);
   color: white;
-  transition: 0.2s;
+  text-decoration: none;
+  font-weight: 600;
+  min-height: 44px;
 }
 
 .btn:hover {
@@ -181,19 +174,14 @@ li {
 }
 
 /* =========================
-   INFO BLOCKS
+   INFO
 ========================= */
 
 .info {
-  margin-top: 50px;
   background: white;
-  border-radius: 16px;
-  padding: 28px;
   border: 1px solid var(--border);
-}
-
-.info h2 {
-  color: var(--blue-dark);
+  border-radius: 16px;
+  padding: 26px;
 }
 
 /* =========================
@@ -202,15 +190,10 @@ li {
 
 .cta {
   margin-top: 60px;
-  background: linear-gradient(135deg, rgba(31,58,147,0.08), rgba(45,156,219,0.08));
+  background: linear-gradient(135deg, rgba(31,58,147,0.06), rgba(45,156,219,0.06));
   padding: 40px;
   border-radius: 16px;
   border: 1px solid var(--border);
-}
-
-.cta h2 {
-  color: var(--blue-dark);
-  margin-top: 0;
 }
 
 form {
@@ -226,10 +209,6 @@ input, textarea {
   font-family: inherit;
 }
 
-textarea {
-  min-height: 110px;
-}
-
 /* =========================
    RESPONSIVE
 ========================= */
@@ -238,6 +217,10 @@ textarea {
   .cards {
     grid-template-columns: 1fr 1fr;
   }
+
+  .nav {
+    padding: 14px 40px;
+  }
 }
 
 </style>
@@ -245,110 +228,102 @@ textarea {
 
 <body>
 
-<!-- HERO -->
-<div class="hero container">
-  <h1>Ihr Zuhause verdient ein perfektes Netzwerk</h1>
+<!-- HEADER -->
+<header>
+  <div class="nav">
+    <div class="logo">CONNECT</div>
+    <nav>
+      <a href="#produkte">Produkte</a>
+      <a href="#loesung">Lösung</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
 
+<!-- HERO -->
+<section class="hero container">
+  <h1>Ihr Zuhause verdient ein perfektes Netzwerk</h1>
   <p>Streaming. Homeoffice. Gaming. Smart Home.</p>
   <p class="sub">Alles funktioniert nur so gut wie Ihre Hausverkabelung.</p>
-</div>
+</section>
 
-<!-- CARDS -->
-<div class="container">
+<!-- PRODUKTE -->
+<section id="produkte" class="section container">
+  <h2>Unsere Lösungen</h2>
+
   <div class="cards">
 
-    <!-- CONNECT HOME -->
     <div class="card">
-      <span class="badge home">CONNECT HOME</span>
+      <span class="badge">CONNECT HOME</span>
+      <h3>Der perfekte Einstieg</h3>
 
-      <h2>Der perfekte Einstieg in das vernetzte Zuhause</h2>
-
-      <div class="section-text">
-        Für alle, die Wert auf eine zuverlässige digitale Infrastruktur in den wichtigsten Wohnbereichen legen.
-      </div>
+      <p>Für stabile Netzwerke in den wichtigsten Wohnbereichen.</p>
 
       <ul>
-        <li>Wohnzimmer optimal fürs Streamen, Fernsehen und Gaming ausgestattet</li>
-        <li>Homeoffice für stabiles Arbeiten und Videokonferenzen zuverlässig verbunden</li>
-        <li>Zuverlässige Internetversorgung durch WLAN im Alltag</li>
-        <li>Für zukünftige Anforderungen vorbereitet</li>
+        <li>Wohnzimmer & Homeoffice optimiert</li>
+        <li>Stabiles WLAN für Alltag & Streaming</li>
+        <li>Zukunftssicher vorbereitet</li>
       </ul>
 
-      <div class="price">ab 1.590 €</div>
-      <a class="btn" href="#cta">Anfrage stellen</a>
+      <strong>ab 1.590 €</strong>
+      <a class="btn" href="#kontakt">Anfrage stellen</a>
     </div>
 
-    <!-- CONNECT FAMILY -->
     <div class="card">
-      <span class="badge family">CONNECT FAMILY</span>
+      <span class="badge">CONNECT FAMILY</span>
+      <h3>Rundum vernetztes Zuhause</h3>
 
-      <h2>Das Rundum-sorglos-Paket für das digitale Zuhause</h2>
-
-      <div class="section-text">
-        Mehr Räume. Mehr Möglichkeiten. Mehr Komfort – für heute und die Zukunft.
-      </div>
+      <p>Mehr Räume, mehr Möglichkeiten, mehr Komfort.</p>
 
       <ul>
-        <li>Alle Vorteile von CONNECT HOME</li>
-        <li>Vernetzung in mehreren Räumen - Kinder-, Schlaf- oder Gästezimmer</li>
-        <li>Gleichzeitiges Streaming, Arbeiten und Gaming ohne Einschränkungen</li>
-        <li>Für zukünftige Technologien bereits vorbereitet</li>
+        <li>Mehrere Räume vollständig vernetzt</li>
+        <li>Parallel Streaming & Arbeiten</li>
+        <li>Maximale Zukunftssicherheit</li>
       </ul>
 
-      <div class="price">ab 2.190 €</div>
-      <a class="btn" href="#cta">Anfrage stellen</a>
+      <strong>ab 2.190 €</strong>
+      <a class="btn" href="#kontakt">Anfrage stellen</a>
     </div>
 
   </div>
+</section>
 
-  <!-- INFO BLOCK 1 -->
+<!-- LÖSUNG -->
+<section id="loesung" class="section container">
+  <h2>Eine Lösung, die mit Ihren Bedürfnissen wächst</h2>
+
   <div class="info">
-    <h2>Eine Lösung, die mit Ihren Bedürfnissen wächst</h2>
     <p>
-      Ob Sie heute nur einen Arbeitsplatz benötigen oder morgen mehrere Zimmer digital vernetzen möchten –
-      unsere Lösungen schaffen die passende Grundlage.
+      Ob ein Arbeitsplatz oder mehrere Räume – unsere Infrastruktur passt sich flexibel an.
     </p>
 
     <ul>
-      <li>Schnelles Internet, genau dort, wo Sie es brauchen</li>
-      <li>Fernsehen ohne zusätzliche Kabel</li>
-      <li>Stabile Verbindungen für Homeoffice, Streaming und Gaming</li>
-      <li>Vorbereitet für zukünftige Technologien, ohne später Wände öffnen zu müssen</li>
+      <li>Schnelles Internet genau dort, wo Sie es brauchen</li>
+      <li>TV ohne zusätzliche Kabel</li>
+      <li>Stabile Verbindungen für alle Anwendungen</li>
+      <li>Zukunftssicher ohne spätere Umbauten</li>
     </ul>
-  </div>
-
-  <!-- INFO BLOCK 2 -->
-  <div class="info">
-    <h2>Eine Dose. Unzählige Möglichkeiten.</h2>
-    <p>
-      Internet, TV und Glasfaser in einer kompakten, modularen Anschlusslösung.
-      Das sorgt für eine aufgeräumte Optik und maximale Flexibilität.
-    </p>
 
     <p>
-      WLAN Access Points integrieren sich harmonisch ins Wohnumfeld (55×55 mm Schalterformat)
-      und passen sich Ihrem Design an.
-    </p>
-
-    <p>
-      Erhältlich in Weiß, Anthrazit und Schwarz.
+      Eine Dose. Unzählige Möglichkeiten. Modular, flexibel und zukunftssicher.
     </p>
   </div>
+</section>
 
-  <!-- CTA -->
-  <div class="cta" id="cta">
-    <h2>Unverbindliche Anfrage starten</h2>
-    <p>Wir beraten Sie persönlich und erstellen ein individuelles Angebot für Ihr Zuhause.</p>
+<!-- KONTAKT -->
+<section id="kontakt" class="section container">
+  <div class="cta">
+    <h2>Jetzt unverbindlich anfragen</h2>
+    <p>Wir erstellen ein individuelles Angebot für Ihr Zuhause.</p>
 
     <form>
       <input type="text" placeholder="Name" />
       <input type="email" placeholder="E-Mail" />
-      <textarea placeholder="Beschreiben Sie Ihr Projekt (Wohnräume, Nutzung, Wünsche)"></textarea>
-      <button class="btn" type="submit">Anfrage senden</button>
+      <textarea placeholder="Beschreiben Sie Ihr Projekt"></textarea>
+      <button class="btn" type="submit">Absenden</button>
     </form>
   </div>
-
-</div>
+</section>
 
 </body>
 </html>
