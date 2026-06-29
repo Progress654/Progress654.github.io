@@ -186,7 +186,34 @@ header {
 .card-content {
   padding: 22px;
 }
+
    
+.card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 18px 22px;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.card-header.home {
+  background: linear-gradient(135deg, #1F3A93, #2D9CDB);
+}
+
+.card-header.family {
+  background: linear-gradient(135deg, #2D9CDB, #1F3A93);
+}
+
+.card-body {
+  padding: var(--space-lg);
+}
 /* =========================
    TEXT (ORIGINAL CONTENT SCALE)
 ========================= */
@@ -348,56 +375,60 @@ footer {
   <div class="cards">
 
     <!-- HOME -->
-     <div class="card-header home">
-     <span>CONNECT HOME</span>
-     </div>
      <div class="card">
-      <span class="badge"><h2>CONNECT HOME</h2></span>
 
-      <h2>Der perfekte Einstieg in das vernetzte Zuhause</h2>
+  <div class="card-header home">
+    <span>CONNECT HOME</span>
+  </div>
 
-      <div class="section-text">
-        Für alle, die Wert auf eine zuverlässige digitale Infrastruktur in den wichtigsten Wohnbereichen legen.
-      </div>
+  <div class="card-body">
 
-      <ul>
-        <li>✔ Wohnzimmer optimal fürs Streamen, Fernsehen und Gaming ausgestattet</li>
-        <li>✔ Homeoffice für stabiles Arbeiten und Videokonferenzen zuverlässig verbunden</li>
-        <li>✔ Zuverlässige Internetversorgung durch WLAN im Alltag</li>
-        <li>✔ Für zukünftige Anforderungen vorbereitet</li>
-      </ul>
+    <h2>Der perfekte Einstieg in das vernetzte Zuhause</h2>
 
-      <div class="price">ab 1.590 €</div>
-      <a class="btn" href="#kontakt">Anfrage stellen</a>
+    <div class="section-text">
+      Für alle, die Wert auf eine zuverlässige digitale Infrastruktur in den wichtigsten Wohnbereichen legen.
     </div>
 
-    <!-- FAMILY -->
-    <div class="card-header family">
-    <span>CONNECT FAMILY</span>
-    <div class="badge">EMPFOHLEN</div>
-    </div>
-     
-     <div class="card">
-      <span class="badge"><h2>CONNECT FAMILY</h2></span>
+    <ul>
+      <li>✔ Wohnzimmer optimal fürs Streamen, Fernsehen und Gaming ausgestattet</li>
+      <li>✔ Homeoffice für stabiles Arbeiten und Videokonferenzen zuverlässig verbunden</li>
+      <li>✔ Zuverlässige Internetversorgung durch WLAN im Alltag</li>
+      <li>✔ Für zukünftige Anforderungen vorbereitet</li>
+    </ul>
 
-      <h2>Das Rundum-sorglos-Paket für das digitale Zuhause</h2>
-
-      <div class="section-text">
-        Mehr Räume. Mehr Möglichkeiten. Mehr Komfort – für heute und die Zukunft.
-      </div>
-
-      <ul>
-        <li>✔ Alle Vorteile von CONNECT HOME</li>
-        <li>✔ Vernetzung in mehreren Räumen - Kinder-, Schlaf- oder Gästezimmer</li>
-        <li>✔ Gleichzeitiges Streaming, Arbeiten und Gaming ohne Einschränkungen</li>
-        <li>✔ Für zukünftige Technologien bereits vorbereitet</li>
-      </ul>
-
-      <div class="price">ab 2.190 €</div>
-      <a class="btn" href="#kontakt">Anfrage stellen</a>
-    </div>
+    <div class="price">ab 1.590 €</div>
+    <a class="btn" href="#kontakt">Anfrage stellen</a>
 
   </div>
+</div>
+
+    <!-- FAMILY -->
+    <div class="card">
+
+  <div class="card-header family">
+    <span>CONNECT FAMILY</span>
+  </div>
+
+  <div class="card-body">
+
+    <h2>Das Rundum-sorglos-Paket für das digitale Zuhause</h2>
+
+    <div class="section-text">
+      Mehr Räume. Mehr Möglichkeiten. Mehr Komfort – für heute und die Zukunft.
+    </div>
+
+    <ul>
+      <li>✔ Alle Vorteile von CONNECT HOME</li>
+      <li>✔ Vernetzung in mehreren Räumen - Kinder-, Schlaf- oder Gästezimmer</li>
+      <li>✔ Gleichzeitiges Streaming, Arbeiten und Gaming ohne Einschränkungen</li>
+      <li>✔ Für zukünftige Technologien bereits vorbereitet</li>
+    </ul>
+
+    <div class="price">ab 2.190 €</div>
+    <a class="btn" href="#kontakt">Anfrage stellen</a>
+
+  </div>
+</div>
 </section>
 
 <!-- INFO -->
