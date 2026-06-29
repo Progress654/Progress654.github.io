@@ -134,19 +134,19 @@ header {
   gap: var(--space-lg);
   margin-top: var(--space-xl);
 }
-
 .card {
-  background: var(--card);
-  border-radius: var(--r-lg);
-  border: 1px solid var(--border);
-  padding: var(--space-lg);
-  box-shadow: 0 18px 40px rgba(31,58,147,0.08);
+  position: relative;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(31,58,147,0.10);
+  box-shadow: 0 20px 50px rgba(31,58,147,0.08);
   transition: 0.25s ease;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 24px 60px rgba(31,58,147,0.12);
+  box-shadow: 0 30px 70px rgba(31,58,147,0.12);
 }
 
 .card h2 {
@@ -154,16 +154,39 @@ header {
   margin-top: var(--space-sm);
   color: var(--blue-dark);
 }
-
 .badge {
-  display: inline-block;
-  padding: 6px 12px;
+  background: rgba(255,255,255,0.18);
+  color: white;
+  padding: 6px 10px;
   border-radius: 999px;
-  font-size: 12px;
-  background: rgba(45,156,219,0.12);
-  color: var(--blue);
+  font-size: 11px;
+  backdrop-filter: blur(10px);
+}
+.card-header {
+  padding: 18px 20px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/* HOME = ruhig & professionell */
+.card-header.home {
+  background: linear-gradient(135deg, #1F3A93, #2D9CDB);
+}
+
+/* FAMILY = stärker + premium */
+.card-header.family {
+  background: linear-gradient(135deg, #2D9CDB, #1F3A93);
+  position: relative;
+}
+
+.card-content {
+  padding: 22px;
+}
+   
 /* =========================
    TEXT (ORIGINAL CONTENT SCALE)
 ========================= */
@@ -325,7 +348,10 @@ footer {
   <div class="cards">
 
     <!-- HOME -->
-    <div class="card">
+     <div class="card-header home">
+     <span>CONNECT HOME</span>
+     </div>
+     <div class="card">
       <span class="badge"><h2>CONNECT HOME</h2></span>
 
       <h2>Der perfekte Einstieg in das vernetzte Zuhause</h2>
@@ -346,7 +372,12 @@ footer {
     </div>
 
     <!-- FAMILY -->
-    <div class="card">
+    <div class="card-header family">
+    <span>CONNECT FAMILY</span>
+    <div class="badge">EMPFOHLEN</div>
+    </div>
+     
+     <div class="card">
       <span class="badge"><h2>CONNECT FAMILY</h2></span>
 
       <h2>Das Rundum-sorglos-Paket für das digitale Zuhause</h2>
@@ -380,10 +411,10 @@ footer {
     </p>
 
     <ul>
-      <li>Schnelles Internet, genau dort, wo Sie es brauchen.</li>
-      <li>Fernsehen ohne zusätzliche Kabel.</li>
-      <li>Stabile Verbindungen für Homeoffice, Streaming und Gaming.</li>
-      <li>Vorbereitet für zukünftige Technologien, ohne später Wände öffnen zu müssen.</li>
+      <li>✔ Internet, genau dort, wo Sie es brauchen.</li>
+      <li>✔ ohne zusätzliche Kabel.</li>
+      <li>✔ Verbindungen für Homeoffice, Streaming und Gaming.</li>
+      <li>✔ für zukünftige Technologien, ohne später Wände öffnen zu müssen.</li>
     </ul>
 
     <h2 style="margin-top:40px;">Eine Dose. Unzählige Möglichkeiten.</h2>
@@ -399,9 +430,9 @@ footer {
         die Sie tatsächlich nutzen oder künftig nutzen möchten.
         Je nach Bedarf können beispielsweise folgende Module kombiniert werden:</p>
     <ul>
-      <li>Netzwerk (LAN) für Computer, Smart TVs oder Access Points</li>
-      <li>TV für klassisches Fernsehen</li>
-      <li>Glasfaser für glasfaserfähige Router und zukünftige Highspeed-Internetanschlüsse</li>
+      <li>✔ Netzwerk (LAN) für Computer, Smart TVs oder Access Points</li>
+      <li>✔ für klassisches Fernsehen</li>
+      <li>✔ für glasfaserfähige Router und zukünftige Highspeed-Internetanschlüsse</li>
     </ul>
  
      <p>Sollten sich Ihre Anforderungen ändern, können die Module einfach ausgetauscht oder ergänzt werden – ohne
