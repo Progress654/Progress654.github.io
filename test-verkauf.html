@@ -95,28 +95,54 @@ header {
 /* =========================
    HERO
 ========================= */
-
 .hero {
   text-align: center;
   padding: var(--space-xxl) var(--space-md) var(--space-xl);
 }
 
+/* MAIN HEADLINE */
 .hero h1 {
-  font-size: clamp(32px, 4vw, var(--text-xl));
+  font-size: clamp(34px, 4vw, 54px);
   color: var(--blue-dark);
+  letter-spacing: -0.6px;
   margin-bottom: var(--space-md);
-  letter-spacing: -0.5px;
 }
 
-.hero p {
-  font-size: clamp(16px, 2.2vw, 22px);
-  margin: 0;
+/* SUB LINE (emotion + rhythm) */
+.hero .lead {
+  font-size: 20px;
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: var(--space-sm);
 }
 
+/* EXPLANATION LINE */
 .hero .sub {
-  margin-top: var(--space-sm);
+  font-size: 16px;
   color: #5b6b7a;
+  max-width: 700px;
+  margin: auto;
 }
+
+/* FEATURE CHIPS */
+.chips {
+  margin-top: var(--space-lg);
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.chips span {
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(45,156,219,0.10);
+  color: var(--blue-dark);
+}
+
+   
+
 
 /* =========================
    CARDS
@@ -363,10 +389,32 @@ footer {
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<!-- <section class="hero">
   <h1>Ihr Zuhause verdient ein perfektes Netzwerk</h1>
   <p>Streaming. Homeoffice. Gaming. Smart Home.</p>
   <p class="sub">Alles funktioniert nur so gut wie Ihre Hausverkabelung.</p>
+</section> -->
+
+   <section class="hero">
+
+  <h1>
+    Ihr Zuhause verdient ein perfektes Netzwerk
+  </h1>
+
+  <p class="lead">
+    Streaming. Homeoffice. Gaming. Smart Home.
+  </p>
+
+  <p class="sub">
+    Eine stabile digitale Infrastruktur entscheidet darüber, wie zuverlässig Ihr Zuhause wirklich funktioniert.
+  </p>
+
+  <div class="chips">
+    <span>Stabil</span>
+    <span>Zukunftssicher</span>
+    <span>Unsichtbar integriert</span>
+  </div>
+
 </section>
 
 <!-- PRODUCTS -->
