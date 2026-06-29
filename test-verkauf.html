@@ -125,52 +125,53 @@ header {
   top: 0;
   z-index: 1000;
 
-  background: rgba(255,255,255,0.72);
-  backdrop-filter: blur(16px);
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(16px);
 
-  border-bottom: 1px solid rgba(31,58,147,0.10);
+  border-bottom: 1px solid rgba(31,58,147,0.12);
 }
-
+   
 /* =========================
    INNER LAYOUT
 ========================= */
 
 .header-inner {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 
   padding: 14px 20px;
-  text-align: center;
+  gap: 6px;
 }
+   
 /* =========================
    BRAND (LOGO + WORDMARK)
 ========================= */
 
-}
 .logo-svg {
-  max-width: 300px;
-  height: auto;
+  height: 70px;
+  width: auto;
 }
+   
 /* =========================
    CLAIM TEXT
 ========================= */
 
 .claim {
-  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
 
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.4px;
+  color: #1F3A93;
 
-  color: #2C3E50;
-  opacity: 0.70;
+  opacity: 0.85;
 }
-
+   
+   
 /* =========================
    OPTIONAL MICRO INTERACTION
 ========================= */
@@ -677,7 +678,7 @@ section {
   </div>
 
 </header>
-
+   
 <!-- HERO -->
 
 <section class="hero">
