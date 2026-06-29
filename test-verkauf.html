@@ -109,9 +109,9 @@ header {
   top: 0;
   z-index: 1000;
 
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 
   border-bottom: 1px solid rgba(31,58,147,0.10);
 }
@@ -127,28 +127,19 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 
   padding: 14px 20px;
   text-align: center;
 }
-
 /* =========================
    BRAND (LOGO + WORDMARK)
 ========================= */
 
-.brand {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-
-/* SVG sizing clean */
 .logo-svg {
-  max-width: 320px;
+  max-width: 300px;
   height: auto;
 }
-
 /* =========================
    CLAIM TEXT
 ========================= */
@@ -156,12 +147,12 @@ header {
 .claim {
   margin-top: 6px;
 
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.45px;
 
   color: #2C3E50;
-  opacity: 0.75;
+  opacity: 0.65;
 }
 
 /* =========================
@@ -173,10 +164,8 @@ header {
 }
 
 .site-header:hover {
-  background: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.9);
 }
-
-
 
 
    
@@ -486,14 +475,15 @@ footer {
 
 <body>
 
-<!-- HEADER -->
+<!-- Header -->
 
 <header class="site-header">
 
   <div class="header-inner">
 
-    <!-- LOGO -->
+    <!-- BRAND -->
     <div class="brand">
+
       <svg class="logo-svg" viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
         <rect x="20" y="50" width="80" height="80" fill="#1F3A93" rx="6"/>
         <circle cx="110" cy="90" r="36" fill="#2D9CDB"/>
@@ -501,6 +491,7 @@ footer {
           BERATUNG & TECHNIK
         </text>
       </svg>
+
     </div>
 
     <!-- CLAIM -->
