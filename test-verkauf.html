@@ -7,190 +7,232 @@
 
 <style>
 
+/* =========================
+   BRAND COLORS
+========================= */
+
 :root {
-  --bg: #0b0f17;
-  --card: #111827;
-  --text: #e5e7eb;
-  --muted: #a1a1aa;
-  --primary: #3b82f6;
-  --accent: #22c55e;
-  --warning: #f59e0b;
-  --border: rgba(255,255,255,0.08);
+  --blue-dark: #1F3A93;
+  --blue: #2D9CDB;
+  --text: #2C3E50;
+  --bg: #F5F8FC;
+  --card: #FFFFFF;
+  --border: rgba(31,58,147,0.12);
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   font-family: system-ui, Arial;
   background: var(--bg);
   color: var(--text);
+  line-height: 1.65;
 }
 
-/* HERO */
-
-.hero {
-  text-align: center;
-  padding: 70px 20px 30px;
-}
-
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 10px;
-}
-
-.hero p {
-  color: var(--muted);
-}
-
-/* CONTAINER */
+/* =========================
+   LAYOUT
+========================= */
 
 .container {
   max-width: 1100px;
   margin: auto;
-  padding: 20px;
+  padding: 24px;
 }
 
-/* STEP FUNNEL */
+/* =========================
+   HERO
+========================= */
 
-.steps {
-  display: grid;
-  gap: 10px;
-  margin-top: 30px;
+.hero {
+  text-align: center;
+  padding: 70px 20px 40px;
 }
 
-.step {
-  padding: 14px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  color: var(--muted);
-  font-size: 0.95rem;
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  color: var(--blue-dark);
+  margin-bottom: 12px;
 }
 
-.step strong {
+.hero p {
+  font-size: clamp(1rem, 3.5vw, 1.2rem);
   color: var(--text);
+  margin: 6px 0;
 }
 
-/* CARDS */
+.hero .sub {
+  color: #5b6b7a;
+  margin-top: 10px;
+}
+
+/* =========================
+   CARDS
+========================= */
 
 .cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 22px;
   margin-top: 40px;
 }
 
 .card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.04), transparent);
+  background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 24px;
+  border-radius: 16px;
+  padding: 26px;
+  box-shadow: 0 10px 25px rgba(31,58,147,0.06);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
+  transition: 0.2s ease;
 }
 
-/* BEST CHOICE */
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(45,156,219,0.35);
+}
 
-.card.best {
-  border: 1px solid rgba(34,197,94,0.5);
-  transform: scale(1.02);
+.card h2 {
+  margin-top: 10px;
+  color: var(--blue-dark);
 }
 
 .badge {
   display: inline-block;
-  font-size: 0.75rem;
   padding: 6px 10px;
   border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
-.blue { background: rgba(59,130,246,0.15); color: var(--primary); }
-.green { background: rgba(34,197,94,0.15); color: var(--accent); }
-.orange { background: rgba(245,158,11,0.15); color: var(--warning); }
-
-h2 { margin: 0; }
-
-.price {
-  font-weight: 800;
-  margin-top: 10px;
-  font-size: 1.2rem;
+.badge.home {
+  background: rgba(31,58,147,0.08);
+  color: var(--blue-dark);
 }
 
-ul {
-  padding-left: 18px;
-  color: var(--muted);
+.badge.family {
+  background: rgba(45,156,219,0.12);
+  color: var(--blue);
 }
 
-li { margin-bottom: 6px; }
+/* =========================
+   TEXT CONTENT (YOUR ORIGINAL STYLE)
+========================= */
 
-/* BUTTON */
-
-.btn {
-  margin-top: 18px;
-  padding: 14px;
-  border-radius: 12px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 700;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 44px;
-}
-
-.primary {
-  background: var(--primary);
-  color: white;
-}
-
-/* COMPARISON */
-
-.compare {
-  margin-top: 60px;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 20px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-td {
-  padding: 12px;
-  border-bottom: 1px solid var(--border);
-  color: var(--muted);
-}
-
-td strong {
+.section-text {
+  margin-top: 12px;
   color: var(--text);
 }
 
-/* CTA */
+.section-text strong {
+  color: var(--blue-dark);
+}
+
+/* =========================
+   LISTS
+========================= */
+
+ul {
+  padding-left: 18px;
+  margin-top: 12px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* =========================
+   PRICE
+========================= */
+
+.price {
+  margin-top: 14px;
+  font-weight: 700;
+  color: var(--blue-dark);
+  font-size: 1.1rem;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+  padding: 14px;
+  min-height: 44px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  background: var(--blue);
+  color: white;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: var(--blue-dark);
+}
+
+/* =========================
+   INFO BLOCKS
+========================= */
+
+.info {
+  margin-top: 50px;
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid var(--border);
+}
+
+.info h2 {
+  color: var(--blue-dark);
+}
+
+/* =========================
+   CTA
+========================= */
 
 .cta {
   margin-top: 60px;
-  padding: 30px;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.03);
+  background: linear-gradient(135deg, rgba(31,58,147,0.08), rgba(45,156,219,0.08));
+  padding: 40px;
+  border-radius: 16px;
   border: 1px solid var(--border);
+}
+
+.cta h2 {
+  color: var(--blue-dark);
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
 }
 
 input, textarea {
-  width: 100%;
   padding: 12px;
-  margin-top: 10px;
   border-radius: 10px;
   border: 1px solid var(--border);
-  background: transparent;
-  color: white;
+  font-family: inherit;
 }
 
-/* RESPONSIVE */
+textarea {
+  min-height: 110px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (min-width: 768px) {
   .cards {
@@ -205,88 +247,104 @@ input, textarea {
 
 <!-- HERO -->
 <div class="hero container">
-  <h1>Das perfekte Netzwerk für Ihr Zuhause</h1>
-  <p>Stabile Verbindung. Keine Ausfälle. Zukunftssicher.</p>
+  <h1>Ihr Zuhause verdient ein perfektes Netzwerk</h1>
+
+  <p>Streaming. Homeoffice. Gaming. Smart Home.</p>
+  <p class="sub">Alles funktioniert nur so gut wie Ihre Hausverkabelung.</p>
 </div>
 
-<!-- FUNNEL STEPS -->
+<!-- CARDS -->
 <div class="container">
-  <div class="steps">
-    <div class="step"><strong>1.</strong> Wählen Sie Ihre Wohnsituation</div>
-    <div class="step"><strong>2.</strong> Wir planen Ihr Netzwerk</div>
-    <div class="step"><strong>3.</strong> Sie erhalten ein fixes Angebot</div>
-  </div>
-
-  <!-- CARDS -->
   <div class="cards">
 
-    <!-- HOME -->
+    <!-- CONNECT HOME -->
     <div class="card">
-      <span class="badge blue">CONNECT HOME</span>
-      <h2>Einstiegslösung</h2>
+      <span class="badge home">CONNECT HOME</span>
+
+      <h2>Der perfekte Einstieg in das vernetzte Zuhause</h2>
+
+      <div class="section-text">
+        Für alle, die Wert auf eine zuverlässige digitale Infrastruktur in den wichtigsten Wohnbereichen legen.
+      </div>
 
       <ul>
-        <li>Wohnzimmer & Homeoffice optimiert</li>
-        <li>Stabiles WLAN</li>
-        <li>Streaming & Gaming</li>
+        <li>Wohnzimmer optimal fürs Streamen, Fernsehen und Gaming ausgestattet</li>
+        <li>Homeoffice für stabiles Arbeiten und Videokonferenzen zuverlässig verbunden</li>
+        <li>Zuverlässige Internetversorgung durch WLAN im Alltag</li>
+        <li>Für zukünftige Anforderungen vorbereitet</li>
       </ul>
 
       <div class="price">ab 1.590 €</div>
-
-      <a class="btn primary" href="#cta">Auswählen</a>
+      <a class="btn" href="#cta">Anfrage stellen</a>
     </div>
 
-    <!-- FAMILY (BEST CHOICE) -->
-    <div class="card best">
-      <span class="badge green">EMPFOHLEN</span>
-      <h2>CONNECT FAMILY</h2>
+    <!-- CONNECT FAMILY -->
+    <div class="card">
+      <span class="badge family">CONNECT FAMILY</span>
+
+      <h2>Das Rundum-sorglos-Paket für das digitale Zuhause</h2>
+
+      <div class="section-text">
+        Mehr Räume. Mehr Möglichkeiten. Mehr Komfort – für heute und die Zukunft.
+      </div>
 
       <ul>
-        <li>Mehrere Räume vollständig vernetzt</li>
-        <li>Parallel Nutzung ohne Einschränkungen</li>
-        <li>Maximale Zukunftssicherheit</li>
+        <li>Alle Vorteile von CONNECT HOME</li>
+        <li>Vernetzung in mehreren Räumen - Kinder-, Schlaf- oder Gästezimmer</li>
+        <li>Gleichzeitiges Streaming, Arbeiten und Gaming ohne Einschränkungen</li>
+        <li>Für zukünftige Technologien bereits vorbereitet</li>
       </ul>
 
       <div class="price">ab 2.190 €</div>
-
-      <a class="btn primary" href="#cta">BESTELLEN</a>
+      <a class="btn" href="#cta">Anfrage stellen</a>
     </div>
 
   </div>
 
-  <!-- COMPARISON -->
-  <div class="compare">
-    <h2>Direkter Vergleich</h2>
+  <!-- INFO BLOCK 1 -->
+  <div class="info">
+    <h2>Eine Lösung, die mit Ihren Bedürfnissen wächst</h2>
+    <p>
+      Ob Sie heute nur einen Arbeitsplatz benötigen oder morgen mehrere Zimmer digital vernetzen möchten –
+      unsere Lösungen schaffen die passende Grundlage.
+    </p>
 
-    <table>
-      <tr>
-        <td><strong>Wohnbereiche</strong></td>
-        <td>2 Räume</td>
-        <td>Mehrere Räume</td>
-      </tr>
-      <tr>
-        <td><strong>Streaming</strong></td>
-        <td>✔</td>
-        <td>✔✔✔</td>
-      </tr>
-      <tr>
-        <td><strong>Zukunftssicher</strong></td>
-        <td>✔</td>
-        <td>✔✔✔</td>
-      </tr>
-    </table>
+    <ul>
+      <li>Schnelles Internet, genau dort, wo Sie es brauchen</li>
+      <li>Fernsehen ohne zusätzliche Kabel</li>
+      <li>Stabile Verbindungen für Homeoffice, Streaming und Gaming</li>
+      <li>Vorbereitet für zukünftige Technologien, ohne später Wände öffnen zu müssen</li>
+    </ul>
+  </div>
+
+  <!-- INFO BLOCK 2 -->
+  <div class="info">
+    <h2>Eine Dose. Unzählige Möglichkeiten.</h2>
+    <p>
+      Internet, TV und Glasfaser in einer kompakten, modularen Anschlusslösung.
+      Das sorgt für eine aufgeräumte Optik und maximale Flexibilität.
+    </p>
+
+    <p>
+      WLAN Access Points integrieren sich harmonisch ins Wohnumfeld (55×55 mm Schalterformat)
+      und passen sich Ihrem Design an.
+    </p>
+
+    <p>
+      Erhältlich in Weiß, Anthrazit und Schwarz.
+    </p>
   </div>
 
   <!-- CTA -->
   <div class="cta" id="cta">
-    <h2>Jetzt unverbindliches Angebot erhalten</h2>
+    <h2>Unverbindliche Anfrage starten</h2>
+    <p>Wir beraten Sie persönlich und erstellen ein individuelles Angebot für Ihr Zuhause.</p>
 
     <form>
       <input type="text" placeholder="Name" />
       <input type="email" placeholder="E-Mail" />
-      <textarea placeholder="Wie viele Räume sollen vernetzt werden?"></textarea>
-
-      <a class="btn primary" href="#">Anfrage senden</a>
+      <textarea placeholder="Beschreiben Sie Ihr Projekt (Wohnräume, Nutzung, Wünsche)"></textarea>
+      <button class="btn" type="submit">Anfrage senden</button>
     </form>
   </div>
 
