@@ -182,8 +182,6 @@ header {
 .site-header:hover {
   background: rgba(255,255,255,0.9);
 }
-
-
    
 /* =========================
    HERO
@@ -233,9 +231,6 @@ header {
   background: rgba(45,156,219,0.10);
   color: var(--blue-dark);
 }
-
-
-
 
 /* =========================
    CARDS
@@ -319,7 +314,6 @@ header {
   padding: 22px;
 }
 
-   
 .card {
   padding: 0;
   overflow: hidden;
@@ -537,13 +531,22 @@ input, textarea {
 /* =========================
    FOOTER / IMPRESSUM
 ========================= */
+.footer {
+    text-align: center;
+    padding: 50px 20px;
+    color: #6B7280;
+    font-size: 14px;
+}
 
-footer {
-  margin-top: var(--space-xxl);
-  padding: var(--space-xl);
-  text-align: center;
-  font-size: 13px;
-  color: #6b7280;
+.footer a {
+    color: #1F3A93;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.footer a:hover {
+    color: #2D9CDB;
+    text-decoration: underline;
 }
 
 /* =========================
@@ -772,14 +775,15 @@ section {
 </section>
 
 <!-- IMPRESSUM -->
-<footer>
-  <p><strong>Impressum</strong></p>
-  <p>
-    Diese Website gehört zur offiziellen Präsentation von Connect Netzwerk Lösungen.<br/>
-    Weitere Informationen finden Sie auf unserer Website.
-  </p>
-  <p>© 2026 Beratung & Technik – Alle Rechte vorbehalten</p>
-</footer>
 
+<footer class="footer">
+
+    <p>© 2026 BERATUNG & TECHNIK</p>
+
+    <p>
+        <a href="https://www.beratung-technik.at/impressum">Impressum & Datenschutz</a> |
+    </p>
+
+</footer>
 </body>
 </html>
