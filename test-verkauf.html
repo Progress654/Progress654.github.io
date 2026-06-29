@@ -96,9 +96,27 @@ header {
   color: var(--text);
   font-size: 14px;
 }
+   
+.top-nav {
+  margin-top: 10px;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
 
+.top-nav a {
+  font-size: 13px;
+  font-weight: 500;
+  color: #2C3E50;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: 0.2s ease;
+}
 
-
+.top-nav a:hover {
+  opacity: 1;
+  color: #1F3A93;
+}
    
 /* =========================
    HEADER BASE (Sticky Premium)
@@ -545,13 +563,11 @@ footer {
 
      
 <!--    <div class="logo">LOGO</div> -->
-    <nav>
-      <a href="#produkte">Produkte</a>
-      <a href="#loesung">Lösung</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
-  </div>
-</header>
+<nav class="top-nav">
+  <a href="#produkte">Produkte</a>
+  <a href="#loesung">Lösung</a>
+  <a href="#kontakt">Kontakt</a>
+</nav>   
 
 <!-- HERO -->
 
