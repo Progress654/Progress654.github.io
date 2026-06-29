@@ -141,7 +141,40 @@ header {
   color: var(--blue-dark);
 }
 
+
+
    
+.hero-values {
+  margin-top: var(--space-xl);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.value {
+  text-align: center;
+  padding: var(--space-md);
+}
+
+.value-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--blue-dark);
+  letter-spacing: -0.3px;
+}
+
+.value-sub {
+  font-size: 14px;
+  color: #5b6b7a;
+  margin-top: 6px;
+}
+
+/* Desktop: nebeneinander */
+@media (min-width: 768px) {
+  .hero-values {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 
 /* =========================
@@ -314,7 +347,29 @@ li {
   font-size: 26px;
   color: var(--blue-dark);
 }
+/* =========================
+   Section intro
+========================= */
 
+.section-intro {
+  text-align: center;
+  margin-top: var(--space-xxl);
+  margin-bottom: var(--space-xl);
+}
+
+.section-intro h2 {
+  font-size: 28px;
+  color: var(--blue-dark);
+  letter-spacing: -0.4px;
+}
+
+.section-intro p {
+  font-size: 16px;
+  color: #5b6b7a;
+  max-width: 650px;
+  margin: 10px auto 0;
+}
+   
 /* =========================
    CTA
 ========================= */
@@ -409,14 +464,40 @@ footer {
     Eine stabile digitale Infrastruktur entscheidet darüber, wie zuverlässig Ihr Zuhause wirklich funktioniert.
   </p>
 
-  <div class="chips">
-    <span>Stabil</span>
-    <span>Zukunftssicher</span>
-    <span>Unsichtbar integriert</span>
+ <div class="hero-values">
+
+  <div class="value">
+    <div class="value-title">Stabil</div>
+    <div class="value-sub">Zuverlässige Verbindung im gesamten Zuhause</div>
   </div>
+
+  <div class="value">
+    <div class="value-title">Zukunftssicher</div>
+    <div class="value-sub">Vorbereitet für neue digitale Anforderungen</div>
+  </div>
+
+  <div class="value">
+    <div class="value-title">Unsichtbar integriert</div>
+    <div class="value-sub">Technik ohne sichtbare Störung im Wohnraum</div>
+  </div>
+
+</div>
+      
+</section>
+
+<section class="section-intro container">
+
+  <h2>
+    Die passende Lösung für Ihr Zuhause
+  </h2>
+
+  <p>
+    Wählen Sie zwischen einem soliden Einstieg oder einer vollständig vernetzten Lösung für mehrere Räume.
+  </p>
 
 </section>
 
+   
 <!-- PRODUCTS -->
 <section id="produkte" class="container">
 
@@ -477,7 +558,7 @@ footer {
 
   </div>
 </div>
-</section>
+</section>   
 
 <!-- INFO -->
 <section id="loesung" class="container">
