@@ -7,10 +7,6 @@
 
 <style>
 
-/* =========================
-   DESIGN SYSTEM
-========================= */
-
 :root {
   --bg: #0b0f17;
   --card: #111827;
@@ -18,86 +14,88 @@
   --muted: #a1a1aa;
   --primary: #3b82f6;
   --accent: #22c55e;
+  --warning: #f59e0b;
   --border: rgba(255,255,255,0.08);
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  background: radial-gradient(circle at top, #111827, #0b0f17);
+  font-family: system-ui, Arial;
+  background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
 }
 
-/* =========================
-   LAYOUT
-========================= */
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 24px;
-}
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
   text-align: center;
-  padding: 80px 20px 40px;
+  padding: 70px 20px 30px;
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 10px;
 }
 
 .hero p {
   color: var(--muted);
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
-/* =========================
-   TRUST LINE
-========================= */
+/* CONTAINER */
 
-.trust {
-  text-align: center;
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* STEP FUNNEL */
+
+.steps {
+  display: grid;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.step {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
   color: var(--muted);
-  font-size: 0.9rem;
-  margin-top: 10px;
+  font-size: 0.95rem;
 }
 
-/* =========================
-   CARDS
-========================= */
+.step strong {
+  color: var(--text);
+}
+
+/* CARDS */
 
 .cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
-  margin-top: 50px;
+  gap: 20px;
+  margin-top: 40px;
 }
 
 .card {
   background: linear-gradient(180deg, rgba(255,255,255,0.04), transparent);
   border: 1px solid var(--border);
   border-radius: 18px;
-  padding: 26px;
-  transition: 0.25s ease;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(59,130,246,0.4);
+/* BEST CHOICE */
+
+.card.best {
+  border: 1px solid rgba(34,197,94,0.5);
+  transform: scale(1.02);
 }
 
 .badge {
@@ -105,151 +103,94 @@ body {
   font-size: 0.75rem;
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(59,130,246,0.15);
-  color: var(--primary);
   margin-bottom: 10px;
 }
 
-.badge.green {
-  background: rgba(34,197,94,0.15);
-  color: var(--accent);
-}
+.blue { background: rgba(59,130,246,0.15); color: var(--primary); }
+.green { background: rgba(34,197,94,0.15); color: var(--accent); }
+.orange { background: rgba(245,158,11,0.15); color: var(--warning); }
 
-h2 {
-  margin: 0;
-  font-size: 1.4rem;
-}
+h2 { margin: 0; }
 
 .price {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-top: 10px;
+  font-size: 1.2rem;
 }
-
-/* =========================
-   LIST
-========================= */
 
 ul {
   padding-left: 18px;
   color: var(--muted);
 }
 
-li {
-  margin-bottom: 6px;
-}
+li { margin-bottom: 6px; }
 
-/* =========================
-   BUTTON
-========================= */
+/* BUTTON */
 
 .btn {
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 14px 16px;
   min-height: 44px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 600;
-  margin-top: 18px;
-  transition: 0.2s;
 }
 
-.btn.primary {
+.primary {
   background: var(--primary);
   color: white;
 }
 
-.btn.primary:hover {
-  background: #2563eb;
-}
+/* COMPARISON */
 
-/* =========================
-   INFO SECTION
-========================= */
-
-.info {
+.compare {
   margin-top: 60px;
-  padding: 28px;
   border: 1px solid var(--border);
   border-radius: 18px;
-  background: rgba(255,255,255,0.02);
+  padding: 20px;
 }
 
-.info h2 {
-  margin-top: 0;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
 }
 
-/* =========================
-   CTA FORM
-========================= */
+td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+}
+
+td strong {
+  color: var(--text);
+}
+
+/* CTA */
 
 .cta {
   margin-top: 60px;
-  padding: 40px;
+  padding: 30px;
   border-radius: 18px;
-  background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(34,197,94,0.1));
+  background: rgba(255,255,255,0.03);
   border: 1px solid var(--border);
-}
-
-.cta h2 {
-  margin-top: 0;
-}
-
-form {
-  display: grid;
-  gap: 12px;
-  margin-top: 20px;
 }
 
 input, textarea {
   width: 100%;
   padding: 12px;
+  margin-top: 10px;
   border-radius: 10px;
   border: 1px solid var(--border);
-  background: rgba(0,0,0,0.3);
+  background: transparent;
   color: white;
 }
 
-textarea {
-  min-height: 100px;
-}
-
-/* =========================
-   STICKY CTA
-========================= */
-
-.sticky {
-  position: fixed;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(17,24,39,0.9);
-  border: 1px solid var(--border);
-  padding: 10px;
-  border-radius: 999px;
-  display: flex;
-  gap: 10px;
-  backdrop-filter: blur(10px);
-}
-
-.sticky a {
-  padding: 10px 14px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.sticky .primary {
-  background: var(--accent);
-  color: black;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
 @media (min-width: 768px) {
   .cards {
@@ -264,81 +205,91 @@ textarea {
 
 <!-- HERO -->
 <div class="hero container">
-  <h1>Ihr Zuhause verdient ein perfektes Netzwerk</h1>
-  <p>Streaming. Homeoffice. Gaming. Smart Home.</p>
-  <div class="trust">Zukunftssichere Infrastruktur für moderne Wohnräume</div>
+  <h1>Das perfekte Netzwerk für Ihr Zuhause</h1>
+  <p>Stabile Verbindung. Keine Ausfälle. Zukunftssicher.</p>
 </div>
 
-<!-- CARDS -->
+<!-- FUNNEL STEPS -->
 <div class="container">
+  <div class="steps">
+    <div class="step"><strong>1.</strong> Wählen Sie Ihre Wohnsituation</div>
+    <div class="step"><strong>2.</strong> Wir planen Ihr Netzwerk</div>
+    <div class="step"><strong>3.</strong> Sie erhalten ein fixes Angebot</div>
+  </div>
+
+  <!-- CARDS -->
   <div class="cards">
 
     <!-- HOME -->
     <div class="card">
-      <div>
-        <span class="badge">CONNECT HOME</span>
-        <h2>Der perfekte Einstieg</h2>
+      <span class="badge blue">CONNECT HOME</span>
+      <h2>Einstiegslösung</h2>
 
-        <ul>
-          <li>Optimiert für Wohnzimmer & Homeoffice</li>
-          <li>Stabiles WLAN & Streaming</li>
-          <li>Gaming & Videokonferenzen</li>
-          <li>Zukunftssicher vorbereitet</li>
-        </ul>
+      <ul>
+        <li>Wohnzimmer & Homeoffice optimiert</li>
+        <li>Stabiles WLAN</li>
+        <li>Streaming & Gaming</li>
+      </ul>
 
-        <div class="price">ab 1.590 €</div>
-      </div>
+      <div class="price">ab 1.590 €</div>
 
-      <a class="btn primary" href="#contact">Anfragen</a>
+      <a class="btn primary" href="#cta">Auswählen</a>
     </div>
 
-    <!-- FAMILY -->
-    <div class="card">
-      <div>
-        <span class="badge green">CONNECT FAMILY</span>
-        <h2>Rundum vernetztes Zuhause</h2>
+    <!-- FAMILY (BEST CHOICE) -->
+    <div class="card best">
+      <span class="badge green">EMPFOHLEN</span>
+      <h2>CONNECT FAMILY</h2>
 
-        <ul>
-          <li>Mehrere Räume vollständig vernetzt</li>
-          <li>Parallel Streaming & Arbeiten</li>
-          <li>Gaming ohne Einschränkungen</li>
-          <li>Erweiterbar für die Zukunft</li>
-        </ul>
+      <ul>
+        <li>Mehrere Räume vollständig vernetzt</li>
+        <li>Parallel Nutzung ohne Einschränkungen</li>
+        <li>Maximale Zukunftssicherheit</li>
+      </ul>
 
-        <div class="price">ab 2.190 €</div>
-      </div>
+      <div class="price">ab 2.190 €</div>
 
-      <a class="btn primary" href="#contact">Anfragen</a>
+      <a class="btn primary" href="#cta">BESTELLEN</a>
     </div>
 
   </div>
 
-  <!-- INFO -->
-  <div class="info">
-    <h2>Eine Lösung, die mit Ihnen wächst</h2>
-    <p>
-      Ob ein Arbeitsplatz oder mehrere Räume – Ihre Infrastruktur bleibt flexibel und erweiterbar.
-    </p>
+  <!-- COMPARISON -->
+  <div class="compare">
+    <h2>Direkter Vergleich</h2>
+
+    <table>
+      <tr>
+        <td><strong>Wohnbereiche</strong></td>
+        <td>2 Räume</td>
+        <td>Mehrere Räume</td>
+      </tr>
+      <tr>
+        <td><strong>Streaming</strong></td>
+        <td>✔</td>
+        <td>✔✔✔</td>
+      </tr>
+      <tr>
+        <td><strong>Zukunftssicher</strong></td>
+        <td>✔</td>
+        <td>✔✔✔</td>
+      </tr>
+    </table>
   </div>
 
-  <!-- CTA FORM -->
-  <div class="cta" id="contact">
-    <h2>Unverbindliche Anfrage starten</h2>
-    <p>Wir melden uns persönlich mit einem passenden Angebot.</p>
+  <!-- CTA -->
+  <div class="cta" id="cta">
+    <h2>Jetzt unverbindliches Angebot erhalten</h2>
 
     <form>
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="E-Mail" required />
-      <textarea placeholder="Ihre Anfrage..."></textarea>
-      <button class="btn primary" type="submit">Anfrage senden</button>
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="E-Mail" />
+      <textarea placeholder="Wie viele Räume sollen vernetzt werden?"></textarea>
+
+      <a class="btn primary" href="#">Anfrage senden</a>
     </form>
   </div>
-</div>
 
-<!-- STICKY CTA -->
-<div class="sticky">
-  <a href="#contact">Kontakt</a>
-  <a class="primary" href="#contact">Angebot anfordern</a>
 </div>
 
 </body>
