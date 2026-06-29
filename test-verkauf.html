@@ -315,6 +315,13 @@ header {
 .card-body {
   padding: var(--space-lg);
 }
+
+.card.family {
+  border: 1px solid rgba(45,156,219,0.35);
+  box-shadow: 0 25px 60px rgba(45,156,219,0.15);
+  transform: scale(1.02);
+}
+   
 /* =========================
    TEXT (ORIGINAL CONTENT SCALE)
 ========================= */
@@ -441,7 +448,36 @@ input, textarea {
   border: 1px solid var(--border);
   font-size: 14px;
 }
+   
+/* =========================
+   Stycky Anfrage senden
+========================= */
+.sticky-cta {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
 
+  background: #2D9CDB;
+  color: white;
+  text-decoration: none;
+
+  padding: 14px 18px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  box-shadow: 0 10px 30px rgba(45,156,219,0.25);
+  transition: 0.25s ease;
+}
+
+.sticky-cta:hover {
+  background: #1F3A93;
+  transform: translateY(-2px);
+}
+
+   
 /* =========================
    FOOTER / IMPRESSUM
 ========================= */
@@ -473,6 +509,10 @@ footer {
 
 <body>
 
+<a href="#kontakt" class="sticky-cta">
+  Anfrage senden
+</a>
+   
 <!-- Header -->
 
 <header class="site-header">
