@@ -73,17 +73,17 @@ header {
   padding: var(--space-sm) var(--space-md);
 }
 
-.logo {
-  width: 140px;
-  height: 36px;
-  border: 2px dashed var(--blue);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--blue-dark);
-  font-size: 12px;
-}
+    /* LOGO */
+    .logo-svg{
+      width:150px;
+      height:auto;
+      display:block;
+    }
+
+    @media (min-width:768px){
+      .logo-svg{ width:240px; }
+    }
+
 
 .nav a {
   margin-left: var(--space-md);
