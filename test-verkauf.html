@@ -56,18 +56,19 @@ body {
    HEADER
 ========================= */
 
-
-
-header{
-      position: sticky;
-      top:0;
-      background: color-mix(in srgb, var(--bg) 90%, transparent);
-      backdrop-filter: blur(12px);
-      border-bottom:1px solid var(--border);
-      padding:15px 20px;
-      z-index:1000;
-    }
-   
+header {
+  background: white;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header-wrapper {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 10px;
+}
 .nav {
   max-width: 1200px;
   margin: auto;
@@ -407,6 +408,25 @@ footer {
   <div class="nav">
 
 <!-- LOGO -->
+
+<div class="header-wrapper">
+
+  <!-- LOGO -->
+  <svg class="logo-svg" viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
+    <rect x="20" y="50" width="80" height="80" fill="#1F3A93" rx="4"/>
+    <circle cx="110" cy="90" r="36" fill="#2D9CDB"/>
+    <text x="170" y="76" font-size="48" fill="#2C3E50" font-weight="bold">BERATUNG</text>
+    <text x="200" y="120" font-size="48" fill="#2C3E50" font-weight="bold">&amp;TECHNIK</text>
+  </svg>
+
+  <!-- HEADER TEXT -->
+  <header class="header-text">
+    <strong>Der Heimnetz- & Glasfaser Planer</strong>
+  </header>
+
+</div>
+
+ <!--    
 <svg class="logo-svg" viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
   <rect x="20" y="50" width="80" height="80" fill="#1F3A93" rx="4"/>
   <circle cx="110" cy="90" r="36" fill="#2D9CDB"/>
@@ -417,7 +437,7 @@ footer {
 <header>
   <strong>Der Heimnetz- & Glasfaser Planer</strong>
 </header>
-
+-->
 
 
      
@@ -431,11 +451,6 @@ footer {
 </header>
 
 <!-- HERO -->
-<!-- <section class="hero">
-  <h1>Ihr Zuhause verdient ein perfektes Netzwerk</h1>
-  <p>Streaming. Homeoffice. Gaming. Smart Home.</p>
-  <p class="sub">Alles funktioniert nur so gut wie Ihre Hausverkabelung.</p>
-</section> -->
 
    <section class="hero">
 
