@@ -97,6 +97,89 @@ header {
   font-size: 14px;
 }
 
+
+
+   
+/* =========================
+   HEADER BASE (Sticky Premium)
+========================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(31,58,147,0.10);
+}
+
+/* =========================
+   INNER LAYOUT
+========================= */
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 20px;
+  text-align: center;
+}
+
+/* =========================
+   BRAND (LOGO + WORDMARK)
+========================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SVG sizing clean */
+.logo-svg {
+  max-width: 320px;
+  height: auto;
+}
+
+/* =========================
+   CLAIM TEXT
+========================= */
+
+.claim {
+  margin-top: 6px;
+
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+
+  color: #2C3E50;
+  opacity: 0.75;
+}
+
+/* =========================
+   OPTIONAL MICRO INTERACTION
+========================= */
+
+.site-header {
+  transition: all 0.25s ease;
+}
+
+.site-header:hover {
+  background: rgba(255,255,255,0.92);
+}
+
+
+
+
+   
 /* =========================
    HERO
 ========================= */
@@ -404,28 +487,55 @@ footer {
 <body>
 
 <!-- HEADER -->
+
+<header class="site-header">
+
+  <div class="header-inner">
+
+    <!-- LOGO -->
+    <div class="brand">
+      <svg class="logo-svg" viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
+        <rect x="20" y="50" width="80" height="80" fill="#1F3A93" rx="6"/>
+        <circle cx="110" cy="90" r="36" fill="#2D9CDB"/>
+        <text x="170" y="105" font-size="52" fill="#2C3E50" font-weight="bold">
+          BERATUNG & TECHNIK
+        </text>
+      </svg>
+    </div>
+
+    <!-- CLAIM -->
+    <div class="claim">
+      Der Heimnetz- & Glasfaser Planer
+    </div>
+
+  </div>
+
+</header>
+
+
+<!--   
 <header>
   <div class="nav">
-
+-->
 <!-- LOGO -->
-
+<!--
 <div class="header-wrapper">
-
+-->
   <!-- LOGO -->
-  <svg class="logo-svg" viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
+<!--  <svg class="logo-svg" viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
     <rect x="20" y="50" width="80" height="80" fill="#1F3A93" rx="4"/>
     <circle cx="110" cy="90" r="36" fill="#2D9CDB"/>
     <text x="170" y="76" font-size="48" fill="#2C3E50" font-weight="bold">BERATUNG</text>
     <text x="200" y="120" font-size="48" fill="#2C3E50" font-weight="bold">&amp;TECHNIK</text>
   </svg>
-
+-->
   <!-- HEADER TEXT -->
-  <header class="header-text">
+<!--  <header class="header-text">
     <strong>Der Heimnetz- & Glasfaser Planer</strong>
   </header>
 
 </div>
-
+-->
  <!--    
 <svg class="logo-svg" viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
   <rect x="20" y="50" width="80" height="80" fill="#1F3A93" rx="4"/>
@@ -438,7 +548,6 @@ footer {
   <strong>Der Heimnetz- & Glasfaser Planer</strong>
 </header>
 -->
-
 
      
 <!--    <div class="logo">LOGO</div> -->
