@@ -56,14 +56,18 @@ body {
    HEADER
 ========================= */
 
-header {
-  background: white;
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
 
+
+header{
+      position: sticky;
+      top:0;
+      background: color-mix(in srgb, var(--bg) 90%, transparent);
+      backdrop-filter: blur(12px);
+      border-bottom:1px solid var(--border);
+      padding:15px 20px;
+      z-index:1000;
+    }
+   
 .nav {
   max-width: 1200px;
   margin: auto;
