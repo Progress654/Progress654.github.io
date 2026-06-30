@@ -248,7 +248,6 @@ header {
     max-width:650px;
 }
 
-
 .hero-image img {
   width: clamp(320px, 40vw, 520px);
   max-width: 100%;
@@ -270,7 +269,30 @@ header {
     transparent 100%
   );
 }
-  
+
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.chip {
+  font-size: 14px;
+  font-weight: 500;
+
+  padding: 8px 14px;
+  border-radius: 999px;
+
+  background: #F3F8FF;
+  color: #1F3A93;
+
+  border: 1px solid rgba(31,58,147,0.12);
+
+  white-space: nowrap;
+}
+   
 /* =========================
    CARDS
 ========================= */
@@ -742,16 +764,30 @@ section {
                 Ihr Zuhause verdient ein perfektes Netzwerk
             </h1>
 
-            <p class="lead">
+<!--            <p class="lead">
                 Streaming &middot; Gaming &middot; IP-TV &middot; Videocalls &middot; Große Downloads &middot; TV classic &middot; Stabiles WLAN
             </p>
-           
+    -->       
             <p class="sub">
                 Eine <strong>stabile digitale Infrastruktur</strong>
                 entscheidet darüber, wie zuverlässig Ihr Zuhause
                 wirklich funktioniert.
             </p>
 
+<div class="hero-chips">
+
+  <span class="chip">Streaming</span>
+  <span class="chip">Gaming</span>
+  <span class="chip">Homeoffice</span>
+  <span class="chip">Videocalls</span>
+  <span class="chip">IP-TV</span>
+  <span class="chip">TV classic</span>
+  <span class="chip">WLAN</span>
+  <span class="chip">Glasfaser</span>
+  <span class="chip">Zukunftssicher</span>
+
+</div>
+           
         </div>
 
         <div class="hero-image">
