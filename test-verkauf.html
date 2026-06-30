@@ -192,94 +192,57 @@ header {
 =================================== */
 
 .hero {
-
-    position: relative;
-    overflow: hidden;
-
-    padding: 90px 30px 70px;
-
-    background:
-        linear-gradient(180deg,#ffffff 0%,#F7FAFF 100%);
+  padding: 90px 20px 70px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F7FAFF 100%);
 }
 
-.hero-content{
+.hero-content {
+  max-width: 1200px;
+  margin: auto;
 
-    max-width:1200px;
-    margin:auto;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
 }
 
-.hero-text{
-
-    flex:1;
-    position:relative;
-    z-index:2;
+/* TEXT */
+.hero-text {
+  flex: 1;
 }
 
-.hero h1{
-
-    font-size:clamp(42px,5vw,68px);
-    line-height:1.05;
-
-    color:#1F3A93;
-
-    margin-bottom:24px;
+.hero h1 {
+  font-size: clamp(36px, 4vw, 64px);
+  line-height: 1.05;
+  color: #1F3A93;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
 }
 
-.hero .lead{
-
-    font-size:23px;
-
-    line-height:1.45;
-
-    margin-bottom:26px;
+.hero .lead {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #2C3E50;
+  margin-bottom: 18px;
 }
 
-.hero .sub{
-
-    font-size:20px;
-
-    color:#556270;
-
-    max-width:650px;
+.hero .sub {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #5b6b7a;
+  max-width: 600px;
 }
 
-.hero-image img {
-  width: clamp(320px, 40vw, 520px);
-  max-width: 100%;
-  opacity: 0.9;
-
-  border-radius: 28px;
-
-  filter: drop-shadow(0 20px 50px rgba(31,58,147,0.15));
-
-  -webkit-mask-image: radial-gradient(
-    circle at 70% 50%,
-    black 55%,
-    transparent 100%
-  );
-
-  mask-image: radial-gradient(
-    circle at 70% 50%,
-    black 55%,
-    transparent 100%
-  );
-}
-
+/* CHIPS */
 .hero-chips {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 .chip {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
 
   padding: 8px 14px;
@@ -291,6 +254,33 @@ header {
   border: 1px solid rgba(31,58,147,0.12);
 
   white-space: nowrap;
+}
+
+/* IMAGE */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  width: clamp(320px, 40vw, 520px);
+  border-radius: 28px;
+
+  opacity: 0.92;
+
+  box-shadow: 0 25px 60px rgba(31,58,147,0.12);
+
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    black 60%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    circle at center,
+    black 60%,
+    transparent 100%
+  );
 }
    
 /* =========================
@@ -681,19 +671,10 @@ section {
     text-align:center;
 }
 
-.hero-image{
-
-    order:-1;
-    justify-content:center;
-}
-
-.hero-image img{
-
-    width:420px;
-
-    transform:none;
-
-    opacity:.18;
+.hero-image img {
+    width: clamp(260px, 70vw, 420px);
+    opacity: 0.9;
+    transform: none;
 }
 
 .hero .sub{
@@ -752,52 +733,50 @@ section {
 
 </header>
    
-<!-- HERO -->
-
 <section class="hero">
 
-    <div class="hero-content">
+  <div class="hero-content">
 
-        <div class="hero-text">
+    <!-- TEXT -->
+    <div class="hero-text">
 
-            <h1>
-                Ihr Zuhause verdient ein perfektes Netzwerk
-            </h1>
+      <h1>
+        Ihr Zuhause verdient ein perfektes Netzwerk
+      </h1>
 
-<!--            <p class="lead">
-                Streaming &middot; Gaming &middot; IP-TV &middot; Videocalls &middot; Große Downloads &middot; TV classic &middot; Stabiles WLAN
-            </p>
-    -->       
-            <p class="sub">
-                Eine <strong>stabile digitale Infrastruktur</strong>
-                entscheidet darüber, wie zuverlässig Ihr Zuhause
-                wirklich funktioniert.
-            </p>
+      <p class="lead">
+        Streaming. Gaming. Homeoffice. Videocalls. IP-TV.
+        Klassisches Fernsehen. Stabiles WLAN. Glasfaser.
+      </p>
 
-<div class="hero-chips">
+      <p class="sub">
+        Eine <strong>stabile digitale Infrastruktur</strong> entscheidet darüber,
+        wie zuverlässig Ihr Zuhause heute und in Zukunft funktioniert.
+      </p>
 
-  <span class="chip">Streaming</span>
-  <span class="chip">Gaming</span>
-  <span class="chip">Homeoffice</span>
-  <span class="chip">Videocalls</span>
-  <span class="chip">IP-TV</span>
-  <span class="chip">TV classic</span>
-  <span class="chip">WLAN</span>
-  <span class="chip">Glasfaser</span>
-  <span class="chip">Zukunftssicher</span>
+      <!-- CHIPS -->
+      <div class="hero-chips">
 
-</div>
-           
-        </div>
+        <span class="chip">Streaming</span>
+        <span class="chip">Gaming</span>
+        <span class="chip">Homeoffice</span>
+        <span class="chip">Videocalls</span>
+        <span class="chip">IP-TV</span>
+        <span class="chip">TV classic</span>
+        <span class="chip">WLAN</span>
+        <span class="chip">Glasfaser</span>
+        <span class="chip">Zukunftssicher</span>
 
-        <div class="hero-image">
-
-            <img src="images/WLAN.png"
-                 alt="Modernes Wohnzimmer mit perfektem WLAN">
-
-        </div>
+      </div>
 
     </div>
+
+    <!-- IMAGE -->
+    <div class="hero-image">
+      <img src="images/wohnzimmer.png" alt="Modernes vernetztes Zuhause">
+    </div>
+
+  </div>
 
 </section>
    
