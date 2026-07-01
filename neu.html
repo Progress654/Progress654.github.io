@@ -1,1 +1,859 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beratung & Technik</title>
+  <meta name="description" content="Beratung & Technik: Strategie, Technologie & Umsetzung – klar, pragmatisch, wirkungsvoll.">
+  <style> 
+    :root{
+      --nav-h: 72px;
+      --accent: #2D9CDB;
+      --bg: #ffffff;
+      --fg: #0f1115;
+      --muted: #6b7280;
+      --surface: #f6f7fb;
+      --border: #e5e7eb;
+      --radius: 14px;
+      --shadow: 0 10px 30px -15px rgba(0,0,0,.2);
+    }
+    html[data-theme="dark"]{
+      --bg: #0f1115;
+      --fg: #e5e9f0;
+      --muted: #9aa0aa;
+      --surface: #181b21;
+      --border: #272b33;
+      --shadow: 0 10px 30px -20px rgba(0,0,0,.6);
+    }
+    *{ box-sizing:border-box; }
+    ::selection{ background: var(--accent); color:#fff; }
+    html{
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+    }
+    html, body {
+  height: 100%;
+}
+    body{
+      margin:0;
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,Inter,Helvetica,Arial,sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.55;
+    }
+    a{ color: inherit; text-decoration: none; }
+    img{ max-width:100%; display:block; }
+    h1,h2,h3{ line-height:1.15; margin:0 0 1rem; }
+    h1{ font-size: clamp(2.6rem, 6vw, 4rem); }
+    h2{ font-size: clamp(1.8rem, 3.2vw, 2.4rem); }
+    p{ max-width: 70ch; }
+    ul{ padding-left: 1.2rem; }
+    /* Header / Nav */
+    header{
+      position: fixed;
+      top:0; left:0; right:0;
+      height: var(--nav-h);
+      display:flex; align-items:center;
+      justify-content: space-between;
+      padding: 0 clamp(1rem, 5vw, 4rem);
+      backdrop-filter: blur(16px);
+      background: color-mix(in srgb, var(--bg) 75%, transparent);
+      border-bottom: 1px solid var(--border);
+      z-index: 9999;
+    }
+    .brand{
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+    nav{
+      display:flex; gap: 1.2rem;
+      align-items:center;
+    }
+    nav a{
+      padding: .35rem .2rem;
+      border-bottom: 2px solid transparent;
+      color: var(--muted);
+      font-weight: 500;
+      transition: color .15s, border-color .15s;
+    }
+    nav a.active{
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    
+    #themeToggle{
+      margin-left: .6rem;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: inherit;
+      height: 36px; width: 36px;
+      border-radius: 50%;
+      display:flex; align-items:center; justify-content:center;
+      cursor:pointer;
+    }
+    /* Scroll progress bar */
+    .progress{
+      position: fixed;
+      top:0; left:0;
+      height: 3px;
+      background: var(--accent);
+      width: 0%;
+      z-index: 10000;
+    }
+    /* Sections */
+    section{
+      min-height: 100vh;
+      scroll-snap-align: start;
+      /*scroll-snap-stop: always; */
+      padding: 100px clamp(1rem, 6vw, 6rem) clamp(4rem, 8vw, 6rem);
+      display:flex; align-items:center;
+      position: relative;
+    }
+    
+      html, body {
+        scroll-snap-type: y proximity;  /* weiches Einrasten */
+        scroll-behavior: smooth;       /* sanfte Scrollbewegung bei Ankern */
+      }
+    
+    .container{
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .hero{
+      background: radial-gradient(circle at 70% -20%, color-mix(in srgb, var(--accent) 35%, transparent) 0%, transparent 60%), var(--bg);
+    }
+    .hero p{
+      font-size: 1.15rem;
+      color: var(--muted);
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:.4rem;
+      padding:.9rem 1.2rem;
+      border-radius: 999px;
+      font-weight:600;
+      border: 1px solid transparent;
+      cursor:pointer;
+      transition: transform .12s, box-shadow .12s;
+      text-decoration: none;
+    }
+    .btn:hover{ transform: translateY(-1px); }
+    .btn-primary{
+      background: var(--accent);
+      color:#fff;
+      box-shadow: var(--shadow);
+    }
+    .btn-outline{
+      border-color: var(--border);
+      color: var(--fg);
+    }
+    .grid{
+      display:grid;
+      gap: 1.5rem;
+    }
+    .grid-3{
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    }
+    .card{
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.4rem;
+      box-shadow: var(--shadow);
+      line-height: 24px; /* fixer Abstand */
+    }
+    .step{
+      display:flex; gap:1rem; align-items:flex-start;
+      padding:0.5rem 0;
+    }
+    .step-num{
+      height:32px; width:32px; flex:0 0 32px;
+      border-radius:50%;
+      background: var(--accent);
+      color:#fff; display:flex; align-items:center; justify-content:center;
+      font-weight:600; font-size:.9rem;
+      box-shadow: var(--shadow);
+    }
+    .muted{ color: var(--muted); }
+    .badge{
+      display:inline-block;
+      background: color-mix(in srgb, var(--accent) 15%, transparent);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: .2rem .6rem;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .03em;
+    }
+    .contact{
+      display:grid;
+      gap:2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    }
+    form{
+      display:grid; gap: .8rem;
+    }
+    input, textarea{
+      width:100%;
+      border:1px solid var(--border);
+      border-radius: 10px;
+      padding:.8rem 1rem;
+      background: transparent;
+      color: inherit;
+      font-family: inherit;
+      resize: vertical;
+      min-height: 42px;
+    }
+   footer{
+      position:absolute; bottom: 1rem; left: 0; right: 0;
+      text-align:center; font-size:.85rem; color: var(--muted);
+      padding: 0 1rem;
+    }
+    @media (max-width: 768px) {
+  nav {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 1.2rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.5rem; /* optional für bessere Wischbarkeit */
+  }
 
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav a {
+    flex: 0 0 auto;
+  }
+}
+<!-- BEGINN -->
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+<!-- .brand svg {
+  max-width: 250px;
+  height: auto;
+  display: block;
+} 
+.brand svg {
+  width: 250px;
+  height: auto;
+} -->
+.brand .logo-svg {
+  display: block;
+  max-width: none;
+}
+@media (min-width: 768px) {
+  .brand svg {
+    width: 350px;
+  }
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  padding: 0 clamp(1rem, 5vw, 4rem);
+  backdrop-filter: blur(16px);
+  background: color-mix(in srgb, var(--bg) 75%, transparent);
+  border-bottom: 1px solid var(--border);
+  z-index: 9999;
+}
+nav {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+<!-- ENDE -->
+
+    .logo-svg {
+  width: 200px;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .logo-svg {
+    width: 350px;
+  }
+}    
+
+<!-- NEU ANFANG -->
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  flex-wrap: nowrap;
+}
+.kontakt-link {
+  font-weight: 600;
+  margin-right: 1rem; /* Abstand zwischen Kontakt und Punkten */
+  text-decoration: none;
+  color: var(--fg);
+}
+.menu-button {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fg);
+}
+.menu-content {
+  display: none;
+  position: absolute;
+  top: 48px; /* Abstand unter den Punkten */
+  right: 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 0.5rem 1rem;
+  flex-direction: column;
+  gap: 0.8rem;
+  z-index: 10000;
+}
+.menu-content.show {
+  display: flex;
+}
+.menu-content a,
+.menu-content button {
+  display: block;
+  padding: 0.6rem 1rem;
+  text-align: left;
+  background: none;
+  border: none;
+  width: 100%;
+  color: var(--fg);
+  font: inherit;
+}
+.menu-content a:hover,
+.menu-content button:hover {
+  background-color: var(--surface);
+}
+
+<! heute 6.9.2025 -->
+
+section#homeway-details {
+  padding: 60px clamp(1rem, 6vw, 6rem);
+  background-color: #f9f9f9;
+}
+
+.homeway-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.homeway-image {
+  flex: 1 1 300px; /* min. Breite 300px, wächst mit */
+}
+
+.homeway-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.homeway-text {
+  flex: 1 1 300px;
+}
+
+@media (max-width: 768px) {
+  .homeway-flex {
+    flex-direction: column;
+    text-align: left;
+  }
+}
+
+<! heute 6.9.2025 -->
+    
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header>
+    <a href="#home" class="brand">
+
+<!-- LOGO -->
+      
+      <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg" style="width:800px !important; height:auto !important; display:block;">
+        <!-- Quadrat (Dunkelblau) -->
+        <rect x="20" y="50" width="80" height="80" fill="#1F3A93" rx="4"/>
+        <!-- Kreis (Petrol) -->
+        <circle cx="110" cy="90" r="36" fill="#2D9CDB" />
+        <!-- Text BERATUNG -->
+        <text x="170" y="76" font-family="Arial, sans-serif" font-size="48" fill="#2C3E50" font-weight="bold" text-transform="uppercase" letter-spacing="1">
+          BERATUNG
+        </text>
+        <!-- Text &TECHNIK -->
+        <text x="200" y="120" font-family="Arial, sans-serif" font-size="48" fill="#2C3E50" font-weight="bold" text-transform="uppercase" letter-spacing="1">
+          &amp;TECHNIK
+        </text>
+      </svg>
+  
+<!-- LOGO ENDE -->
+      
+   <!--  <h4>BERATUNG & TECHNIK</h4>  -->
+    </a>
+      <div class="menu-container style="display:flex;">
+          <button class="menu-button" onclick="toggleMenu()">⋯</button>
+          <nav id="dropdown" class="menu-content">
+            <a href="#home">Start</a>
+            <a href="#vorteile">Vorteile</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#vorgehen">Vorgehen</a>
+            <a href="#ueber-uns">Über&nbsp;mich</a>
+            <a href="#faq">FAQ</a>
+            <a href="#kontakt">Kontakt</a>
+            <button id="themeToggle" aria-label="Theme umschalten">🌓</button>
+          </nav>
+        </div>
+  </header>
+
+  <!-- HERO -->
+  
+<section id="home" class="hero">
+  <div class="container">
+
+    <span class="badge">Technik · Wirtschaft · Umsetzung</span>
+
+    <h1>Beratung & Technik</h1>
+
+    <h2>Technische Entscheidungen mit Weitblick.</h2>
+
+    <p>
+      Ich verbinde Technik, Wirtschaft und Praxis.  
+      Von der digitalen Infrastruktur im Wohnbau bis zur strategischen Unternehmensentwicklung.
+    </p>
+
+    <div style="margin-top:1.5rem; display:flex; gap:1rem; flex-wrap:wrap;">
+
+      <a class="btn btn-primary" href="#infrastruktur">
+        Digitale Infrastruktur
+      </a>
+
+      <a class="btn btn-outline" href="#beratung">
+        Strategische Beratung
+      </a>
+
+    </div>
+
+  </div>
+
+  <footer>© <span id="year6"></span> Beratung & Technik</footer>
+</section>
+
+
+<!-- Neuer Block -->
+
+  <section id="leistungen">
+  <div class="container">
+
+    <h2>Zwei Schwerpunkte. Ein Anspruch.</h2>
+
+    <p class="muted">
+      Klarheit in Technik, Struktur in Entscheidungen und Lösungen mit langfristigem Nutzen.
+    </p>
+
+    <div class="grid grid-3">
+
+      <!-- 1 INFRASTRUKTUR -->
+      <div class="card" id="infrastruktur">
+
+        <h3 style="color:#2D9CDB;">🏠 Digitale Infrastruktur</h3>
+
+        <p>
+          Planung moderner Heimnetz-, Glasfaser- und IT-Infrastrukturen
+          für Neubau, Sanierung und Wohnbauprojekte.
+        </p>
+
+        <a href="/heimnetz-glasfaserplaner.html" class="btn btn-outline">
+          Heimnetz- & Glasfaserplaner
+        </a>
+
+      </div>
+
+      <!-- 2 BERATUNG -->
+      <div class="card" id="beratung">
+
+        <h3 style="color:#2D9CDB;">📈 Strategische Beratung</h3>
+
+        <p>
+          Geschäftsmodelle entwickeln, Prozesse strukturieren und
+          B2B-Vertrieb nachhaltig optimieren.
+        </p>
+
+        <a href="#kontakt" class="btn btn-outline">
+          Beratung anfragen
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+  
+  <!-- VORTEILE -->
+  
+  <section id="vorteile">
+  <div class="container">
+    <h2>Beratung für Technik & Wirtschaft <span style="color: #2D9CDB;">– strukturiert, fundiert, umsetzungsstark.</span></h2>
+    <div class="grid grid-3">
+      <div>
+        <h4>✓ Erfahrung</h4>
+        <p>Über 30 Jahre Erfahrung in Technik, Führung und Vertrieb – Ihr Vorteil bei jeder Lösung.</p>
+      </div>
+      <div>
+        <h4>✓ Branchen-Know-how</h4>
+        <p>Vom Handwerksbetrieb bis zum Industriebetrieb – ich kenne die Anforderungen aus der Praxis.</p>
+      </div>
+      <div>
+        <h4>✓ Umsetzungsstärke</h4>
+        <p>Ich denke nicht nur strategisch, sondern begleite aktiv bis zur fertigen Lösung.</p>
+      </div>
+    </div>
+  </div>
+     <footer>© <span id="year6"></span> Beratung & Technik</footer>
+</section>
+
+  <!-- PORTFOLIO -->
+  
+  <section id="portfolio">
+    <div class="container">
+      <h2>Mein <span style="color: #2D9CDB;">Portfolio</span></h2>
+      <p class="muted">Klarer Fokus, tiefe Expertise, schnelle Umsetzung.</p>
+      <h3>Beratung für <span style="color: #2D9CDB;">Struktur, Digitalisierung, Wachstum und Glasfaser- & IT-Infrastruktur für den Wohnbau</span></h3>
+      <div class="grid grid-3" style="margin-top:2rem;">
+      <div class="card">
+          <h3 style="color: #2D9CDB;">&check; FTTH-Inhouse-Verkabelung (NE4)</h3>
+          <p style="hyphens:auto; overflow-wrap:break-word;">Für Wohnbauträger und GU, die beim Ausbau moderner Glasfaser‑Infrastruktur keine Kompromisse eingehen: 
+            Mit langjähriger Erfahrung und präziser Umsetzung bringen wir Glasfaser‑Inhouseverkabelung (NE4) auf höchstes Niveau.</p>
+        </div>
+        <div class="card">
+          <h3 style="color: #2D9CDB;">&check; homeway - Das zukunftssichere Heimnetz für Ihr Zuhause (NE5)</h3>
+          <p style="hyphens:auto; overflow-wrap:break-word;">Für Häuslbauer, Mieter und Wohnungseigentümer, die in jedem Raum, ob Wohnbereich oder Homeoffice, unkomplizierten Zugang zu allen Multimediadiensten wünschen.</p>
+          <a href="#homeway-details" 
+             class="btn btn-outline" 
+             style="background-color: transparent; 
+                    color: #2D9CDB; 
+                    border: 2px solid #2D9CDB;">
+             Mehr Infos
+          </a> 
+        </div>   
+        
+        <div class="card">
+        <h3 style="color:#2D9CDB;">Digitale Werkzeuge (ERP / Prozesse)</h3>
+
+       <p>
+         Unterstützung bei der Auswahl und Einführung digitaler Systeme
+        gemeinsam mit spezialisierten Implementierungspartnern.
+        </p>
+       </div>
+        
+        
+          <h3 style="color: #2D9CDB;">&check; Von der Idee <br> zum Geschäftsmodell</h3>
+          <p style="hyphens:auto; overflow-wrap:break-word;">Dieses Angebot richtet sich an Start-ups und etablierte Unternehmen, die mit frischen Ideen durchstarten, ihre Strategie neu ausrichten oder ihre Marktposition gezielt ausbauen möchten.</p>
+        </div>
+        <div class="card">
+          <h3 style="color: #2D9CDB;">&check; Unternehmensabläufe strukturieren & optimieren</h3>
+          <p style="hyphens:auto; overflow-wrap:break-word;">Für alle Unternehmen, die wachsen, sich im Rahmen einer Sanierung restrukturieren oder ihre Prozesse einfach effizienter gestalten möchten (die Umsetzung erfolgt im Workshop-Format mit bewährter Methode).</p>
+        </div>
+        <div class="card">
+          <h3 style="color: #2D9CDB;">&check; Verkaufen mit System - Ihr maßgeschneidertes B2B-Verkaufstraining</h3>
+          <p style="hyphens:auto; overflow-wrap:break-word;">Dieses Angebot richtet sich an Unternehmen im B2B-Bereich, die über ihr bestehendes Netzwerk hinaus wachsen und mit einem aktiven Vertrieb gezielt neue Märkte und Kunden erschließen möchten.</p>
+        </div>
+      </div>
+      <a href="#kontakt" class="btn btn-primary" style="margin-top:2rem;">Kostenloses Erstgespräch vereinbaren</a>
+    </div>
+     <footer>© <span id="year6"></span> Beratung & Technik</footer>
+  </section>
+
+  <!-- VORGEHEN -->
+  
+ <section id="vorgehen">
+    <div class="container">
+      <h2>So läuft unsere <span style="color: #2D9CDB;">Zusammenarbeit ab</span></h2>
+      <p class="muted">Strukturiert, effizient und praxisnah.</p>
+      <div class="steps" style="margin-top:1.6rem;">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <h3>Erstgespräch vereinbaren</h3>
+        </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+          <h3>Analyse & Zieldefinition</h3>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+          <h3>Strategie & Lösungskonzept</h3>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div>
+          <h3>Umsetzung & Begleitung</h3>
+          </div>
+        </div>
+        <a href="#kontakt" class="btn btn-primary" style="margin-top:2rem;">Kostenloses Erstgespräch vereinbaren</a>
+      </div>
+    </div>
+     <footer>© <span id="year6"></span> Beratung & Technik</footer>
+  </section>
+
+  <!-- Über mich -->
+  
+  <section id="ueber-uns">
+    <div class="container flex-container">
+    <div class="text-content">
+    <h2>Fachliche Stärke <span style="color: #2D9CDB;">trifft Praxisnähe</span></h2>
+    <p class="muted">Über 30 Jahre Erfahrung zwischen Technik & Wirtschaft – für Ihre konkreten Herausforderungen.</p>
+    <p>Als Unternehmensberater mit fundiertem elektrotechnischem Ingenieurwissen und betriebswirtschaftlichem Studium verbinde ich technisches Know-how mit wirtschaftlicher Weitsicht. In über drei Jahrzehnten habe ich überwiegend in leitenden Positionen Verantwortung getragen – insbesondere in den Bereichen IT-Vertrieb (B2B), Qualitätsmanagement und Unternehmensentwicklung.</p>
+    <p>Heute begleite ich Wohnbauträger sowie private Bauherren bei der Planung und Realisierung moderner Glasfaser- und IT-Infrastrukturen und unterstütze Unternehmen dabei, ihre Abläufe konsequent zu digitalisieren. Darüber hinaus begleite ich Start-ups, Gewerbe-, Handwerks- und Industriebetriebe bei der Entwicklung marktorientierter Geschäftsmodelle, der Schaffung klarer Strukturen und der gezielten Professionalisierung ihres Vertriebs.</p>
+    <p>Ich weiß aus Erfahrung: Nur wer Technik, Wirtschaft und Umsetzung zusammen denkt, kommt wirklich weiter.</p>      
+      <p><em><strong>„Ich stehe für praxisorientierte Lösungen, strategischen Blick und verlässliche Umsetzung.“</strong></em></p>
+    </div>
+    <a href="#kontakt" class="btn btn-primary">Kostenloses Erstgespräch vereinbaren</a>
+    <footer>© <span id="year6"></span> Beratung & Technik</footer>
+</section>
+
+<!-- FAQ -->
+  
+<section id="faq">
+  <div class="container">
+  <!--  <h2>Häufige Fragen – Klarheit vor dem Erstgespräch</h2> -->
+    <h2>Häufige Fragen <span style="color: #2D9CDB;">– Klarheit vor dem Erstgespräch</span></h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4>Was kostet die Beratung?</h4>
+        <p>Das kostenlose Erstgespräch ist unverbindlich. Danach erhalten Sie ein transparentes Angebot mit fixem oder modularem Preis – abgestimmt auf Umfang und Zielsetzung.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Wie läuft die Zusammenarbeit ab?</h4>
+        <p>In einem strukturierten Prozess: Analyse → Strategie → Umsetzung. Ich begleite Sie dabei Schritt für Schritt – praxisnah und lösungsorientiert.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Für welche Unternehmen ist meine Beratung geeignet?</h4>
+        <p>Ich arbeite mit Start-ups, KMU, Handwerks- und Industriebetrieben sowie Wohnbauträgern und Elektrounternehmen – dort, wo Technik auf Wirtschaft trifft.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Wie lange dauert ein Projekt?</h4>
+        <p>Das hängt vom Umfang ab – von einem kompakten 1-Tages-Vertriebstraining bis zu mehrmonatiger Prozessberatung ist alles möglich. Ich kläre das gerne im Erstgespräch.</p>
+      </div>
+    </div>
+  </div>
+   <footer>© <span id="year6"></span> Beratung & Technik</footer>
+</section>
+
+<!-- homeway Details -->  
+  
+<section id="homeway-details">
+  <div class="container">
+    <h2>Das digitale Fundament für Ihr Einfamilienhaus</h2>
+    <div class="homeway-flex">
+      <div class="homeway-image">
+        <img src="images/homeway_System_Aufbau_Einfamilienhaus.png" alt="homeway-Struktur">
+      </div>
+      <div class="homeway-text">        
+        <p>Homeoffice, in 4K Streamen, Glasfaser und Co. stellen immer größere Anforderungen an das Multimedianetz im neuen Eigenheim. 
+        Der Wunsch nach Highspeed Internet, sowie der störungsfreien Nutzung in allen Wohnräumen erfordert zukunftssichere, 
+        durchdachte Konzepte.</p>
+        <p>Damit Sie Multimedia in bester Qualität nutzen können, benötigt man ein auf den eigenen Anspruch 
+        abgestimmtes Zuhausenetz. Ähnlich zum Stromnetz ermöglicht das Zuhausenetz von homeway Multimediadienste genau dort, 
+        wo sie benötigt werden.
+           Mehr Infos finden Sie beim Hersteller:
+           <a href="https://www.homeway.de/privat/home/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             style="color:#2D9CDB; text-decoration:underline;">
+             homeway.de
+           </a>
+        </p>        
+        <h3>Unser Angebot als <span style="color: #2D9CDB;">Spezialist für zukunftssichere Heimnetze im Einfamilienhaus.</span></h3>
+        <p>Wir begleiten Sie von der ersten Idee bis zur fertigen Umsetzung: Dazu gehören eine individuelle Planung 
+          und persönliche Beratung sowie die enge Abstimmung mit Ihrem Elektriker. Anschließend übernehmen wir 
+          die fachgerechte Dosenmontage, montieren das Verteilerfeld und führen eine 
+          Überprüfung samt Dokumentation durch. Auch die Inbetriebnahme von WLAN und PoE‑Switch gehört
+          zu unserem Leistungsumfang.</p>
+        <p>Die Installation erfolgt durch uns oder einen zertifizierten homeway‑Partnerbetrieb.</p>
+          <p><strong>Nicht im Angebot enthalten:</strong> Die Grundinstallation (Leerrohre, Unterputzdosen, 
+          Medienverteiler) sowie die TV‑Anbindung (SAT oder Kabel) - erfolgt bauseits durch Ihren 
+          Elektriker oder Diensteanbieter.</p>
+          <div class="button-row">
+          <a href="#portfolio" class="btn btn-secondary">← Zurück zum Portfolio</a>
+          <a href="#kontakt" class="btn btn-primary">Jetzt anfragen</a>
+          <a href="images/Volle Geschwindigkeit in jedem Raum.pdf" target="_blank" class="btn btn-secondary">FLYER ansehen</a>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  <!-- KONTAKT -->
+  
+<section id="kontakt">
+  <div class="container">
+    <h2>Kontakt <span style="color: #2D9CDB;">Informationen</span></h2>
+    <p style="font-size: 18px; font-weight: normal;">Sie möchten ein Erstgespräch vereinbaren oder haben eine konkrete Frage?</p>
+    <h3>Kontaktmöglichkeiten</h3>
+    <ul class="contact-info">
+      <li><strong>E-Mail:</strong> <a href="mailto:office@beratung-technik.at" style="color: #2D9CDB; font-style: italic;">E-Mail senden</a></li>
+      <li><strong>Telefon/WhatsApp:</strong> <a href="tel:+43 664 4169873">+43 664 4169873</a></li>
+      <!-- Optional 
+      <li><strong>Social Media:</strong> <a href="https://www.linkedin.com/in/gerhard-koschi-655b89170" aria-label="LinkedIn">LinkedIn</a></li>
+      <li><strong>Adresse:</strong> 1170 Wien | Keine Kundentermine vor Ort</li> -->
+    </ul>
+  </div>
+  <footer>© <span id="year6"></span> Beratung & Technik</footer>
+</section>
+  
+  <!-- IMPRESSUM -->
+
+<section id="impressum">
+  <div class="container">
+    <h2>Impressum</h2>
+    <p>Gerhard Koschi - Beratung & Technik<br>
+    Alszeile 93, 1170 Wien<p>
+    <p>Unternehmensberatung & IT</p>
+    <p>Tel: +43 664 4169873<br>
+    E-Mail: <a href="mailto:office@beratung-technik.at">office@beratung-technik.at</a></p>
+    <p><strong>Unternehmensgegenstand:</strong><br>
+      Unternehmensberatung einschließlich der Unternehmensorganisation und <br>
+      Dienstleistungen in der automatischen Datenverarbeitung und Informationstechnik </p>
+    <p><strong>Mitglied</strong> der WKÖ Fachverband UBIT / WKW Fachgruppe UBIT</p>
+    <p><strong>Aufsichtsbehörde:</strong> Magistrat der Stadt Wien</p>
+    <p>Haftungsausschluss: Alle Inhalte ohne Gewähr. Keine Haftung für externe Links.</p>
+    <p><strong>Bildnachweis:</strong><br>
+      homeway_System_Aufbau_Einfamilienhaus.png</p>  
+    <h3>Datenschutzerklärung</h3>
+    <p>Diese Webseite dient ausschließlich der Bereitstellung von Informationen. Es werden keine personenbezogenen Daten automatisiert erfasst oder verarbeitet.</p>
+    <p>Beim Besuch der Webseite wird Ihre IP-Adresse vom Webserver technisch bedingt verarbeitet. Diese Verarbeitung erfolgt ausschließlich zur Sicherstellung des technischen Betriebs und wird nicht weiter ausgewertet.</p>
+    <p>Wenn Sie uns per E-Mail kontaktieren, erfolgt die Verarbeitung Ihrer Daten ausschließlich zum Zweck der Beantwortung Ihrer Anfrage.</p>
+    <p>Diese Webseite verwendet keine Cookies und keine Tracking-Technologien.</p>
+  </div>
+    <footer>© <span id="year7"></span> Beratung & Technik</footer>
+  </section> 
+  <script>
+    // Year stamps
+    const y = new Date().getFullYear();
+    document.querySelectorAll('[id^="year"]').forEach(el => el.textContent = y);
+
+    // Theme init
+    const root = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    root.dataset.theme = saved || (prefersDark ? 'dark' : 'light');
+
+    // Theme toggle
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', root.dataset.theme);
+    });
+
+    // Scroll progress
+    const progress = document.getElementById('progress');
+    const onScroll = () => {
+      const doc = document.documentElement;
+      const scrolled = (doc.scrollTop) / (doc.scrollHeight - doc.clientHeight) * 100;
+      progress.style.width = scrolled + '%';
+    };
+    document.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Active nav link (scrollspy)
+    const sections = [...document.querySelectorAll('section[id]')];
+    const navLinks = [...document.querySelectorAll('nav a[href^="#"]')];
+    const byId = id => navLinks.find(a => a.getAttribute('href') === '#' + id);
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          navLinks.forEach(a => a.classList.remove('active'));
+          const link = byId(entry.target.id);
+          if(link) link.classList.add('active');
+        }
+      });
+    }, { threshold: 0.55 });
+
+    sections.forEach(s => io.observe(s));
+  </script>
+  <script>
+  const navLinks = document.querySelectorAll("nav a");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+    });
+  });
+</script>
+
+<!-- NEU -->
+  <script>
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll("nav a");
+
+  function activateLink() {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 100;
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", activateLink);
+</script>
+
+<!-- NEU ENDE -->
+  
+<!-- NEU 10.8 -->
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('dropdown');
+    menu.classList.toggle('show');
+  }
+
+  // Optional: Menü schließen, wenn man außerhalb klickt
+  window.addEventListener('click', function(e) {
+    const menu = document.getElementById('dropdown');
+    const button = document.querySelector('.menu-button');
+    if (!menu.contains(e.target) && !button.contains(e.target)) {
+      menu.classList.remove('show');
+    }
+  });
+</script>
+  
+</body>
+</html>
