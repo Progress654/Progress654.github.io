@@ -1,1 +1,192 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Impressum & Datenschutz</title>
 
+<style>
+:root{
+  --accent:#2D9CDB;
+  --bg:#fff;
+  --fg:#0f1115;
+  --muted:#6b7280;
+  --surface:#f6f7fb;
+  --border:#e5e7eb;
+}
+
+html[data-theme="dark"]{
+  --bg:#0f1115;
+  --fg:#e5e9f0;
+  --muted:#9aa0aa;
+  --surface:#171b21;
+  --border:#272b33;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto;
+  background:var(--bg);
+  color:var(--fg);
+  line-height:1.6;
+}
+
+/* HEADER */
+header{
+  position:fixed;
+  top:0;left:0;right:0;
+  height:72px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 2rem;
+  background:color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  z-index:1000;
+}
+
+.brand{
+  font-weight:700;
+  color:var(--fg);
+  text-decoration:none;
+}
+
+/* MENU */
+.menu-btn{
+  border:1px solid var(--border);
+  background:transparent;
+  width:38px;height:38px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.menu{
+  position:absolute;
+  top:72px;
+  right:2rem;
+  background:var(--bg);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:0.5rem;
+  display:none;
+  flex-direction:column;
+}
+
+.menu a{
+  padding:0.6rem 1rem;
+  text-decoration:none;
+  color:var(--fg);
+}
+
+.menu a:hover{
+  background:var(--surface);
+}
+
+.menu.show{display:flex}
+
+/* CONTENT */
+.container{
+  max-width:900px;
+  margin:0 auto;
+  padding:120px 1.5rem 60px;
+}
+
+h1,h2{
+  margin-top:2rem;
+}
+
+p{
+  color:var(--muted);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:3rem 1rem;
+  color:var(--muted);
+  border-top:1px solid var(--border);
+  margin-top:3rem;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a class="brand" href="index.html">← Beratung & Technik</a>
+
+  <button class="menu-btn" onclick="toggleMenu()">⋯</button>
+
+  <nav class="menu" id="menu">
+    <a href="index.html#home">Start</a>
+    <a href="index.html#leistungen">Leistungen</a>
+    <a href="index.html#kontakt">Kontakt</a>
+    <a href="impressum.html">Impressum</a>
+  </nav>
+</header>
+
+<div class="container">
+
+<h1>Impressum</h1>
+
+<p><strong>Unternehmen:</strong><br>
+Beratung & Technik</p>
+
+<p><strong>Adresse:</strong><br>
+Wien, Österreich</p>
+
+<p><strong>Kontakt:</strong><br>
+E-Mail: office@domain.at<br>
+Telefon: +43 ...</p>
+
+<p><strong>Unternehmensgegenstand:</strong><br>
+Unternehmensberatung & IT-Dienstleistungen</p>
+
+<p><strong>Mitgliedschaft:</strong><br>
+WKÖ / UBIT Fachgruppe</p>
+
+<h2>Haftungsausschluss</h2>
+<p>
+Alle Inhalte wurden sorgfältig erstellt, jedoch ohne Gewähr für Richtigkeit.
+Für externe Links wird keine Haftung übernommen.
+</p>
+
+<h1>Datenschutz</h1>
+
+<h2>Allgemein</h2>
+<p>
+Diese Website verarbeitet keine personenbezogenen Daten zu Analyse- oder Trackingzwecken.
+</p>
+
+<h2>Server Logs</h2>
+<p>
+Beim Aufruf der Seite werden technisch notwendige Daten (z. B. IP-Adresse)
+vom Hosting-Provider verarbeitet.
+</p>
+
+<h2>Kontaktaufnahme</h2>
+<p>
+Wenn Sie uns kontaktieren, werden Ihre Daten ausschließlich zur Bearbeitung der Anfrage verwendet.
+</p>
+
+<h2>Cookies</h2>
+<p>
+Diese Website verwendet keine Tracking-Cookies.
+</p>
+
+</div>
+
+<footer>
+© Beratung & Technik
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
