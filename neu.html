@@ -37,7 +37,7 @@ body{
 html{scroll-behavior:smooth}
 
 /* HEADER */
-header{
+.header{
   position:fixed;
   top:0;left:0;right:0;
   height:72px;
@@ -50,26 +50,67 @@ header{
   border-bottom:1px solid var(--border);
   z-index:1000;
 }
-header .logo{
-  display:flex;
-  align-items:center;
-  max-height:72px;
-  overflow:hidden;
-}
-header .logo-svg{
-  height: 56px;
-  width: auto;
-  display: block;
-  flex-shrink: 0;
-}
-nav{
-  display:flex;
-  gap:1.2rem;
-  font-size:14px;
-  color:var(--muted);
+
+/* LOGO */
+.logo-svg{
+  height:52px;
+  width:auto;
+  display:block;
 }
 
-nav a:hover{color:var(--accent)}
+/* NAV */
+.nav{
+  display:flex;
+  gap:1.5rem;
+}
+
+.nav a{
+  font-size:14px;
+  color:var(--muted);
+  text-decoration:none;
+  position:relative;
+}
+
+.nav a:hover{
+  color:var(--accent);
+}
+
+/* CTA */
+.cta{
+  background:var(--accent);
+  color:#fff;
+  padding:.6rem 1rem;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 10px 25px rgba(45,156,219,.25);
+}
+
+/* HAMBURGER (mobile) */
+.hamburger{
+  display:none;
+  background:none;
+  border:1px solid var(--border);
+  width:40px;
+  height:40px;
+  border-radius:10px;
+  font-size:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .nav{ display:none; }
+  .cta{ display:none; }
+  .hamburger{ display:block; }
+}
+
+/* LOGO RESPONSIVE */
+@media(max-width:600px){
+  .logo-svg{
+    height:42px;
+  }
+}
 
 /* HERO */
 .hero{
@@ -264,39 +305,51 @@ footer{
     height: 38px;
   }
 }
+@media(max-width:900px){
+  .nav{
+    display:none;
+  }
 
-</style>
+  .nav.open{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:72px;
+    right:2rem;
+    background:var(--bg);
+    border:1px solid var(--border);
+    padding:1rem;
+    border-radius:12px;
+  }
+}</style>
 </head>
 
 <body>
 
-<header>
+<header class="header">
 
-<!-- LOGO -->
-  
-  <div class="logo">
-  <svg class="logo-svg" viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
-        <!-- Quadrat (Dunkelblau) -->
-        <rect x="20" y="50" width="80" height="80" fill="#1F3A93" rx="4"/>
-        <!-- Kreis (Petrol) -->
-        <circle cx="110" cy="90" r="36" fill="#2D9CDB" />
-        <!-- Text BERATUNG -->
-        <text x="170" y="76" font-family="Arial, sans-serif" font-size="48" fill="#2C3E50" font-weight="bold" text-transform="uppercase" letter-spacing="1">
-          BERATUNG
-        </text>
-        <!-- Text &TECHNIK -->
-        <text x="200" y="120" font-family="Arial, sans-serif" font-size="48" fill="#2C3E50" font-weight="bold" text-transform="uppercase" letter-spacing="1">
-          &amp;TECHNIK
-        </text>
-      </svg>
-  
-<!-- LOGO ENDE -->
-  
-  <nav>
+  <a href="#home" class="logo">
+    <svg class="logo-svg" viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
+      <rect x="20" y="50" width="80" height="80" fill="#1F3A93" rx="4"/>
+      <circle cx="110" cy="90" r="36" fill="#2D9CDB"/>
+      <text x="170" y="76" font-family="Arial" font-size="48" fill="#2C3E50" font-weight="bold">BERATUNG</text>
+      <text x="200" y="120" font-family="Arial" font-size="48" fill="#2C3E50" font-weight="bold">&amp;TECHNIK</text>
+    </svg>
+  </a>
+
+  <nav class="nav">
     <a href="#leistungen">Leistungen</a>
-    <a href="#homeway">Heimnetz</a>
+    <a href="#ueber">Über mich</a>
+    <a href="#faq">FAQ</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
+
+  <a href="#kontakt" class="cta">
+    Erstgespräch
+  </a>
+
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+
 </header>
 
 <!-- HERO -->
@@ -533,6 +586,19 @@ footer{
   </div>
 
 </footer>
+  
+<script>
+function toggleMenu(){
+  const nav = document.querySelector('.nav');
 
+  const isOpen = nav.classList.contains('open');
+
+  if(isOpen){
+    nav.classList.remove('open');
+  } else {
+    nav.classList.add('open');
+  }
+}
+</script>
 </body>
 </html>
