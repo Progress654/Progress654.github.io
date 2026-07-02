@@ -375,6 +375,37 @@ section#homeway-details {
   flex: 1 1 300px;
 }
 
+.leistungen-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 1.8rem;
+  margin-top: 2rem;
+}
+
+<!-- neu 2.7.2026 -->
+    
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+/* Tablet */
+@media (max-width: 900px) {
+  .leistungen-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Feinschliff */
+@media (max-width: 600px) {
+  .card {
+    padding: 1.2rem;
+  }
+}
+    
 @media (max-width: 768px) {
   .homeway-flex {
     flex-direction: column;
@@ -488,7 +519,7 @@ section#homeway-details {
       wirtschaftlichem Denken und einem klaren Blick für nachhaltige Lösungen.
     </p>
 
-    <div class="grid" style="display:grid; grid-template-columns: 1.6fr 1fr; gap:1.8rem; margin-top:2rem;">
+    <div class="leistungen-grid">
 
       <!-- 🏠 DIGITALE INFRASTRUKTUR (HERVORGEHOBEN) -->
       <div class="card">
