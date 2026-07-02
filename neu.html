@@ -50,9 +50,21 @@ header{
   border-bottom:1px solid var(--border);
   z-index:1000;
 }
-header svg{
-  flex-shrink: 0;
+header .logo{
+  display:flex;
+  align-items:center;
+  max-height:72px;
+  overflow:hidden;
 }
+
+header .logo-svg{
+  height: 48px !important;
+  width: auto !important;
+  max-height: 48px !important;
+  display:block;
+  flex-shrink:0;
+}
+  
 nav{
   display:flex;
   gap:1.2rem;
@@ -254,8 +266,9 @@ footer{
 <header>
 
 <!-- LOGO -->
-
-  <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
+  
+  <div class="logo">
+  <svg class="logo-svg" viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
         <!-- Quadrat (Dunkelblau) -->
         <rect x="20" y="50" width="80" height="80" fill="#1F3A93" rx="4"/>
         <!-- Kreis (Petrol) -->
