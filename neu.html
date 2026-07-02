@@ -50,7 +50,9 @@ header{
   border-bottom:1px solid var(--border);
   z-index:1000;
 }
-
+header svg{
+  flex-shrink: 0;
+}
 nav{
   display:flex;
   gap:1.2rem;
@@ -224,9 +226,24 @@ footer{
    BRAND (LOGO + WORDMARK)
 ========================= */
 
-.logo-svg {
-  height: 70px;
+.logo-svg{
+  height: 48px;
   width: auto;
+  display: block;
+}
+
+/* Desktop etwas größer */
+@media (min-width: 1024px){
+  .logo-svg{
+    height: 64px;
+  }
+}
+
+/* Mobile kleiner */
+@media (max-width: 600px){
+  .logo-svg{
+    height: 38px;
+  }
 }
 
 </style>
@@ -238,7 +255,7 @@ footer{
 
 <!-- LOGO -->
 
-  <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg" style="width:800px !important; height:auto !important; display:block;">
+  <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
         <!-- Quadrat (Dunkelblau) -->
         <rect x="20" y="50" width="80" height="80" fill="#1F3A93" rx="4"/>
         <!-- Kreis (Petrol) -->
