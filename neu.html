@@ -56,15 +56,12 @@ header .logo{
   max-height:72px;
   overflow:hidden;
 }
-
 header .logo-svg{
-  height: 48px !important;
-  width: auto !important;
-  max-height: 48px !important;
-  display:block;
-  flex-shrink:0;
+  height: 56px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
 }
-  
 nav{
   display:flex;
   gap:1.2rem;
@@ -183,7 +180,17 @@ section{
 .grid-2{
   grid-template-columns:repeat(2,1fr);
 }
+@media (min-width: 1024px){
+  header .logo-svg{
+    height: 64px;
+  }
+}
 
+@media (max-width: 600px){
+  header .logo-svg{
+    height: 42px;
+  }
+}
 @media(max-width:900px){
   .grid-2{grid-template-columns:1fr}
 }
