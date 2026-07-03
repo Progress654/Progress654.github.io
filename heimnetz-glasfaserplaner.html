@@ -136,28 +136,23 @@ header {
    INNER LAYOUT
 ========================= */
 
-
 .header-inner{
   max-width:1200px;
   margin:auto;
+
   display:flex;
   justify-content:space-between;
-  align-items:flex-start;
+  align-items:center;
+
   padding:14px 20px;
 }
 
-/* linke Seite */
+/* linker Block */
 .header-left{
   display:flex;
   flex-direction:column;
   align-items:flex-start;
   gap:6px;
-}
-
-/* rechte Seite */
-.header-right{
-  display:flex;
-  align-items:center;
 }
 
 /* Claim */
@@ -167,7 +162,7 @@ header {
   color:#1F3A93;
 }
 
-/* Back Link */
+/* rechter Link */
 .back-link{
   font-size:14px;
   color:#5f6b7a;
@@ -866,12 +861,10 @@ section {
     </div>
      
       <!-- RECHTER BLOCK -->
-    <div class="header-right">
-      <a href="index.html" class="back-link">
-        ← Zur Startseite
-      </a>
-    </div>
-     
+
+     <a href="index.html" class="back-link">
+    ← Zur Startseite
+     </a>
   </div>
 
 </header>
