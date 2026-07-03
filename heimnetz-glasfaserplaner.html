@@ -140,14 +140,14 @@ header {
   max-width:1200px;
   margin:auto;
 
-  display:flex;
-  justify-content:space-between;
+  display:grid;
+  grid-template-columns: 1fr auto;
   align-items:center;
 
   padding:14px 20px;
 }
 
-/* linker Block */
+/* LINKS */
 .header-left{
   display:flex;
   flex-direction:column;
@@ -155,14 +155,19 @@ header {
   gap:6px;
 }
 
-/* Claim */
+/* RECHTS */
+.header-right{
+  justify-self:end;
+}
+
+/* CLAIM */
 .claim{
   font-size:15px;
   font-weight:600;
   color:#1F3A93;
 }
 
-/* rechter Link */
+/* LINK */
 .back-link{
   font-size:14px;
   color:#5f6b7a;
@@ -861,10 +866,10 @@ section {
     </div>
      
       <!-- RECHTER BLOCK -->
+   <div class="header-right">
+    <a href="index.html" class="back-link">← Zur Startseite</a>
+   </div>
 
-     <a href="index.html" class="back-link">
-    ← Zur Startseite
-     </a>
   </div>
 
 </header>
