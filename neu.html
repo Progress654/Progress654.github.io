@@ -357,6 +357,48 @@ ul{
   }
 }
 
+/* Kontaktformular */
+.contact-box form {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 15px;
+  color: var(--fg);
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(45,156,219,0.15);
+}
+
+.contact-box button {
+  padding: 14px;
+  width: 100%;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.contact-box button:hover {
+  transform: translateY(-2px);
+}
+  
 /* FOOTER */
 footer{
   text-align:center;
@@ -573,9 +615,10 @@ section{
     </p>
 
       <form action="https://un-sta.com/forms/DEINE-ID" method="POST">
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="E-Mail" required />
-      <textarea placeholder="Worum geht es?" rows="5"></textarea>
+
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="E-Mail" required />
+      <textarea name="message" placeholder="Worum geht es?" rows="5" required></textarea>
 
       <button class="btn" type="submit">Anfrage senden</button>
     </form>
