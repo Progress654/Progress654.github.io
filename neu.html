@@ -113,6 +113,13 @@ html{scroll-behavior:smooth}
 .cta{
   padding: clamp(28px, 4vw, 60px);
 }
+.cta-btn{
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+}
   
 /* HAMBURGER (mobile) */
 .hamburger{
@@ -128,7 +135,6 @@ html{scroll-behavior:smooth}
 /* RESPONSIVE */
 @media(max-width:900px){
   .nav{ display:none; }
-  .cta{ display:none; }
   .hamburger{ display:block; }
 }
 
@@ -333,7 +339,9 @@ ul{
   color:#5b6b7a;
   font-size:14px;
 }
-
+.contact-box{
+  padding: 40px;
+}
 @media(max-width:800px){
   .contact-grid{
     grid-template-columns:1fr;
@@ -415,10 +423,7 @@ section{
     <a href="#ueber">Über mich</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
-
-  <a href="#kontakt" class="cta">
-    Erstgespräch
-  </a>
+  <a href="#kontakt" class="cta-btn">Erstgespräch</a>
 
   <button class="hamburger" onclick="toggleMenu()">☰</button>
 
