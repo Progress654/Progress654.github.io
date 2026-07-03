@@ -77,18 +77,43 @@ html{scroll-behavior:smooth}
   color:var(--accent);
 }
 
-/* CTA */
-.cta{
-  background:var(--accent);
-  color:#fff;
-  padding:.6rem 1rem;
-  border-radius:999px;
-  font-size:13px;
-  font-weight:600;
-  text-decoration:none;
-  box-shadow:0 10px 25px rgba(45,156,219,.25);
+
+/* =========================
+   CTA
+========================= */
+
+.cta input,
+.cta textarea{
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  background: white;
+  transition: 0.2s ease;
 }
 
+.cta input:focus,
+.cta textarea:focus{
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(45,156,219,0.15);
+}
+   
+.cta h2 {
+  font-size: 26px;
+  color: var(--blue-dark);
+}
+
+.cta form{
+  display: grid;
+  gap: 12px;
+}
+
+.cta{
+  padding: clamp(28px, 4vw, 60px);
+}
+  
 /* HAMBURGER (mobile) */
 .hamburger{
   display:none;
