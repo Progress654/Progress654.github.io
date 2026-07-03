@@ -136,47 +136,47 @@ header {
    INNER LAYOUT
 ========================= */
 
-.header-inner{
-  max-width:1200px;
-  margin:auto;
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
 
-  display:grid;
-  grid-template-columns: 1fr auto;
-  align-items:center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  padding:14px 20px;
+  padding: 14px 20px;
 }
 
-/* LINKS */
-.header-left{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  gap:6px;
+/* LINKS: Logo + Claim untereinander */
+.header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
 }
 
-/* RECHTS */
-.header-right{
-  justify-self:end;
+/* RECHTS: Link bleibt rechts */
+.header-right {
+  display: flex;
+  align-items: center;
 }
 
-/* CLAIM */
-.claim{
-  font-size:15px;
-  font-weight:600;
-  color:#1F3A93;
+/* Claim Styling */
+.claim {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1F3A93;
 }
 
-/* LINK */
-.back-link{
-  font-size:14px;
-  color:#5f6b7a;
-  text-decoration:none;
-  white-space:nowrap;
+/* Back Link */
+.back-link {
+  font-size: 14px;
+  color: #5f6b7a;
+  text-decoration: none;
 }
 
-.back-link:hover{
-  color:#2D9CDB;
+.back-link:hover {
+  color: #2D9CDB;
 }
    
 /* =========================
@@ -845,7 +845,42 @@ section {
 
   <div class="header-inner">
 
-    <!-- BRAND -->
+    <!-- LINKS -->
+    <div class="header-left">
+
+      <a href="#top" class="brand">
+        <svg class="logo-svg" viewBox="0 0 700 180">
+          <rect x="20" y="50" width="80" height="80" fill="#1F3A93" rx="6"/>
+          <circle cx="110" cy="90" r="36" fill="#2D9CDB"/>
+          <text x="170" y="100" font-size="52" fill="#2C3E50" font-weight="bold">
+            BERATUNG &
+          </text>
+          <text x="170" y="155" font-size="52" fill="#2C3E50" font-weight="bold">
+            TECHNIK
+          </text>
+        </svg>
+      </a>
+
+      <div class="claim">
+        Der Heimnetz- & Glasfaser Planer
+      </div>
+
+    </div>
+
+    <!-- RECHTS -->
+    <div class="header-right">
+      <a href="index.html" class="back-link">← Zur Startseite</a>
+    </div>
+
+  </div>
+
+</header>
+
+<!--
+   
+<header class="site-header">
+
+  <div class="header-inner">
 
 <a href="/" class="brand">
   <svg class="logo-svg" viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
@@ -860,19 +895,18 @@ section {
   </svg>
 </a>
      
-    <!-- CLAIM -->
     <div class="claim">
       Der Heimnetz- & Glasfaser Planer
     </div>
      
-      <!-- RECHTER BLOCK -->
+
    <div class="header-right">
     <a href="index.html" class="back-link">← Zur Startseite</a>
    </div>
 
   </div>
 
-</header>
+</header> -->
    
 <section class="hero">
 
