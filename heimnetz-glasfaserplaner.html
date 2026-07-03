@@ -184,9 +184,6 @@ header {
   background: rgba(255,255,255,0.9);
 }
    
-/* =========================
-   HERO
-========================= */
 /* ===================================
    HERO
 =================================== */
@@ -494,7 +491,6 @@ li {
 .info p {
     margin-bottom: 18px;
 }
-
    
 /* =========================
    Section intro
@@ -584,6 +580,55 @@ li {
 
 .cta{
   padding: clamp(28px, 4vw, 60px);
+}
+
+/* CTA Kontaktbereich – Optimierung */
+.cta {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: clamp(28px, 4vw, 60px);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Inputs */
+.cta input,
+.cta textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  font-size: 15px;
+  color: var(--fg);
+  transition: 0.2s ease;
+}
+
+/* Fokus */
+.cta input:focus,
+.cta textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(45,156,219,0.15);
+}
+
+/* Button */
+.cta button {
+  padding: 14px;
+  width: 100%;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cta button:hover {
+  transform: translateY(-2px);
 }
    
 /* =========================
@@ -831,11 +876,13 @@ section {
         <span class="chip">Gaming</span>
         <span class="chip">Homeoffice</span>
         <span class="chip">Videocalls</span>
+        <span class="chip">Remote tätig</span>
+        <span class="chip">große Downloads</span>
         <span class="chip">IP-TV</span>
         <span class="chip">TV classic</span>
         <span class="chip">WLAN</span>
         <span class="chip">Glasfaser</span>
-        <span class="chip">Zukunftssicher</span>
+        <span class="chip">10-Gigabit-Ethernet</span>
 
       </div>
 
@@ -1035,9 +1082,10 @@ section {
     </p>
 
       <form action="https://un-sta.com/forms/DEINE-ID" method="POST">
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="E-Mail" required />
-      <textarea placeholder="Worum geht es? (z. B. Neubau, Sanierung, Anzahl Räume)" rows="5"></textarea>
+
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="E-Mail" required />
+      <textarea name="message" placeholder="Worum geht es? (z. B. Neubau, Sanierung, Anzahl Räume)" rows="5" required></textarea>
 
       <button class="btn" type="submit">Anfrage senden</button>
     </form>
