@@ -654,24 +654,36 @@ input, textarea {
 /* =========================
    FOOTER / IMPRESSUM
 ========================= */
-.footer {
-    text-align: center;
-    padding: 50px 20px;
-    color: #6B7280;
-    font-size: 14px;
+
+footer.footer{
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  margin-top: 4rem;
 }
 
-.footer a {
-    color: #1F3A93;
-    text-decoration: none;
-    margin: 0 8px;
+.footer-links{
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.footer a:hover {
-    color: #2D9CDB;
-    text-decoration: underline;
+.footer-links a{
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
 }
 
+.footer-links a:hover{
+  color: var(--accent);
+}
+
+.footer-copy{
+  font-size: 13px;
+  margin: 0;
+}
+
+   
 /* =========================
    RESPONSIVE
 ========================= */
@@ -1013,6 +1025,15 @@ section {
 
 <!-- IMPRESSUM -->
 
+<footer class="footer">
+  <div class="footer-links">
+    <a href="impressum.html">Impressum</a>
+    <a href="impressum.html#datenschutz">Datenschutz</a>
+  </div>
+
+  <p class="footer-copy">© 2026 BERATUNG & TECHNIK</p>
+</footer>
+     <!-- 
 <footer>
   <div style="display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap;">
     <a href="impressum.html">Impressum</a>
@@ -1021,7 +1042,6 @@ section {
     <p>© <span id="year"></span> Beratung & Technik</p>
 </footer>
 
-   <!--
 <footer class="footer">
 
     <p>© 2026 BERATUNG & TECHNIK</p>
