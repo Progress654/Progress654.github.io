@@ -554,30 +554,29 @@ li {
    CTA
 ========================= */
 
-.cta {
-  margin-top: var(--space-xl);
-  padding: var(--space-xl);
-  border-radius: var(--r-lg);
-  background: linear-gradient(135deg, rgba(31,58,147,0.06), rgba(45,156,219,0.08));
-  border: 1px solid var(--border);
-}
 
-.cta h2 {
-  font-size: 26px;
-  color: var(--blue-dark);
-}
 
-form {
-  display: grid;
-  gap: var(--space-sm);
-  margin-top: var(--space-md);
-}
-
-input, textarea {
-  padding: 12px;
-  border-radius: var(--r-md);
+.cta input,
+.cta textarea{
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
   border: 1px solid var(--border);
   font-size: 14px;
+  background: white;
+  transition: 0.2s ease;
+}
+
+.cta input:focus,
+.cta textarea:focus{
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(45,156,219,0.15);
+}
+
+.cta form{
+  display: grid;
+  gap: 12px;
 }
    
 /* =========================
@@ -1023,6 +1022,33 @@ section {
   <div class="cta">
 
     <h2>Unverbindliche Anfrage</h2>
+
+    <p>
+      Beschreiben Sie kurz Ihr Projekt – wir melden uns mit einer passenden Lösung für Ihr Zuhause.
+    </p>
+
+    <form>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="E-Mail" required />
+      <textarea placeholder="Worum geht es? (z. B. Neubau, Sanierung, Anzahl Räume)" rows="5"></textarea>
+
+      <button class="btn" type="submit">
+        Anfrage senden
+      </button>
+    </form>
+
+    <p style="margin-top:12px; font-size:12px; color:#5b6b7a;">
+      Antwort in der Regel innerhalb von 24 Stunden
+    </p>
+
+  </div>
+</section>
+   
+   <!--
+<section id="kontakt" class="container">
+  <div class="cta">
+
+    <h2>Unverbindliche Anfrage</h2>
     <p>Wir erstellen ein individuelles Angebot für Ihr Zuhause.</p>
 
     <form>
@@ -1033,7 +1059,7 @@ section {
     </form>
 
   </div>
-</section>
+</section> -->
 
 <!-- IMPRESSUM -->
 
