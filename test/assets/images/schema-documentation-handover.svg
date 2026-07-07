@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Digitale Heimnetz-Mappe</title>
+  <desc id="desc">Visualisierung einer sauberen Heimnetz-Dokumentation mit Portplan, WLAN-Daten, Messprotokoll, Fotos und Supportkontakt.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7faff}.paper{fill:#fff;stroke:#cbd5e1;stroke-width:3}.blue{fill:#2563eb}.navy{fill:#172033}.cyan{fill:#0e7490}.soft{fill:#e8f0ff}.line{stroke:#cbd5e1;stroke-width:3;stroke-linecap:round}.accent{stroke:#2563eb;stroke-width:4;stroke-linecap:round}.label{font:700 28px Arial,Helvetica,sans-serif;fill:#172033}.small{font:600 20px Arial,Helvetica,sans-serif;fill:#475569}.tiny{font:600 16px Arial,Helvetica,sans-serif;fill:#64748b}.white{fill:#fff}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="760" rx="28"/>
+  <rect x="100" y="90" width="1000" height="580" rx="26" fill="#eef4fb" stroke="#d7dee8" stroke-width="2"/>
+  <rect class="paper" x="160" y="145" width="330" height="430" rx="12"/>
+  <rect class="paper" x="435" y="120" width="360" height="500" rx="12"/>
+  <rect class="paper" x="735" y="165" width="305" height="390" rx="12"/>
+  <rect class="blue" x="435" y="120" width="360" height="68" rx="12"/>
+  <rect class="blue" x="435" y="170" width="360" height="18"/>
+  <text class="white" x="470" y="164" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700">Digitale Heimnetz-Mappe</text>
+  <text class="label" x="190" y="200">Portplan</text>
+  <line class="line" x1="190" y1="235" x2="440" y2="235"/>
+  <rect class="soft" x="190" y="265" width="250" height="42" rx="8"/>
+  <text class="tiny" x="210" y="292">Patchfeld 01 -> Wohnzimmer</text>
+  <rect class="soft" x="190" y="325" width="250" height="42" rx="8"/>
+  <text class="tiny" x="210" y="352">Patchfeld 02 -> Homeoffice</text>
+  <rect class="soft" x="190" y="385" width="250" height="42" rx="8"/>
+  <text class="tiny" x="210" y="412">Patchfeld 03 -> Access Point</text>
+  <rect class="soft" x="190" y="445" width="250" height="42" rx="8"/>
+  <text class="tiny" x="210" y="472">Patchfeld 04 -> Garage</text>
+  <text class="label" x="480" y="245">Was der Kunde bekommt</text>
+  <g transform="translate(485 280)">
+    <circle class="blue" cx="14" cy="14" r="14"/><path d="M7 14l5 5 10-12" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="small" x="45" y="21">gepruefte LAN-Dosen</text>
+  </g>
+  <g transform="translate(485 335)">
+    <circle class="blue" cx="14" cy="14" r="14"/><path d="M7 14l5 5 10-12" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="small" x="45" y="21">beschrifteter Netzwerkschrank</text>
+  </g>
+  <g transform="translate(485 390)">
+    <circle class="blue" cx="14" cy="14" r="14"/><path d="M7 14l5 5 10-12" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="small" x="45" y="21">WLAN-Daten &amp; AP-Standorte</text>
+  </g>
+  <g transform="translate(485 445)">
+    <circle class="blue" cx="14" cy="14" r="14"/><path d="M7 14l5 5 10-12" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="small" x="45" y="21">Fotos, Messung, Supportkontakt</text>
+  </g>
+  <rect x="485" y="520" width="260" height="46" rx="10" fill="#172033"/>
+  <text class="white" x="520" y="550" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">Nachvollziehbare Uebergabe</text>
+  <text class="label" x="775" y="220">Messprotokoll</text>
+  <line class="line" x1="775" y1="255" x2="1000" y2="255"/>
+  <text class="tiny" x="775" y="295">Dose</text>
+  <text class="tiny" x="895" y="295">Status</text>
+  <line class="line" x1="775" y1="310" x2="1000" y2="310"/>
+  <text class="tiny" x="775" y="340">Wohnzimmer</text>
+  <text class="tiny" x="895" y="340">OK</text>
+  <line class="accent" x1="930" y1="334" x2="970" y2="334"/>
+  <text class="tiny" x="775" y="385">Homeoffice</text>
+  <text class="tiny" x="895" y="385">OK</text>
+  <line class="accent" x1="930" y1="379" x2="970" y2="379"/>
+  <text class="tiny" x="775" y="430">Garage</text>
+  <text class="tiny" x="895" y="430">OK</text>
+  <line class="accent" x1="930" y1="424" x2="970" y2="424"/>
+  <rect x="780" y="480" width="215" height="36" rx="8" fill="#e8f0ff"/>
+  <text class="tiny" x="805" y="504">Stand: nach Uebergabe</text>
+  <text class="label" x="100" y="720">Ergebnis: ein geprueftes, beschriftetes und dokumentiertes Heimnetz</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Schema Heimnetz im Haus</title>
+  <desc id="desc">Vereinfachtes Schema mit Glasfaser, Netzwerkschrank, Switch, LAN-Dosen, Access Points, Garage und Garten.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7faff}.wall{fill:#fff;stroke:#cbd5e1;stroke-width:3}.roof{fill:#1f3a93}.line{fill:none;stroke:#2563eb;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.line2{fill:none;stroke:#0e7490;stroke-width:4;stroke-linecap:round;stroke-dasharray:10 10}.node{fill:#e8f0ff;stroke:#2563eb;stroke-width:3}.hub{fill:#172033}.label{font:700 28px Arial,Helvetica,sans-serif;fill:#172033}.small{font:600 20px Arial,Helvetica,sans-serif;fill:#475569}.tiny{font:600 17px Arial,Helvetica,sans-serif;fill:#64748b}.white{fill:#fff}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="760" rx="28"/>
+  <path class="roof" d="M170 230 600 70l430 160v54H170z"/>
+  <rect class="wall" x="215" y="250" width="770" height="385" rx="12"/>
+  <line x1="215" y1="378" x2="985" y2="378" stroke="#cbd5e1" stroke-width="3"/>
+  <line x1="215" y1="506" x2="985" y2="506" stroke="#cbd5e1" stroke-width="3"/>
+  <line x1="470" y1="250" x2="470" y2="635" stroke="#cbd5e1" stroke-width="3"/>
+  <line x1="730" y1="250" x2="730" y2="635" stroke="#cbd5e1" stroke-width="3"/>
+  <rect class="wall" x="80" y="475" width="120" height="160" rx="10"/>
+  <text class="label" x="70" y="455">Garage</text>
+  <text class="label" x="850" y="690">Garten</text>
+  <text class="small" x="265" y="315">Homeoffice</text>
+  <text class="small" x="525" y="315">Kinderzimmer</text>
+  <text class="small" x="775" y="315">Schlafzimmer</text>
+  <text class="small" x="270" y="445">Wohnzimmer</text>
+  <text class="small" x="535" y="445">Kueche</text>
+  <text class="small" x="785" y="445">Terrasse</text>
+  <text class="small" x="270" y="575">Technikraum</text>
+  <text class="small" x="535" y="575">TV / Medien</text>
+  <text class="small" x="785" y="575">Gaeste</text>
+  <rect class="hub" x="285" y="540" width="145" height="62" rx="8"/>
+  <text class="white" x="307" y="566" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="700">Netzwerk-</text>
+  <text class="white" x="317" y="590" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="700">schrank</text>
+  <rect x="108" y="535" width="64" height="46" rx="7" fill="#fff" stroke="#2563eb" stroke-width="3"/>
+  <text class="tiny" x="103" y="608">Wallbox</text>
+  <circle class="node" cx="350" cy="315" r="31"/>
+  <path class="line2" d="M337 317c8-8 18-8 26 0M345 326c3-3 7-3 10 0"/>
+  <circle class="node" cx="610" cy="315" r="31"/>
+  <path class="line2" d="M597 317c8-8 18-8 26 0M605 326c3-3 7-3 10 0"/>
+  <circle class="node" cx="865" cy="445" r="31"/>
+  <path class="line2" d="M852 447c8-8 18-8 26 0M860 456c3-3 7-3 10 0"/>
+  <rect class="node" x="552" y="418" width="46" height="38" rx="6"/>
+  <rect class="node" x="828" y="548" width="46" height="38" rx="6"/>
+  <rect class="node" x="1060" y="522" width="62" height="46" rx="8"/>
+  <path class="line2" d="M1072 522c12-10 27-10 39 0M1081 533c6-5 14-5 20 0"/>
+  <text class="small" x="1030" y="600">Outdoor-AP</text>
+  <path class="line" d="M350 540V345"/>
+  <path class="line" d="M430 570H575V456"/>
+  <path class="line" d="M430 585h421v-38"/>
+  <path class="line" d="M430 555H610V346"/>
+  <path class="line" d="M430 600H140v-65"/>
+  <path class="line" d="M430 570h435V475"/>
+  <path class="line" d="M874 567h215v-46"/>
+  <path class="line2" d="M290 620 160 690"/>
+  <circle cx="160" cy="690" r="13" fill="#0e7490"/>
+  <text class="small" x="40" y="720">Glasfaser / ONT</text>
+  <rect x="55" y="96" width="320" height="88" rx="14" fill="#fff" stroke="#d7dee8" stroke-width="2"/>
+  <text class="label" x="80" y="132">Ein Hausnetz als System</text>
+  <text class="small" x="80" y="162">Glasfaser -> Schrank -> Switch -> Dosen &amp; APs</text>
+  <rect x="785" y="96" width="340" height="88" rx="14" fill="#fff" stroke="#d7dee8" stroke-width="2"/>
+  <circle cx="820" cy="128" r="10" fill="#2563eb"/>
+  <text class="small" x="842" y="135">LAN / PoE</text>
+  <circle cx="820" cy="160" r="10" fill="#0e7490"/>
+  <text class="small" x="842" y="167">Glasfaser / Provider</text>
+</svg>
