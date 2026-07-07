@@ -1,0 +1,6 @@
+Site: Beratung & Technik
+Domain: https://www.beratung-technik.at/
+Owner: Gerhard Koschi - Beratung & Technik
+Region: Wien, Niederösterreich, Burgenland
+Contact: office@beratung-technik.at
+Focus: Heimnetz, Glasfaser, LAN, WLAN, HomeWay, Netzwerkschrank, Access Points, Inbetriebnahme
