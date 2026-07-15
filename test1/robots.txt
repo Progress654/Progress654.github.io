@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+# Wenn Trainingsnutzung nicht gewünscht ist, kann GPTBot später mit "Disallow: /" blockiert werden.
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://www.beratung-technik.at/sitemap.xml
