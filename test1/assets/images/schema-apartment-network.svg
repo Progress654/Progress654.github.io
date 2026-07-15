@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Schema Heimnetz in der Wohnung</title>
+  <desc id="desc">Vereinfachtes Wohnungsschema mit Medienverteiler, Router, Switch, LAN-Dosen, Homeoffice, TV und WLAN Access Point.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7faff}.room{fill:#fff;stroke:#cbd5e1;stroke-width:3}.line{fill:none;stroke:#2563eb;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.wifi{fill:none;stroke:#0e7490;stroke-width:4;stroke-linecap:round}.node{fill:#e8f0ff;stroke:#2563eb;stroke-width:3}.hub{fill:#172033}.label{font:700 28px Arial,Helvetica,sans-serif;fill:#172033}.small{font:600 20px Arial,Helvetica,sans-serif;fill:#475569}.tiny{font:600 17px Arial,Helvetica,sans-serif;fill:#64748b}.white{fill:#fff}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="760" rx="28"/>
+  <rect class="room" x="115" y="130" width="970" height="515" rx="18"/>
+  <line x1="115" y1="315" x2="1085" y2="315" stroke="#cbd5e1" stroke-width="3"/>
+  <line x1="115" y1="485" x2="1085" y2="485" stroke="#cbd5e1" stroke-width="3"/>
+  <line x1="430" y1="130" x2="430" y2="645" stroke="#cbd5e1" stroke-width="3"/>
+  <line x1="760" y1="130" x2="760" y2="645" stroke="#cbd5e1" stroke-width="3"/>
+  <text class="small" x="175" y="200">Homeoffice</text>
+  <text class="small" x="490" y="200">Wohnen / TV</text>
+  <text class="small" x="815" y="200">Schlafzimmer</text>
+  <text class="small" x="175" y="380">Küche</text>
+  <text class="small" x="490" y="380">Flur</text>
+  <text class="small" x="815" y="380">Kinderzimmer</text>
+  <text class="small" x="175" y="555">Medienverteiler</text>
+  <text class="small" x="490" y="555">Bad / Technik</text>
+  <text class="small" x="815" y="555">Balkon</text>
+  <rect class="hub" x="180" y="575" width="155" height="48" rx="8"/>
+  <text class="white" x="205" y="606" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">Switch</text>
+  <rect x="185" y="510" width="145" height="42" rx="7" fill="#fff" stroke="#0e7490" stroke-width="3"/>
+  <text class="tiny" x="205" y="537">Router / ONT</text>
+  <rect class="node" x="230" y="230" width="52" height="42" rx="7"/>
+  <text class="tiny" x="205" y="298">LAN-Dose</text>
+  <rect class="node" x="565" y="230" width="52" height="42" rx="7"/>
+  <text class="tiny" x="530" y="298">TV / Konsole</text>
+  <rect class="node" x="890" y="405" width="52" height="42" rx="7"/>
+  <text class="tiny" x="840" y="475">LAN-Dose</text>
+  <circle class="node" cx="600" cy="400" r="36"/>
+  <path class="wifi" d="M582 395c11-10 25-10 36 0M591 407c5-4 13-4 18 0"/>
+  <text class="tiny" x="545" y="465">WLAN Access Point</text>
+  <circle class="node" cx="915" cy="575" r="31"/>
+  <path class="wifi" d="M902 577c8-8 18-8 26 0M910 586c3-3 7-3 10 0"/>
+  <text class="tiny" x="860" y="625">Balkon / Terrasse</text>
+  <path class="line" d="M258 575V272"/>
+  <path class="line" d="M335 590h256V436"/>
+  <path class="line" d="M335 600h581V447"/>
+  <path class="line" d="M335 585h256V272"/>
+  <path class="line" d="M335 615h580v-40"/>
+  <path class="line" d="M258 552v23"/>
+  <rect x="55" y="42" width="435" height="68" rx="14" fill="#fff" stroke="#d7dee8" stroke-width="2"/>
+  <text class="label" x="80" y="84">Wohnung: klare Portzuordnung</text>
+  <rect x="720" y="42" width="380" height="68" rx="14" fill="#fff" stroke="#d7dee8" stroke-width="2"/>
+  <text class="small" x="748" y="72">Eine Dose = ein klarer Switch-Port</text>
+  <text class="tiny" x="748" y="96">Beschriftung, Test und Dokumentation inklusive</text>
+</svg>

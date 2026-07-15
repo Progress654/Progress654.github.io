@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Dokumentierte Übergabe des Heimnetzes</title>
+  <desc id="desc">Übersichtliche Heimnetz-Mappe mit Portplan, Prüfstatus, WLAN-Daten, Fotos und Supportinformationen.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7faff}.panel{fill:#fff;stroke:#cbd5e1;stroke-width:3}.soft{fill:#e8f0ff}.blue{fill:#2563eb}.teal{fill:#0e7490}.navy{fill:#172033}.muted{fill:#64748b}.line{stroke:#d7dee8;stroke-width:3}.title{font:700 38px Arial,Helvetica,sans-serif;fill:#fff}.subtitle{font:600 22px Arial,Helvetica,sans-serif;fill:#dbeafe}.heading{font:700 30px Arial,Helvetica,sans-serif;fill:#172033}.text{font:600 22px Arial,Helvetica,sans-serif;fill:#475569}.small{font:700 19px Arial,Helvetica,sans-serif;fill:#64748b}.code{font:700 20px Arial,Helvetica,sans-serif;fill:#1d4ed8}.white{fill:#fff}
+    </style>
+    <g id="check">
+      <circle class="blue" cx="15" cy="15" r="15"/>
+      <path d="M8 15l5 5 10-12" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g id="document">
+      <path d="M8 2h29l9 9v43H8z" fill="#e8f0ff" stroke="#2563eb" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M37 2v12h9M16 24h22M16 33h22M16 42h15" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </defs>
+
+  <rect class="bg" width="1200" height="760" rx="28"/>
+  <rect class="navy" x="55" y="48" width="1090" height="112" rx="18"/>
+  <circle class="blue" cx="108" cy="104" r="28"/>
+  <path d="M94 104l10 10 20-24" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="title" x="158" y="98">Dokumentierte Übergabe</text>
+  <text class="subtitle" x="158" y="132">Portplan · Prüfstatus · WLAN-Daten · Geräteübersicht</text>
+
+  <rect class="panel" x="55" y="188" width="340" height="440" rx="16"/>
+  <rect class="soft" x="80" y="214" width="72" height="72" rx="14"/>
+  <use href="#document" x="90" y="222"/>
+  <text class="heading" x="174" y="258">Portplan</text>
+  <text class="small" x="82" y="316">PORT</text>
+  <text class="small" x="178" y="316">RAUM / NUTZUNG</text>
+  <line class="line" x1="82" y1="330" x2="368" y2="330"/>
+
+  <rect class="soft" x="80" y="350" width="288" height="50" rx="9"/>
+  <text class="code" x="96" y="382">P01</text>
+  <text class="text" x="178" y="382">Wohnzimmer</text>
+  <rect class="soft" x="80" y="414" width="288" height="50" rx="9"/>
+  <text class="code" x="96" y="446">P02</text>
+  <text class="text" x="178" y="446">Homeoffice</text>
+  <rect class="soft" x="80" y="478" width="288" height="50" rx="9"/>
+  <text class="code" x="96" y="510">P03</text>
+  <text class="text" x="178" y="510">Access Point</text>
+  <rect class="soft" x="80" y="542" width="288" height="50" rx="9"/>
+  <text class="code" x="96" y="574">P04</text>
+  <text class="text" x="178" y="574">Garage</text>
+
+  <rect class="panel" x="430" y="188" width="340" height="440" rx="16"/>
+  <rect class="soft" x="455" y="214" width="72" height="72" rx="14"/>
+  <use href="#check" x="476" y="235"/>
+  <text class="heading" x="549" y="258">Prüfstatus</text>
+
+  <g transform="translate(462 332)">
+    <use href="#check"/>
+    <text class="text" x="48" y="23">LAN-Dosen geprüft</text>
+  </g>
+  <g transform="translate(462 397)">
+    <use href="#check"/>
+    <text class="text" x="48" y="23">Ports beschriftet</text>
+  </g>
+  <g transform="translate(462 462)">
+    <use href="#check"/>
+    <text class="text" x="48" y="23">WLAN-Zonen geprüft</text>
+  </g>
+  <g transform="translate(462 527)">
+    <use href="#check"/>
+    <text class="text" x="48" y="23">Geräte zugeordnet</text>
+  </g>
+  <rect class="navy" x="462" y="576" width="276" height="34" rx="8"/>
+  <text class="white" x="520" y="600" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="700">Status nachvollziehbar</text>
+
+  <rect class="panel" x="805" y="188" width="340" height="440" rx="16"/>
+  <rect class="soft" x="830" y="214" width="72" height="72" rx="14"/>
+  <path d="M850 236h32v30h-32zM856 230h20l6 6M858 247h16M858 255h11" fill="none" stroke="#0e7490" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="heading" x="924" y="248">Heimnetz-</text>
+  <text class="heading" x="924" y="278">Mappe</text>
+
+  <g transform="translate(837 332)">
+    <circle class="teal" cx="10" cy="10" r="10"/>
+    <path d="M5 10l4 4 7-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="text" x="34" y="18">Port- und Raumplan</text>
+  </g>
+  <g transform="translate(837 392)">
+    <circle class="teal" cx="10" cy="10" r="10"/>
+    <path d="M5 10l4 4 7-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="text" x="34" y="18">WLAN-/Gerätedaten</text>
+  </g>
+  <g transform="translate(837 452)">
+    <circle class="teal" cx="10" cy="10" r="10"/>
+    <path d="M5 10l4 4 7-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="text" x="34" y="18">Fotos und Hinweise</text>
+  </g>
+  <g transform="translate(837 512)">
+    <circle class="teal" cx="10" cy="10" r="10"/>
+    <path d="M5 10l4 4 7-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="text" x="34" y="18">Supportkontakt</text>
+  </g>
+  <rect x="837" y="566" width="276" height="44" rx="9" fill="#e6f5f7"/>
+  <text class="small" x="876" y="594" fill="#0e7490">Stand nach Übergabe</text>
+
+  <circle class="blue" cx="348" cy="688" r="9"/>
+  <circle class="teal" cx="376" cy="688" r="9"/>
+  <text class="heading" x="402" y="699">Geprüft · beschriftet · nachvollziehbar</text>
+</svg>
