@@ -458,7 +458,6 @@ h3 {
     radial-gradient(circle at 9% 12%, rgba(58, 164, 216, 0.16), transparent 30%),
     linear-gradient(135deg, #f8f8f4 0%, #eef4f7 100%);
 }
-*/
 
 .home-hero {
     min-height: 680px;
@@ -469,7 +468,8 @@ h3 {
             rgba(0,0,0,.45)
         ),
         url("../images/generated-elegant-home-network-hero.webp") center 40% / cover no-repeat;
-}
+}*/
+
 .home-hero {
     background-image:
         linear-gradient(
