@@ -463,7 +463,7 @@ h3 {
     position: relative;
     background:
         linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-        url("assets/images/generated-elegant-home-network-hero.webp") center center / cover no-repeat;
+        url("../images/generated-elegant-home-network-hero.webp") center center / cover no-repeat;
     min-height: 80vh;
     display: flex;
     align-items: center;
