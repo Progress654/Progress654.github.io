@@ -459,11 +459,20 @@ h3 {
     linear-gradient(135deg, #f8f8f4 0%, #eef4f7 100%);
 }
 */
+
 .home-hero {
     position: relative;
-    background:
+    background-image:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.70) 0%,
+        rgba(0,0,0,.55) 45%,
+        rgba(0,0,0,.25) 100%
+    ),
+    url("../images/generated-elegant-home-network-hero.webp");
+  /*  background:
         linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-        url("../images/generated-elegant-home-network-hero.webp") center center / cover no-repeat;
+        url("../images/generated-elegant-home-network-hero.webp") center center / cover no-repeat; */
     min-height: 80vh;
     display: flex;
     align-items: center;
@@ -541,6 +550,14 @@ h3 {
   z-index: -1;
   border-radius: var(--radius-lg);
   background: var(--signal-soft);
+}
+
+.home-hero .eyebrow,
+.home-hero h1,
+.home-hero .lead,
+.home-hero .claim,
+.home-hero .personal-note {
+    color: #fff;
 }
 
 .visual-caption {
