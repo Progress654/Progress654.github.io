@@ -602,14 +602,14 @@ h3 {
   border-radius: var(--radius-lg);
   background: var(--signal-soft);
 }
-
+/*
 .home-hero .eyebrow,
 .home-hero .lead,
 .home-hero .claim,
 .home-hero .personal-note,
 .home-hero h1 {
     color: #fff !important;
-}
+} */
 
 .home-hero .claim {
     border-left-color: rgba(255,255,255,.6);
@@ -640,10 +640,10 @@ h3 {
 }
 */
 
-}.home-hero h1,
+.home-hero h1,
 .home-hero .lead,
 .home-hero .claim,
-.home-hero .eyebrow,
+/*.home-hero .eyebrow,*/
 .home-hero .personal-note {
     color: #fff !important;
 }
