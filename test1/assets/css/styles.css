@@ -452,11 +452,11 @@ h3 {
 }
 
 .home-hero {
-  min-height: 0;
+  min-height: 620px;
+  display: grid;
+  align-items: center;
   border-bottom: 0;
-  background:
-    radial-gradient(circle at 9% 12%, rgba(58, 164, 216, 0.16), transparent 30%),
-    linear-gradient(135deg, #f8f8f4 0%, #eef4f7 100%);
+  background: var(--charcoal);
 }
 
 .home-hero::after {
@@ -504,15 +504,12 @@ h3 {
 }
 
 .home-hero-media {
-  position: relative;
+  position: absolute;
+  inset: 0;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
   object-fit: cover;
-  object-position: 58% center;
-  border: 1px solid rgba(20, 35, 60, 0.12);
-  border-radius: var(--radius-lg);
-  background: #fff;
-  box-shadow: var(--shadow);
+  object-position: center;
 }
 
 .home-hero-visual::before {
