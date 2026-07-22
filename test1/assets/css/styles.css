@@ -649,7 +649,8 @@ h3 {
 }
 
 .home-hero .eyebrow {
-  color: var(--signal);
+  color: #8bd8ea;
+ /* color: var(--signal);*/
 }
 
 .home-hero .lead {
