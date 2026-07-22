@@ -450,13 +450,25 @@ h3 {
   background: #fff;
   box-shadow: var(--shadow);
 }
-
+/*
 .home-hero {
   min-height: 0;
   border-bottom: 0;
   background:
     radial-gradient(circle at 9% 12%, rgba(58, 164, 216, 0.16), transparent 30%),
     linear-gradient(135deg, #f8f8f4 0%, #eef4f7 100%);
+}
+*/
+
+.home-hero {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.70) 0%,
+            rgba(0,0,0,.45) 45%,
+            rgba(0,0,0,.20) 100%
+        ),
+        url("assets/images/generated-elegant-home-network-hero.webp") center/cover no-repeat;
 }
 
 .home-hero::after {
@@ -484,11 +496,17 @@ h3 {
   border-radius: 0 0 999px 999px;
   background: linear-gradient(90deg, var(--accent), var(--signal));
 }
-
+/*
 .home-hero .hero-grid {
   grid-template-columns: minmax(0, 1.02fr) minmax(380px, 0.98fr);
   gap: clamp(40px, 6vw, 78px);
   padding-block: clamp(64px, 8vw, 104px);
+}
+*/
+
+.home-hero .hero-grid {
+    width: min(1200px, 92%);
+    margin: 0 auto;
 }
 
 .home-hero-copy {
@@ -545,10 +563,19 @@ h3 {
   line-height: 1.35;
   backdrop-filter: blur(12px);
 }
-
+/*
 .home-hero h1 {
   max-width: 12.5ch;
   color: var(--ink);
+}
+*/
+
+.home-hero h1,
+.home-hero .lead,
+.home-hero .claim,
+.home-hero .eyebrow,
+.home-hero .personal-note {
+    color: #fff;
 }
 
 .home-hero .eyebrow {
