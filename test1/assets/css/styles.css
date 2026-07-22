@@ -452,11 +452,11 @@ h3 {
 }
 
 .home-hero {
-  min-height: 620px;
-  display: grid;
-  align-items: center;
+  min-height: 0;
   border-bottom: 0;
-  background: var(--charcoal);
+  background:
+    radial-gradient(circle at 9% 12%, rgba(58, 164, 216, 0.16), transparent 30%),
+    linear-gradient(135deg, #f8f8f4 0%, #eef4f7 100%);
 }
 
 .home-hero::after {
@@ -504,13 +504,16 @@ h3 {
 }
 
 .home-hero-media {
-  position: absolute;
-  inset: 0;
+  position: relative;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  object-position: center;
-}
+  object-position: 58% center;
+  border: 1px solid rgba(20, 35, 60, 0.12);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow);
+} 
 
 .home-hero-visual::before {
   content: "";
