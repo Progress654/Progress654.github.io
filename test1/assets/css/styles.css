@@ -551,6 +551,18 @@ h3 {
 */
 
 .home-hero .hero-grid {
+    width: min(1400px, 92%);
+    grid-template-columns: minmax(0, 760px);
+    gap: 0;
+    padding-block: 76px;
+}
+
+.home-hero-copy {
+    max-width: 760px;
+}
+
+/*
+.home-hero .hero-grid {
     width: min(1200px, 92%);
     margin: 0 auto;
 }
@@ -558,7 +570,7 @@ h3 {
 .home-hero-copy {
   position: relative;
   z-index: 2;
-}
+} */
 
 .home-hero-visual {
   position: relative;
