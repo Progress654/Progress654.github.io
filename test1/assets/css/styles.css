@@ -394,7 +394,8 @@ h3 {
   margin: 22px 0 0;
   padding: 3px 0 3px 16px;
   border-left: 3px solid var(--accent);
-  color: var(--ink);
+ /* color: var(--ink); */
+  color: #8bd8ea;
   font-weight: 700;
   line-height: 1.5;
 }
