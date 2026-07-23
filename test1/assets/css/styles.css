@@ -394,8 +394,8 @@ h3 {
   margin: 22px 0 0;
   padding: 3px 0 3px 16px;
   border-left: 3px solid var(--accent);
- /* color: var(--ink); */
-  color: #8bd8ea;
+  color: var(--ink);
+  /* color: #8bd8ea;*/
   font-weight: 700;
   line-height: 1.5;
 }
@@ -491,7 +491,7 @@ h3 {
 }
 
 /* .home-hero {
-    /*position: relative;*/
+    position: relative;
     background-position: center center;
     background-image:
      linear-gradient(
@@ -501,9 +501,9 @@ h3 {
      rgba(0,0,0,.35) 100%
    ),
      url("../images/generated-elegant-home-network-hero.webp");
-  /*  background:
+  background:
         linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-        url("../images/generated-elegant-home-network-hero.webp") center center / cover no-repeat; */
+        url("../images/generated-elegant-home-network-hero.webp") center center / cover no-repeat;
     min-height: 80vh;
     display: flex;
     align-items: center;
