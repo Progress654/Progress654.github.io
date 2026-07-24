@@ -137,7 +137,7 @@ const createMobileActions = () => {
   actions.className = "mobile-actions";
   actions.setAttribute("aria-label", "Schnellkontakt");
   actions.innerHTML = [
-    '<a class="mobile-call" href="tel:+436644169873">Anrufen</a>',
+   /* '<a class="mobile-call" href="tel:+436644169873">Anrufen</a>', */
     '<a class="mobile-request" href="kontakt.html#projektformular">Projekt anfragen</a>',
   ].join("");
 
