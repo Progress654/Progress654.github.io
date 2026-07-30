@@ -26,19 +26,11 @@ Der Einstieg erfolgt über eine kostenlose Ersteinschätzung anhand von Eckdaten
 
 - https://www.beratung-technik.at/
 - https://www.beratung-technik.at/heimnetz-glasfaserplaner.html
-- https://www.beratung-technik.at/heimnetzwerk-installation-wien-noe-burgenland.html
 - https://www.beratung-technik.at/wlan-optimierung-wien-noe-burgenland.html
 - https://www.beratung-technik.at/glasfaser-heimnetz-wien-noe-burgenland.html
-- https://www.beratung-technik.at/netzwerkschrank-einrichten-wien-noe-burgenland.html
-- https://www.beratung-technik.at/lan-dose-funktioniert-nicht-wien-noe-burgenland.html
-- https://www.beratung-technik.at/homeway-installation-wien-noe-burgenland.html
-- https://www.beratung-technik.at/netzwerk-pv-wallbox-waermepumpe-wien-noe-burgenland.html
 - https://www.beratung-technik.at/netzwerk-kleine-bueros-praxis-wien-noe-burgenland.html
-- https://www.beratung-technik.at/ratgeber.html
-- https://www.beratung-technik.at/bauherren-netzwerkplan-2026.html
-- https://www.beratung-technik.at/unifi-omada-homeway-fritz-vergleich.html
 - https://www.beratung-technik.at/powerline-lan-wlan-vergleich.html
-- https://www.beratung-technik.at/preise.html
+- https://www.beratung-technik.at/netzwerk-check.html
 - https://www.beratung-technik.at/faq.html
 - https://www.beratung-technik.at/kontakt.html
 
@@ -49,10 +41,10 @@ Der Einstieg erfolgt über eine kostenlose Ersteinschätzung anhand von Eckdaten
 - Der Netzwerkschrank ist leer, chaotisch oder nicht beschriftet.
 - WLAN ist im Obergeschoss, Keller, Garten, Homeoffice oder in der Garage schlecht.
 - Repeater funktionieren unzuverlässig.
-- Doorbell, Kameras, Wallbox, PV, Wärmepumpe oder Smart Home brauchen stabile Netzwerkverbindung.
+- Kameras, Wallbox, PV, Wärmepumpe oder Smart Home brauchen stabile Netzwerkverbindung.
 - Kunden möchten lokale Kameraaufzeichnung, weniger Cloudabhängigkeit oder nachvollziehbare Schnittstellen.
 - Powerline, Mesh oder Repeater schwanken und müssen im konkreten Bestand eingeordnet werden.
-- Ein kleines Büro, eine Praxis, Ordination oder Kanzlei braucht LAN, WLAN, Gäste-/Patienten-WLAN, Drucker/NAS und eine nachvollziehbare Netzwerkstruktur.
+- Ein kleines Büro braucht LAN, WLAN, Gäste-WLAN, Drucker/NAS und eine nachvollziehbare Netzwerkstruktur.
 - Der Elektriker hat Kabel verlegt, aber niemand übernimmt Inbetriebnahme, Messung, Beschriftung und Erklärung.
 
 ## Kontakt
@@ -60,5 +52,3 @@ Der Einstieg erfolgt über eine kostenlose Ersteinschätzung anhand von Eckdaten
 Gerhard Koschi - Beratung & Technik  
 Alszeile 93, 1170 Wien  
 office@beratung-technik.at  
-+43 664 4169873  
-Telefonisch erreichbar: Mo–Fr 7:00–18:00 Uhr. Außerhalb dieser Zeiten per E-Mail, WhatsApp oder Projektanfrage.
