@@ -2696,6 +2696,35 @@ tr:last-child td {
     font-size: 1rem;
   }
 
+.intro-video {
+  padding: 60px 20px;
+}
+
+.intro-video h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.video-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.video-wrapper video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.video-caption {
+  max-width: 1000px;
+  margin: 14px auto 0;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+  
   .grid.two,
   .grid.three,
   .grid.four,
