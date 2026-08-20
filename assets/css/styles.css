@@ -2695,31 +2695,6 @@ tr:last-child td {
   .section-head p:not(.eyebrow) {
     font-size: 1rem;
   }
-
-
-.video-wrapper {
-  width: 400px !important;
-  max-width: 400px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-.video-wrapper video {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
-}
-
-  
-.video-caption {
-  max-width: 1000px;
-  margin: 12px auto 0;
-  text-align: center;
-  font-size: 0.78rem;
-  font-style: italic;
-  opacity: 0.65;
-}
-
   
   .grid.two,
   .grid.three,
@@ -2982,3 +2957,28 @@ tr:last-child td {
     margin-bottom: 22px !important;
   }
 }
+
+
+.video-wrapper {
+  width: 400px !important;
+  max-width: 400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.video-wrapper video {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+  
+.video-caption {
+  max-width: 1000px;
+  margin: 12px auto 0;
+  text-align: center;
+  font-size: 0.78rem;
+  font-style: italic;
+  opacity: 0.65;
+}
+
