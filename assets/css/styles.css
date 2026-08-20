@@ -2697,7 +2697,7 @@ tr:last-child td {
   }
 
 .video-wrapper {
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -2707,7 +2707,7 @@ tr:last-child td {
   height: auto;
   border-radius: 12px;
 }
-
+  
 .video-caption {
   max-width: 1000px;
   margin: 12px auto 0;
