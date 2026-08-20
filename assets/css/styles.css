@@ -2695,6 +2695,24 @@ tr:last-child td {
   .section-head p:not(.eyebrow) {
     font-size: 1rem;
   }
+
+.video-wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.video-wrapper video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.video-caption {
+  font-size: 0.78rem !important;
+  font-style: italic !important;
+  opacity: 0.65 !important;
+}
   
   .grid.two,
   .grid.three,
