@@ -2960,8 +2960,8 @@ tr:last-child td {
 
 
 .video-wrapper {
-  width: 400px !important;
-  max-width: 400px !important;
+  width: 700px !important;
+  max-width: 800px !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
@@ -2971,7 +2971,11 @@ tr:last-child td {
   max-width: 100% !important;
   height: auto !important;
 }
-
+.video-caption {
+  font-size: 0.78rem !important;
+  font-style: italic !important;
+  opacity: 0.65 !important;
+}
   
 .video-caption {
   max-width: 1000px;
