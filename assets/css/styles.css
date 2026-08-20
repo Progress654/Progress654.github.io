@@ -2712,9 +2712,11 @@ tr:last-child td {
   max-width: 1000px;
   margin: 12px auto 0;
   text-align: center;
-  font-size: 0.9rem;
-  opacity: 0.7;
+  font-size: 0.78rem;
+  font-style: italic;
+  opacity: 0.65;
 }
+
   
   .grid.two,
   .grid.three,
