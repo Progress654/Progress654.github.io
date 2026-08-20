@@ -2696,17 +2696,20 @@ tr:last-child td {
     font-size: 1rem;
   }
 
+
 .video-wrapper {
-  max-width: 400px;
-  margin: 0 auto;
+  width: 400px !important;
+  max-width: 400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .video-wrapper video {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
 }
+
   
 .video-caption {
   max-width: 1000px;
