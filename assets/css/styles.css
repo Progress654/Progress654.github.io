@@ -2957,32 +2957,3 @@ tr:last-child td {
     margin-bottom: 22px !important;
   }
 }
-
-
-.video-wrapper {
-  width: 700px !important;
-  max-width: 800px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-.video-wrapper video {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
-}
-.video-caption {
-  font-size: 0.78rem !important;
-  font-style: italic !important;
-  opacity: 0.65 !important;
-}
-  
-.video-caption {
-  max-width: 1000px;
-  margin: 12px auto 0;
-  text-align: center;
-  font-size: 0.78rem;
-  font-style: italic;
-  opacity: 0.65;
-}
-
