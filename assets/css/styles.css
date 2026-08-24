@@ -1085,7 +1085,7 @@ a.media-card .media-copy::after {
 .media-card:has(> img[src*="generated-"])::after,
 .wide-image:has(> img[src*="generated-"])::after,
 .pricing-overview:has(> img[src*="generated-"])::after {
-  content: "Visualisierung";
+  content: "Visualisierung (KI-generiert)";
 }
 
 .product-card::after,
