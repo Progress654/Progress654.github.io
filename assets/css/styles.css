@@ -2149,16 +2149,22 @@ fieldset.form-field-full {
   box-shadow: var(--shadow);
 }
 
-.pricing-card .plain-list {
-  display: grid;
-  gap: 4px;
-  margin: 14px 0 0;
+/* CONNECT-Paketlisten */
+.pricing-card ul.plain-list {
+  display: grid !important;
+  row-gap: 3px !important;
+  margin-top: 12px !important;
+  padding-left: 20px !important;
 }
 
-.pricing-card .plain-list li {
-  color: #5b6b80;
-  line-height: 1.5;
+.pricing-card ul.plain-list li {
+  color: #5b6b80 !important;
+  font-size: inherit !important;
+  line-height: 1.45 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
+
 
 .pricing-card .package-action {
   margin-top: auto;
