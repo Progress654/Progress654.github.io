@@ -2151,8 +2151,8 @@ fieldset.form-field-full {
 
 .pricing-card .plain-list {
   display: grid;
-  gap: 6px;
-  margin: 14px 0 0;
+  gap: 8px;
+  margin: 18px 0 0;
 }
 
 .pricing-card .package-action {
