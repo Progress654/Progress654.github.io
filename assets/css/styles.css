@@ -858,7 +858,7 @@ a.card {
 
 .card li + li,
 .plain-list li + li {
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 .card.highlight {
